@@ -18,8 +18,8 @@ public sealed class PaintingData : MonoBehaviour
 {
     public PaintingDataHolder paintingData;
 
-    private string previousTag = "Screen";
-    private string currentTag = "Screen";
+    // new flag
+    private bool isLoaded;
 
     public void InitializePaintingData()
     {
@@ -28,24 +28,22 @@ public sealed class PaintingData : MonoBehaviour
             if (paintingData.paintingImage != null)
             {
                 screenRenderer.material.color = paintingData.paintingTextureColor;
-                screenRenderer.material.mainTexture = paintingData.paintingImage.texture;
+                screenRenderer.material.mainTexture = paintingData.paintingImage.texture;   // :contentReference[oaicite:1]{index=1}
+                isLoaded = true;
             }
             else
-                screenRenderer.material.color = SectionColorHolder.EmptyScreenColor;
+            {
+            // show the section’s fallback color when no image is available
+                screenRenderer.material.mainTexture = null;
+                screenRenderer.material.color = SectionColorHolder.EmptyScreenColor;       // :contentReference[oaicite:2]{index=2}
+            }
         }
     }
-
-    /*private void FixedUpdate()
-    {
-        LoadImageBasedOnProximity();
-    }*/
 
     public void LoadImageBasedOnProximity()
     {
         if (!string.IsNullOrEmpty(paintingData.imageURL))
-        {
-            StartCoroutine(LoadImage(paintingData.imageURL));
-        }
+            StartCoroutine(LoadImage(paintingData.imageURL));                              // :contentReference[oaicite:3]{index=3}
     }
 
     IEnumerator LoadImage(string link)
@@ -53,7 +51,11 @@ public sealed class PaintingData : MonoBehaviour
         UnityWebRequest request = UnityWebRequestTexture.GetTexture(link);
         yield return request.SendWebRequest();
 
+#if UNITY_2020_2_OR_NEWER
+        if (request.result != UnityWebRequest.Result.Success)
+#else
         if (request.isNetworkError || request.isHttpError)
+#endif
         {
             Debug.Log(request.error);
         }
@@ -66,22 +68,22 @@ public sealed class PaintingData : MonoBehaviour
                 if (myTexture != null)
                 {
                     screenRenderer.material.color = paintingData.paintingTextureColor;
-                    screenRenderer.material.mainTexture = myTexture;
+                    screenRenderer.material.mainTexture = myTexture;                       // :contentReference[oaicite:4]{index=4}
+                    isLoaded = true;  // <-- set the flag here, inside a method
                 }
                 else
-                    screenRenderer.material.color = SectionColorHolder.EmptyScreenColor;
+                {
+                    screenRenderer.material.mainTexture = null;
+                    screenRenderer.material.color = SectionColorHolder.EmptyScreenColor;   // :contentReference[oaicite:5]{index=5}
+                }
             }
         }
     }
 
     private void Update()
     {
-        currentTag = gameObject.tag;
-
-        if (currentTag == "ClosestHotspot" && previousTag == "Screen") LoadImageBasedOnProximity();
-
-        if (currentTag == "Screen" && previousTag == "ClosestHotspot") InitializePaintingData();
-
-        previousTag = currentTag;
+        // load once when we are the closest, never clear after
+        if (gameObject.tag == "ClosestHotspot" && !isLoaded)
+            LoadImageBasedOnProximity();
     }
 }
