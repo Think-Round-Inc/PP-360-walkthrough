@@ -311,9 +311,12 @@ public class Standalone360Capture : MonoBehaviour
             for (int x = 0; x < width; x++)
             {
                 // Convert pixel coordinates to spherical coordinates
-                float u = (float)x / width;
-                float v = (float)y / height;
-                
+                //float u = (float)x / width; 
+                //float v = (float)y / height;
+
+                float u = ((x + 0.5f) / width);          // 0..1
+                float v = 1f - ((y + 0.5f) / height);    // <-- flip V so top-of-image is +Y (north pole)
+
                 float theta = u * 2f * Mathf.PI; // Longitude
                 float phi = v * Mathf.PI; // Latitude
                 
