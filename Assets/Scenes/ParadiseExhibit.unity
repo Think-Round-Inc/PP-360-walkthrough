@@ -11091,6 +11091,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1988114701274007191, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 1998839631889622072, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.42
@@ -12583,6 +12587,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.026
       objectReference: {fileID: 0}
+    - target: {fileID: 2488091576839044692, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 2488772121917807057, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InDp10c-1
@@ -18219,6 +18227,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.42
       objectReference: {fileID: 0}
+    - target: {fileID: 3708367726828461564, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 3730024450929498823, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -25043,6 +25055,10 @@ PrefabInstance:
       propertyPath: onClickedViewButton.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6793966071466838867, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 6801413876065680947, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.42
@@ -38775,6 +38791,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1988114701274007191, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 1998839631889622072, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.42
@@ -40328,6 +40348,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.026
       objectReference: {fileID: 0}
+    - target: {fileID: 2488091576839044692, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 2488772121917807057, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: JeDp10c-1
@@ -46143,6 +46167,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.42
       objectReference: {fileID: 0}
+    - target: {fileID: 3708367726828461564, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 3730024450929498823, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -53505,6 +53533,10 @@ PrefabInstance:
       propertyPath: onClickedViewButton.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6793966071466838867, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
       value: Wilber Springfield Holding Baby Juanita, Probably Texas or Japan, 1949
@@ -74853,6 +74885,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1988114701274007191, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 1998839631889622072, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.42
@@ -76309,6 +76345,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.026
       objectReference: {fileID: 0}
+    - target: {fileID: 2488091576839044692, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 2488772121917807057, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: TaDp10c-1
@@ -81945,6 +81985,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.42
       objectReference: {fileID: 0}
+    - target: {fileID: 3708367726828461564, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 3730024450929498823, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -88769,6 +88813,10 @@ PrefabInstance:
       propertyPath: onClickedViewButton.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6793966071466838867, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 6801413876065680947, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.42
@@ -100444,7 +100492,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.7058824, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Intensity: 2
   m_Range: 256
   m_SpotAngle: 30
@@ -116750,6 +116798,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1988114701274007191, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 1998839631889622072, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.42
@@ -118242,6 +118294,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.026
       objectReference: {fileID: 0}
+    - target: {fileID: 2488091576839044692, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 2488772121917807057, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: BuDp10c-1
@@ -123878,6 +123934,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.42
       objectReference: {fileID: 0}
+    - target: {fileID: 3708367726828461564, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 3730024450929498823, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -130702,6 +130762,10 @@ PrefabInstance:
       propertyPath: onClickedViewButton.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6793966071466838867, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 6801413876065680947, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.42
@@ -150420,6 +150484,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1988114701274007191, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 1998839631889622072, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.42
@@ -152000,6 +152068,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.026
       objectReference: {fileID: 0}
+    - target: {fileID: 2488091576839044692, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 2488772121917807057, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: ChDp10c-1
@@ -157936,6 +158008,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.42
       objectReference: {fileID: 0}
+    - target: {fileID: 3708367726828461564, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 3730024450929498823, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -165754,6 +165830,10 @@ PrefabInstance:
       propertyPath: onClickedViewButton.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6793966071466838867, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
       value: Hideki's Grandfather, Japan, 1933
@@ -182818,6 +182898,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1988114701274007191, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 1998839631889622072, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.42
@@ -184371,6 +184455,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.026
       objectReference: {fileID: 0}
+    - target: {fileID: 2488091576839044692, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 2488772121917807057, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: MuDp10c-1
@@ -190152,6 +190240,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.42
       objectReference: {fileID: 0}
+    - target: {fileID: 3708367726828461564, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 3730024450929498823, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -197523,6 +197615,10 @@ PrefabInstance:
       propertyPath: onClickedViewButton.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6793966071466838867, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
       value: Ismaila's Dad, Salif Biaye, Retired Principle, 1998 Dakar Senegal
@@ -215027,6 +215123,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1988114701274007191, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 1998839631889622072, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.42
@@ -216543,6 +216643,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.026
       objectReference: {fileID: 0}
+    - target: {fileID: 2488091576839044692, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 2488772121917807057, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: HiDp10c-1
@@ -222339,6 +222443,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.42
       objectReference: {fileID: 0}
+    - target: {fileID: 3708367726828461564, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 3730024450929498823, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -229663,6 +229771,10 @@ PrefabInstance:
       propertyPath: onClickedViewButton.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6793966071466838867, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
       value: Our hero, Dad in the living room home, 2014
