@@ -6860,6 +6860,46 @@ PrefabInstance:
       value: InDp02c-4
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[0]
+      value: 
+      objectReference: {fileID: 267969787}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[1]
+      value: 
+      objectReference: {fileID: 267969785}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[2]
+      value: 
+      objectReference: {fileID: 267969788}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[3]
+      value: 
+      objectReference: {fileID: 267969786}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[4]
+      value: 
+      objectReference: {fileID: 267969775}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[5]
+      value: 
+      objectReference: {fileID: 267969773}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[6]
+      value: 
+      objectReference: {fileID: 267969776}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[7]
+      value: 
+      objectReference: {fileID: 267969774}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[8]
+      value: 
+      objectReference: {fileID: 267969771}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[9]
+      value: 
+      objectReference: {fileID: 267969769}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingTextureColor.a
       value: 1
       objectReference: {fileID: 0}
@@ -6875,6 +6915,190 @@ PrefabInstance:
       propertyPath: paintingTextureColor.r
       value: 0.7058824
       objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[10]
+      value: 
+      objectReference: {fileID: 267969772}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[11]
+      value: 
+      objectReference: {fileID: 267969770}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[12]
+      value: 
+      objectReference: {fileID: 267969783}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[13]
+      value: 
+      objectReference: {fileID: 267969781}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[14]
+      value: 
+      objectReference: {fileID: 267969784}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[15]
+      value: 
+      objectReference: {fileID: 267969782}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[16]
+      value: 
+      objectReference: {fileID: 267969779}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[17]
+      value: 
+      objectReference: {fileID: 267969777}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[18]
+      value: 
+      objectReference: {fileID: 267969780}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[19]
+      value: 
+      objectReference: {fileID: 267969778}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[20]
+      value: 
+      objectReference: {fileID: 267969763}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[21]
+      value: 
+      objectReference: {fileID: 267969761}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[22]
+      value: 
+      objectReference: {fileID: 267969764}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[23]
+      value: 
+      objectReference: {fileID: 267969762}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[24]
+      value: 
+      objectReference: {fileID: 267969767}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[25]
+      value: 
+      objectReference: {fileID: 267969765}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[26]
+      value: 
+      objectReference: {fileID: 267969768}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[27]
+      value: 
+      objectReference: {fileID: 267969766}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[28]
+      value: 
+      objectReference: {fileID: 267969759}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[29]
+      value: 
+      objectReference: {fileID: 267969757}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[30]
+      value: 
+      objectReference: {fileID: 267969760}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[31]
+      value: 
+      objectReference: {fileID: 267969758}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[32]
+      value: 
+      objectReference: {fileID: 267969755}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[33]
+      value: 
+      objectReference: {fileID: 267969753}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[34]
+      value: 
+      objectReference: {fileID: 267969756}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[35]
+      value: 
+      objectReference: {fileID: 267969754}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[36]
+      value: 
+      objectReference: {fileID: 267969747}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[37]
+      value: 
+      objectReference: {fileID: 267969745}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[38]
+      value: 
+      objectReference: {fileID: 267969748}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[39]
+      value: 
+      objectReference: {fileID: 267969746}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[40]
+      value: 
+      objectReference: {fileID: 267969751}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[41]
+      value: 
+      objectReference: {fileID: 267969749}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[42]
+      value: 
+      objectReference: {fileID: 267969752}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[43]
+      value: 
+      objectReference: {fileID: 267969750}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[44]
+      value: 
+      objectReference: {fileID: 267969791}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[45]
+      value: 
+      objectReference: {fileID: 267969789}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[46]
+      value: 
+      objectReference: {fileID: 267969792}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[47]
+      value: 
+      objectReference: {fileID: 267969790}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[48]
+      value: 
+      objectReference: {fileID: 267969743}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[49]
+      value: 
+      objectReference: {fileID: 267969741}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[50]
+      value: 
+      objectReference: {fileID: 267969744}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[51]
+      value: 
+      objectReference: {fileID: 267969742}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[52]
+      value: 
+      objectReference: {fileID: 267969739}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[53]
+      value: 
+      objectReference: {fileID: 267969737}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[54]
+      value: 
+      objectReference: {fileID: 267969740}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: screens.Array.data[55]
+      value: 
+      objectReference: {fileID: 267969738}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: screens.Array.data[56]
       value: 
@@ -7031,6 +7255,615 @@ PrefabInstance:
       propertyPath: paintingTextures.Array.data[15]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[0].paintingName
+      value: Mom and dad decorating the house on Diwali, 2018
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[1].paintingName
+      value: Life has many colors -2022
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[2].paintingName
+      value: Afternoon tea outside of Army residence in Sikkim, India
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[3].paintingName
+      value: Naisha and Aurisha playing in their backyard
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[4].paintingName
+      value: "Getting dad\u2019s blessing on the wedding day, March 2015"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[5].paintingName
+      value: "Getting ready for sweet and healthy Wedding\u20132017"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[6].paintingName
+      value: "Tahil\u2019s parents holding Tahil (in the middle)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[7].paintingName
+      value: Dad with Youngest Daughter during an Indian festival
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[8].paintingName
+      value: Our hero, Dad in the living room home, 2014
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[9].paintingName
+      value: Ever Supporting Smile of Father -2005
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[0].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 09e63dfdaa1bceb409d336faabaf8705, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[10].paintingName
+      value: "Newlyweds: Tahil\u2019s maternal grandfather &amp; maternal grandmother"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[11].paintingName
+      value: 'Dad with daughters: Dance of 2020'
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[13].paintingName
+      value: Strength of joint family -2016
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[14].paintingName
+      value: "Tahil\u2019s Mother Dressed to Go Out with Tahil"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[15].paintingName
+      value: Mom with daughters during Diwali
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[16].paintingName
+      value: Mom dressed up for Lord Krishna&#39;s birthday (Krishna Janmashtmi)
+        at home, Jaipur, 2016
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[17].paintingName
+      value: Strength of joint family -2016
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[18].paintingName
+      value: "Tahil\u2019s Maternal Grandmother"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[19].paintingName
+      value: Naisha with grandma
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[1].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 417efc4f0f302d34c9bb953edab63687, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[20].paintingName
+      value: "Three generations in one frame/Richa\u2019s Lil sis, Dad with his brothers
+        and Grandpa, Jaipur, 1996"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[21].paintingName
+      value: Strength of joint family -2016
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[22].paintingName
+      value: "Tahil\u2019s Maternal Grandfather (Brigadier Nardip Singh) Receiving
+        the Athi Vishist Seva Medal from then President of India, Sarvepalli Ramakrishnan"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[23].paintingName
+      value: Dad with Grandpa
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[24].paintingName
+      value: Posing with my sisters in the dining room, Jaipur, 1998
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[25].paintingName
+      value: Strength of joint family -2016
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[26].paintingName
+      value: "Tahil\u2019s Mom in Her Mother\u2019s Arms"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[27].paintingName
+      value: Mom with daughters at Home
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[28].paintingName
+      value: Posing with my sisters in the dining room, Jaipur, 1998
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[29].paintingName
+      value: Grandmother is the root of my family 2014
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[2].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 981a1f3d8adce2b42bb3ee7aa0d05683, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[30].paintingName
+      value: "Tahil\u2019s mother, Tanu Nardip Singh"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[31].paintingName
+      value: 'Naisha: Oldest daughter'
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[32].paintingName
+      value: Prakash on our wedding day (Baraat Procession), March 10th, 2015
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[33].paintingName
+      value: "Adolescent One day family became King\u2019s family"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[34].paintingName
+      value: Tahil as Prince of His Family
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[35].paintingName
+      value: Aayansh, 1st cousin
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[36].paintingName
+      value: Prakash at his cousin's wedding, 2014
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[37].paintingName
+      value: Freedom of playfulness -2012 Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[38].paintingName
+      value: Tahil at Home as a Young Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[39].paintingName
+      value: Aayansh with Radha Krishna
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[3].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 0284b730ad4fe724dbb8fa10db07bdda, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[40].paintingName
+      value: "Richa\u2019s happy moment, one breezy evening, Bangalore, Nov 2018"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[41].paintingName
+      value: Freedom of playfulness
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[42].paintingName
+      value: "Tahil\u2019s mother (Tanu Nardip Singh), as a Young Girl"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[43].paintingName
+      value: 'Aurisha: Youngest Daughter, 1st birthday'
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[44].paintingName
+      value: Viraaj, the day he was born, June 16th, 2022
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[45].paintingName
+      value: Innocence and joy spread lights through me
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[46].paintingName
+      value: "Tahil\u2019s maternal grandmother with Tahil\u2019s Mother as an Infant"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[47].paintingName
+      value: Naisha as a baby on Christmas day
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[48].paintingName
+      value: Playful time, Backyard, Summer, 2014
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[49].paintingName
+      value: Rangoli in Varandah
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[4].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d4ffd26e93fc6149ae8b97c50b9f4de, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[50].paintingName
+      value: "Grandparents\u2019 new home, mid 1990s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[51].paintingName
+      value: Naisha with mom on Diwali in San Fransisco
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[52].paintingName
+      value: Sparkly eyes, Gamya (niece) Dressed up for Dandiya dance night, 2017
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[53].paintingName
+      value: Freedom of playfulness
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[54].paintingName
+      value: "Tahil\u2019s mother (Tanu Nardip Singh) as a bride on her wedding day,
+        2/26/84"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[55].paintingName
+      value: Naisha on her 5th birthday, dressed as a princess
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[56].paintingName
+      value: "Ruchi\u2019s Family at The Festival of Color, A Celebration of Holi"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[57].paintingName
+      value: 'Magician-Seedlings-The Paths of Happy Marriage: One life One wife'
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[58].paintingName
+      value: Feeling princessly, my wedding day, March 10th, 2015
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[59].paintingName
+      value: 'The Paths of Happy Marriage: One Life-One Wife'
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[5].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 85b16bd741a6b4a45b85b41980bdbe96, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[60].paintingName
+      value: 'The Paths of Happy Marriage: One Life-One Husband'
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[61].paintingName
+      value: Tahil Sharma as an Interfaith Teacher
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[62].paintingName
+      value: "Tahil\u2019s parents during their Wedding Engagement ceremony"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[63].paintingName
+      value: 'The Paths of Happy Marriage: One Life/One Husband-One Wife'
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[64].paintingName
+      value: Durga Puja 2012
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[65].paintingName
+      value: The light Durga Puja 2012
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[66].paintingName
+      value: Tahil on The Wheel-Thinking Round
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[67].paintingName
+      value: The feel of Freedom/Justice/Equality, UN Headquarters, New York, 2020
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[68].paintingName
+      value: Durga Puja 2012
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[69].paintingName
+      value: Gazing away/childlike wonder, Kashvi (niece), Gujarat, 2014
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[6].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ba21cde3f35cce49ab81d03c568a3e2, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[70].paintingName
+      value: Enjoying a summer day with ice cream, Ghirardelli, San Francisco, 2018
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[71].paintingName
+      value: Durga Puja 2012
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[72].paintingName
+      value: "From left: Tahil\u2019s paternal grandfather, father, and mother"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[73].paintingName
+      value: "Star-India\u2019s first prime minister, Jawaharlal Nehru, and Tahil\u2019s
+        grandmother, standing to his right"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[74].paintingName
+      value: "Moon Celebrations, Mom and dad at sister\u2019s wedding, Jaipur, 2012"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[75].paintingName
+      value: Adding colors to life. The joy of making Rangoli on Diwali, Jaipur
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[76].paintingName
+      value: "Ruchi\u2019s family\u2019s cousin on head shaving day"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[77].paintingName
+      value: Universe-I, the Artist, See You. Do You See You?
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[7].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: fd56abd21b41a6e4e96c43e3cfe3c28a, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[8].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: f8751640e0ea4e14597b4f3da65fed4d, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[9].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: be4f78dac2c4fcd49b2c1cfd1f94d5e8, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[10].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 450a6b26c55e7da429907de385730544, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[11].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 9072992e35916a74c89eff2d88fb447f, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[13].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 16251db09a5a53045a6a55ee0d3e22a8, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[14].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fbbdaec48a41fc4b99f640e147806ea, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[15].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 58d29cc378f11a840be202ceb2134803, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[16].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: f61ce8af475e57348b6e735248e51fd8, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[17].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fa15666a70576f44a31054d4e2e60ac, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[18].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 579cd050ead000f40b24d67a1b1df18c, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[19].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 1edb399c96ec6fb49871412fe968eee5, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[20].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c6efd88be513754a895eb3bc41c43d7, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[21].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 1dd194992abc57f4f8bb821443dfc6b7, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[23].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 891ae1bdf1c45314e8df58487f511d00, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[24].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: f5680be19114c2f4a8be9a2db6742524, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[25].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6f88b46405bf37f49a9db9434d7873a6, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[26].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 45c56bf947333494493bb80a8027dea1, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[27].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 71489e6f1f272004e9def0f9e17bb3b9, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[28].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 9beab879cf9562c498d2b007d45ac3ee, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[29].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 46e8ab4ad013bc648966616cae6a8a58, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[30].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: ffa32dcd89988ec4c9f2271c9e6c9f86, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[31].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 35e24382c919da64fb609da00168cf8a, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[32].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 5e11083647e235c458dfa7f798df5633, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[33].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c7e7b377ea3128418fdbffb116e3f43, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[34].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: e5b4e6fb64b3990478350b539487b7e6, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[35].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: ae3953a7a4b1dd041ad80052fbeffe6c, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[36].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 06d4ae498ce252541ab6a3f6af9be432, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[37].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 79b9e6829958d8c4d8861658df16bdd5, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[38].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: d08373a9f6a64f1449dc9a86e31bf882, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[39].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 4878e818d3b6c2d42ad3ed77d250adf1, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[40].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 01f77bb44ad320241b8303e741b671f2, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[41].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: b5bb5ffb27149344b88ba6bc8b70c618, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[43].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c6d684863da6f642b9ceb979138fae1, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[44].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 61b200491cb04d34a9a05beb0d38c812, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[45].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: b7a6df6add9cc3f4d9a9a2442aa79036, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[46].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 854635ba1defc1444bac32b6eeb2a6f0, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[47].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 01bb1c487c322f14d93376811ed1fcd5, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[48].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 38cf0912bf1975248a12555908a8e817, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[49].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: a506fbaa88be84846ba303c945eeb89a, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[50].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 867a1178aac39014eb9c00dd87edad1e, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[51].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 50c83d77613937c4099849f14746e45a, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[52].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: d109473597f6f6643b8ef92cf4514139, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[53].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 89f62db659add1949bac33eb4af4e067, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[54].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 09024fd5b6be72744b51a1f83134e7a9, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[55].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 4f9ad701d0a4b434da4ac5316d2a4282, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[56].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 7db840dbff70aa94fa734827b13bd757, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[58].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: b336f009103db794ab381c6bf1c16695, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[59].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 5faea09a3a750d546bc90cdbe4d674ce, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[60].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: bcd0ab9b974d2924bae1cb92877c1680, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[61].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 04bce84075422f14aa239628d06d47ca, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[62].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c11324cc38919149925b51d5dbe4f12, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[63].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8aa0a9a46bdbefc4ba68e08cab5da600, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[64].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 60b3a0b17afa5b244b867f95028d7388, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[65].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: f980bc3302901d24a89b81a8c6048133, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[66].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 3459bcdb02092054b842a03df5ca0c58, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[67].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 7449eb77c210fea4ebde43bd5d7c1c89, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[68].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d792e8e58e5e364fae74ef9a05119c5, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[69].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: de1c4af71e4d9574c89f0fdad089b232, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[70].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 96940b27a6e72af44bf95f4b9b4997b6, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[71].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: c69abdf5cef252f439697b60585e1492, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[72].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: cd9ad2fc3794e1944953b8813113d362, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[73].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 0add5d380110f66408e043341fe2bd13, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[74].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: ea47be683c2075e40bcba71ea03f4d2e, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[75].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8662dada3e1b5034fa01ef87215f048c, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[76].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 484d16c04abbd454e9f68e458839d95e, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[77].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 0000c5d29dca59e438d03ed648612b5d, type: 3}
     - target: {fileID: 474150729639484875, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InVp02c-1
@@ -30745,7 +31578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8897218430629598900, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: sectionType
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8897218430629598900, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: missingPaintingScreenColor.b
@@ -31042,6 +31875,286 @@ PrefabInstance:
 --- !u!4 &267969736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5944510903610548991, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6397846164085704050, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1651536115744161493, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 430082835867788369, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2610598829342764275, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969741 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 993594059994140493, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8839591356635721049, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 857666211473295351, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5775913174018175381, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2903678158899511877, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1250776065728494214, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4159726477854106093, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090434430616450882, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2903678159993564764, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1250776064673928863, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4159726476800429556, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090434431670967131, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6397846164455347083, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1651536115576924204, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 430082835500249768, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2610598829646346762, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 993594060230613428, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8839591356402432928, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 857666211639513358, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5775913173647517548, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2903678158653170530, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1250776065482136481, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4159726478144487626, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090434430325921381, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2903678160169947600, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1250776064850389267, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4159726476976894584, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090434431494579415, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6397846164026477019, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1651536115986920060, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 430082834802944248, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2610598830341546074, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 993594060909036516, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8839591355973558768, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 857666212051602270, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5775913172985871676, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 156840194906431380, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5480860110242882611, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6850947467948490423, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9141805514677335573, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6281807808600577451, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2326122276416174015, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5837659642128407825, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 778181614127557491, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 598813463566870029, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3557597960052498126, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1855157023404721573, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8395017096385811210, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2903678159452329354, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1250776064133557577, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4159726477332756002, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+  m_PrefabInstance: {fileID: 267969735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267969792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6090434432211148941, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
   m_PrefabInstance: {fileID: 267969735}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &268486273
