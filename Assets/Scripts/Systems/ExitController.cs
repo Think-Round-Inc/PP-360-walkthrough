@@ -1,39 +1,27 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 
-// sealed as its not intended to be inherited
 public sealed class ExitController : MonoBehaviour
 {
-    [SerializeField] KeyCode exitKey = KeyCode.Escape;
-    [SerializeField] TMP_Text exitText;
-    [SerializeField, Tooltip("Fired when exit key is pressed")] UnityEvent onExitKeyPressed;
-    bool exitEventFired;
+    [SerializeField] private KeyCode exitKey = KeyCode.Tab;
+    [SerializeField] private TMP_Text exitText;
+    [SerializeField] private Canvas initialCanvas;
 
     private void Start()
     {
-        if (exitText == null) return;
-        exitText.text = $"Press '{exitKey}' to Exit";
-    }
-
-    private void Update()
-    {
-        // checks for key press then fires exit event once
-        if (!Input.GetKeyDown(exitKey)) return;
-        if (!exitEventFired)
+        if (exitText != null)
         {
-            exitEventFired = true;
-            onExitKeyPressed?.Invoke();
+            exitText.text = $"Press '{exitKey}' to Exit";
         }
     }
 
-    /// <summary>
-    /// Resets exit event in case you ever want to, this makes sure its not fired multiple times per frame
-    /// </summary>
-    public void ResetEventFired() => exitEventFired = false;
+    private void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Tab))
+    {
+        initialCanvas.gameObject.SetActive(true);
+        initialCanvas.enabled = true;
+    }
+}
 
-    /// <summary>
-    /// Quits the application, called in event, but can be changed so a confirmation panel pops up then gets called by button
-    /// </summary>
-    public void QuitApplication() => Application.Quit();
 }

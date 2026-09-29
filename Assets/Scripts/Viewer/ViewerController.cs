@@ -19,7 +19,7 @@ public sealed class ViewerController : MonoBehaviour
 
     private void RotateViewer()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         {
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
