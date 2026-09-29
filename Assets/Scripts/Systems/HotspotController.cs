@@ -159,15 +159,19 @@ public sealed class HotspotController : MonoBehaviour
 
         if (targetHotspot.TryGetComponent(out HotSpot hotSpot))
         {
-            // gets image of icon
-            Image hotspotIconImage = hotspotIcon.GetComponent<Image>();
+            Color normalColor = hotSpot.hasSeenBefore
+                ? hotspotVisitedColor
+                : Color.white;
 
-            // sets icon to color if it has been visited upon reaching target hotspot
-            if (hotSpot.hasSeenBefore && hotspotIconImage != null)
-                hotspotIconImage.color = hotspotVisitedColor;
-            else
-                hotspotIconImage.color = Color.white;
-
+            if (hotspotIcon.TryGetComponent(out ButtonHover hover))
+            {
+                hover.SetNormalColor(normalColor);
+            }
+            else if (hotspotIcon.TryGetComponent(out Image iconImage))
+            {
+                iconImage.color = normalColor;
+            }
+            
             // get world space location of hotspot + offset and converts it to screen space and set icon to that position
             Vector3 hotspotScreenPos = mainCamera.WorldToScreenPoint(targetHotspot.transform.position + hotSpot.hotspotIconOffset);
             hotspotIcon.transform.position = hotspotScreenPos;
