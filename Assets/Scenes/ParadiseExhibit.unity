@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.015531375, g: 0.014462922, b: 0.013482809, a: 1}
+  m_IndirectSpecularColor: {r: 0.015542584, g: 0.014445028, b: 0.013489606, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3096,23 +3096,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab1e109d57a78649bb3845bba363c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitKey: 27
+  exitKey: 9
   exitText: {fileID: 239068021}
-  onExitKeyPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 158266582}
-        m_TargetAssemblyTypeName: ExitController, Assembly-CSharp
-        m_MethodName: QuitApplication
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  initialCanvas: {fileID: 2020517685}
 --- !u!1 &183809911
 GameObject:
   m_ObjectHideFlags: 0
