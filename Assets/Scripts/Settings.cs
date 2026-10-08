@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
+    [SerializeField] private GameObject settingsPanel;
+
     [Header("Sliders")]
     [SerializeField] private Slider brightnessSlider;
     [SerializeField] private Slider fontSizeSlider;
@@ -93,5 +95,18 @@ public class Settings : MonoBehaviour
 
         if (mouseSensitivitySlider != null)
             mouseSensitivitySlider.onValueChanged.RemoveListener(SetMouseSensitivity);
+    }
+
+    public void OpenSettings()
+    {
+        settingsPanel.SetActive(true);
+        viewerController.SetViewerControlsActive(false);
+        Cursor.visible = true;
+    }
+
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
+        viewerController.SetViewerControlsActive(true);
     }
 }
