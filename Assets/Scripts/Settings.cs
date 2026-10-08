@@ -43,21 +43,37 @@ public class Settings : MonoBehaviour
         SetMouseSensitivity(mouseSensitivitySlider.value);
     }
 
-    public void SetBrightness(float value)
+    private void Update()
     {
-        // 1 = normal brightness; 0 = darkest.
-        float darkness = (1f - Mathf.Clamp01(value)) * 0.8f;
+        bool settingsOpen = settingsPanel.activeInHierarchy;
+
+        viewerController.SetViewerControlsActive(!settingsOpen);
+
+        if (settingsOpen)
+        {
+            Cursor.visible = true;
+        }
+    }
+
+  public void SetBrightness(float value)
+    {
+        // 100 = normal brightness; 1 = darkest.
+        float brightness = Mathf.Clamp(value, 1f, 100f) / 100f;
+        float darkness = (1f - brightness) * 0.8f;
+
         brightnessOverlay.color = new Color(0f, 0f, 0f, darkness);
     }
 
-    public void SetFontSize(float offset)
+    public void SetFontSize(float value)
     {
+        // 1 = original sizes; each step adds 1.
+        float offset = Mathf.Clamp(value, 1f, 100f) - 1f;
+
         foreach (var entry in originalFontSizes)
         {
             if (entry.Key != null)
             {
-                entry.Key.fontSize =
-                    Mathf.Max(1f, entry.Value + offset);
+                entry.Key.fontSize = entry.Value + offset;
             }
         }
     }
@@ -66,13 +82,16 @@ public class Settings : MonoBehaviour
     {
         if (viewerController != null)
         {
-            viewerController.SetMouseSensitivity(value);
+            viewerController.SetMouseSensitivity(
+                Mathf.Clamp(value, 1f, 100f));
         }
     }
 
     public void SetVolume(float value)
     {
         // Pending audio implementation.
+        // Convert to 0–1 when connecting audio:
+        // float volume = Mathf.Clamp(value, 1f, 100f) / 100f;
     }
 
     public void SetColorblindMode(bool enabled)
@@ -95,18 +114,5 @@ public class Settings : MonoBehaviour
 
         if (mouseSensitivitySlider != null)
             mouseSensitivitySlider.onValueChanged.RemoveListener(SetMouseSensitivity);
-    }
-
-    public void OpenSettings()
-    {
-        settingsPanel.SetActive(true);
-        viewerController.SetViewerControlsActive(false);
-        Cursor.visible = true;
-    }
-
-    public void CloseSettings()
-    {
-        settingsPanel.SetActive(false);
-        viewerController.SetViewerControlsActive(true);
     }
 }
