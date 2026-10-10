@@ -56,6 +56,7 @@ public sealed class HotspotController : MonoBehaviour
     if (screen.TryGetComponent(out PaintingData data) &&
         data.paintingData != null)
     {
+        infoText.enableAutoSizing = true;
         infoText.text = data.paintingData.paintingName;
     }
 }
