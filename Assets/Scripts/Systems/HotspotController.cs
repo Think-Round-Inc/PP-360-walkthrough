@@ -47,11 +47,18 @@ public sealed class HotspotController : MonoBehaviour
     /// Method to set the painting data information to the infoText
     /// </summary>
     /// <param name="screen">screen that the painting is shown on</param>
-    public void SetPaintingNameAndInfoToInfoText(GameObject screen)
+   public void SetPaintingNameAndInfoToInfoText(GameObject screen)
+{
+    if (infoText == null || screen == null) return;
+
+    infoText.text = "";
+
+    if (screen.TryGetComponent(out PaintingData data) &&
+        data.paintingData != null)
     {
-        if (screen.TryGetComponent(out PaintingData data))
-            infoText.text = $"{data.paintingData.paintingName}\n{data.paintingData.extraPaintingInfo}";
+        infoText.text = data.paintingData.paintingName;
     }
+}
 
     /// <summary>
     /// Clears infoText
@@ -68,12 +75,18 @@ public sealed class HotspotController : MonoBehaviour
     /// Triggers the current hotspots clicked events
     /// </summary>
     public void HotSpotClickedEventTriggered()
+{
+    if (closestHotspot == null) return;
+
+    // Keep the existing painting setup events.
+    if (closestHotspot.TryGetComponent(out HotSpot hotSpot))
     {
-        if (closestHotspot == null) return;
-        // checks currentHotspot GameObject for hotspot script then activates its clicked events
-        if (closestHotspot.TryGetComponent(out HotSpot hotSpot))
-            hotSpot.onClickedHotspot?.Invoke(closestHotspot);
+        hotSpot.onClickedHotspot?.Invoke(closestHotspot);
     }
+
+    // Update the title above the zoomed painting.
+    SetPaintingNameAndInfoToInfoText(closestHotspot);
+}
 
     private void Update()
     {
