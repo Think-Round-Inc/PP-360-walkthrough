@@ -69,4 +69,9 @@ public sealed class ViewerController : MonoBehaviour
 
         transform.Translate(movement, Space.World);
     }
+
+    public void SetMouseSensitivity(float value)
+    {
+        rotationSpeed = value;
+    }
 }
