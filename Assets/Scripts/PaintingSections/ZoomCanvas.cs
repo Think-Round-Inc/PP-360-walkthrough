@@ -7,6 +7,7 @@ public sealed class ZoomCanvas : MonoBehaviour
 {
     public Canvas zoomCanvas;
     [SerializeField] Image paintingZoomableCanvas;
+    [SerializeField] Text Title;
     [SerializeField] UnityEvent onCanvasOpened;
     [SerializeField] UnityEvent onCanvasClosed;
 
