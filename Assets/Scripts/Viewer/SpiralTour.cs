@@ -11,18 +11,28 @@ public sealed class SpiralTour : MonoBehaviour
     [SerializeField] private float rotSpeed = 3f;
     [SerializeField] private float pauseDuration = 2f;
 
+    [Header("Camera Angle Offset (Degrees)")]
+    [Tooltip("X = tilt up/down, Y = turn left/right, Z = roll.")]
+    [SerializeField] private Vector3 cameraAngleOffset;
+
+    [Header("Playback")]
+    [SerializeField] private bool isPlaying = true;
+
     [Header("Target Lists")]
-    [SerializeField] private List<GameObject> targetPositions = new List<GameObject>();
-    [SerializeField] private List<GameObject> targetRotations = new List<GameObject>();
+    [SerializeField] private List<GameObject> targetPositions =
+        new List<GameObject>();
+
+    [SerializeField] private List<GameObject> targetRotations =
+        new List<GameObject>();
 
     [Header("Spiral Tour Options")]
-    [SerializeField] private bool Christians = false;
-    [SerializeField] private bool Jews = false;
-    [SerializeField] private bool Buddhists = false;
-    [SerializeField] private bool Hindus = false;
-    [SerializeField] private bool Taoists = false;
-    [SerializeField] private bool Indigenous = false;
-    [SerializeField] private bool Muslims = false;
+    [SerializeField] private bool Christians;
+    [SerializeField] private bool Jews;
+    [SerializeField] private bool Buddhists;
+    [SerializeField] private bool Hindus;
+    [SerializeField] private bool Taoists;
+    [SerializeField] private bool Indigenous;
+    [SerializeField] private bool Muslims;
 
     [Header("Spawn Points")]
     [SerializeField] private Transform christiansSpawnPoint;
@@ -36,10 +46,14 @@ public sealed class SpiralTour : MonoBehaviour
     private string targetTagViewingPoint = "ViewingPoint";
     private string targetTagPausePoint = "PausePoint";
     private string targetTagScreen = "Display";
-    private int currentTargetIndex = 0;
-    private float currentTime = 0f;
 
-    public void SetViewerControlsActive(bool value) => viewerControllerActive = value;
+    private int currentTargetIndex;
+    private float currentTime;
+
+    public void SetViewerControlsActive(bool value)
+    {
+        viewerControllerActive = value;
+    }
 
     public void SetChristiansActive(bool value) => Christians = value;
     public void SetJewsActive(bool value) => Jews = value;
@@ -51,45 +65,129 @@ public sealed class SpiralTour : MonoBehaviour
 
     public void InitializeScript()
     {
+        // Clear previous targets when starting a different tour.
+        targetPositions.Clear();
+        targetRotations.Clear();
+
+        currentTargetIndex = 0;
+        currentTime = 0f;
+
         SetSpawnLocation();
+
         CollectObjectsWithTag(targetTagViewingPoint, targetPositions);
         CollectObjectsWithTag(targetTagPausePoint, targetPositions);
         CollectObjectsWithTag(targetTagScreen, targetRotations);
 
         SortLists(targetPositions, targetRotations);
+
+        if (targetPositions.Count == 0)
+        {
+            Debug.LogWarning("No tour locations were found.", this);
+        }
+
+        if (targetPositions.Count != targetRotations.Count)
+        {
+            Debug.LogWarning(
+                "Tour position and rotation lists have different counts. " +
+                "Locations without a matching Display will keep their rotation.",
+                this
+            );
+        }
     }
+
+    // ---------- PLAYBACK BUTTONS ---------- //
+
+    public void PreviousLocation()
+    {
+        if (targetPositions.Count == 0) return;
+
+        int index = Mathf.Clamp(
+            currentTargetIndex - 1,
+            0,
+            targetPositions.Count - 1
+        );
+
+        GoToLocation(index);
+    }
+
+    public void NextLocation()
+    {
+        if (targetPositions.Count == 0) return;
+
+        int index = Mathf.Clamp(
+            currentTargetIndex + 1,
+            0,
+            targetPositions.Count - 1
+        );
+
+        GoToLocation(index);
+    }
+
+    private void GoToLocation(int index)
+    {
+        currentTargetIndex = index;
+        currentTime = 0f;
+
+        GameObject target = targetPositions[index];
+        if (target == null) return;
+
+        // Back/forward immediately jumps to the requested location.
+        transform.position = target.transform.position;
+
+        if (TryGetTargetRotation(out Quaternion rotation))
+        {
+            transform.rotation = rotation;
+        }
+    }
+
+    // ---------- TARGET COLLECTION ---------- //
 
     private void SetSpawnLocation()
     {
-        // Set the spawn location based on the selected option
-        Vector3 spawnPosition = GetSpawnPosition();
-        transform.position = spawnPosition;
+        transform.position = GetSpawnPosition();
     }
 
     private Vector3 GetSpawnPosition()
     {
-        // Return the position of the corresponding spawn point based on the selected option
-        if (Christians && christiansSpawnPoint != null) return christiansSpawnPoint.position;
-        if (Jews && jewsSpawnPoint != null) return jewsSpawnPoint.position;
-        if (Buddhists && buddhistsSpawnPoint != null) return buddhistsSpawnPoint.position;
-        if (Hindus && hindusSpawnPoint != null) return hindusSpawnPoint.position;
-        if (Taoists && taoistsSpawnPoint != null) return taoistsSpawnPoint.position;
-        if (Indigenous && indigenousSpawnPoint != null) return indigenousSpawnPoint.position;
-        if (Muslims && muslimsSpawnPoint != null) return muslimsSpawnPoint.position;
+        if (Christians && christiansSpawnPoint != null)
+            return christiansSpawnPoint.position;
 
-        // Default spawn position if no option is selected or if the corresponding spawn point is not set
+        if (Jews && jewsSpawnPoint != null)
+            return jewsSpawnPoint.position;
+
+        if (Buddhists && buddhistsSpawnPoint != null)
+            return buddhistsSpawnPoint.position;
+
+        if (Hindus && hindusSpawnPoint != null)
+            return hindusSpawnPoint.position;
+
+        if (Taoists && taoistsSpawnPoint != null)
+            return taoistsSpawnPoint.position;
+
+        if (Indigenous && indigenousSpawnPoint != null)
+            return indigenousSpawnPoint.position;
+
+        if (Muslims && muslimsSpawnPoint != null)
+            return muslimsSpawnPoint.position;
+
         return Vector3.zero;
     }
 
-    private void CollectObjectsWithTag(string targetTag, List<GameObject> targetList)
+    private void CollectObjectsWithTag(
+        string targetTag,
+        List<GameObject> targetList)
     {
-        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(targetTag);
+        GameObject[] objectsWithTag =
+            GameObject.FindGameObjectsWithTag(targetTag);
 
-        // Filter objects based on the selected option
-        if (Christians || Jews || Buddhists || Hindus || Taoists || Indigenous || Muslims)
+        if (Christians || Jews || Buddhists || Hindus ||
+            Taoists || Indigenous || Muslims)
         {
-            string optionPrefix = GetSelectedOptionPrefix();
-            objectsWithTag = objectsWithTag.Where(obj => obj.name.StartsWith(optionPrefix)).ToArray();
+            string prefix = GetSelectedOptionPrefix();
+
+            objectsWithTag = objectsWithTag
+                .Where(obj => obj.name.StartsWith(prefix))
+                .ToArray();
         }
 
         targetList.AddRange(objectsWithTag);
@@ -105,99 +203,159 @@ public sealed class SpiralTour : MonoBehaviour
         if (Indigenous) return "In";
         if (Muslims) return "Mu";
 
-        // Default prefix if no option is selected
         return "";
     }
 
-    private void SortLists(List<GameObject> targetPositionsList, List<GameObject> targetRotationsList)
+    private void SortLists(
+        List<GameObject> positions,
+        List<GameObject> rotations)
     {
-        targetPositionsList.Sort((obj1, obj2) => CompareNames(obj1.name, obj2.name));
-        targetRotationsList.Sort((obj1, obj2) => CompareNames(obj1.name, obj2.name));
+        positions.Sort((a, b) => CompareNames(a.name, b.name));
+        rotations.Sort((a, b) => CompareNames(a.name, b.name));
     }
 
     private int CompareNames(string name1, string name2)
     {
-        // Define the regular expression pattern
-        string pattern = @"([a-zA-Z]{2})([a-zA-Z]{2})(\d{2})([a-zA-Z]+)(-)(\d+)";
+        string pattern =
+            @"([a-zA-Z]{2})([a-zA-Z]{2})(\d{2})([a-zA-Z]+)(-)(\d+)";
 
-        // Match the patterns for both names
         Match match1 = Regex.Match(name1, pattern);
         Match match2 = Regex.Match(name2, pattern);
 
-        // Check if both matches were successful
         if (match1.Success && match2.Success)
         {
-            int part3_1 = int.Parse(match1.Groups[3].Value);
-            int part3_2 = int.Parse(match2.Groups[3].Value);
+            int number1 = int.Parse(match1.Groups[3].Value);
+            int number2 = int.Parse(match2.Groups[3].Value);
 
-            // Sort first by Part 3 in descending order
-            int result = part3_2.CompareTo(part3_1);
+            int result = number2.CompareTo(number1);
 
-            if (result == 0) // If Part 3 values are equal, sort by Part 4 in ascending order
+            if (result == 0)
             {
-                string part4_1 = match1.Groups[4].Value;
-                string part4_2 = match2.Groups[4].Value;
+                result = string.Compare(
+                    match1.Groups[4].Value,
+                    match2.Groups[4].Value
+                );
 
-                result = part4_1.CompareTo(part4_2);
-
-                if (result == 0) // If Part 4 values are equal, sort by Part 5 in ascending order
+                if (result == 0)
                 {
-                    int part5_1 = int.Parse(match1.Groups[6].Value);
-                    int part5_2 = int.Parse(match2.Groups[6].Value);
+                    int order1 = int.Parse(match1.Groups[6].Value);
+                    int order2 = int.Parse(match2.Groups[6].Value);
 
-                    result = part5_1.CompareTo(part5_2);
+                    result = order1.CompareTo(order2);
                 }
             }
 
             return result;
         }
 
-        // If the pattern doesn't match, consider them equal
         return string.Compare(name1, name2);
     }
 
+    // ---------- MOVEMENT AND CAMERA ---------- //
+
     private void FixedUpdate()
     {
-        if (viewerControllerActive) return;
+        if (viewerControllerActive || !isPlaying) return;
+
         MoveAndRotateTowardsTargets();
+    }
+
+    private bool TryGetTargetRotation(out Quaternion rotation)
+    {
+        rotation = transform.rotation;
+
+        if (currentTargetIndex < 0 ||
+            currentTargetIndex >= targetRotations.Count)
+        {
+            return false;
+        }
+
+        GameObject target = targetRotations[currentTargetIndex];
+        if (target == null) return false;
+
+        Vector3 direction = target.transform.position - transform.position;
+
+        if (direction.sqrMagnitude < 0.0001f)
+        {
+            return false;
+        }
+
+        rotation =
+            Quaternion.LookRotation(direction) *
+            Quaternion.Euler(cameraAngleOffset);
+
+        return true;
     }
 
     private void MoveAndRotateTowardsTargets()
     {
-        if (targetPositions.Count == 0 || currentTargetIndex == targetPositions.Count)
-            return;
-
-        Transform currentTargetPosition = targetPositions[currentTargetIndex].transform;
-        Transform currentTargetRotation = targetRotations[currentTargetIndex].transform;
-
-        transform.position = Vector3.MoveTowards(transform.position, currentTargetPosition.position, moveSpeed * Time.fixedDeltaTime);
-
-        Vector3 directionToFace = currentTargetRotation.position - transform.position;
-
-        if (directionToFace != Vector3.zero)
+        if (currentTargetIndex >= targetPositions.Count)
         {
-            Quaternion rotation = Quaternion.LookRotation(directionToFace);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotSpeed * Time.fixedDeltaTime);
+            isPlaying = false;
+            return;
         }
 
-        float distanceToTarget = Vector3.Distance(transform.position - new Vector3(0f, 0.985f, 0f), currentTargetPosition.position);
+        GameObject target = targetPositions[currentTargetIndex];
 
-        if (distanceToTarget <= 0.1f && Quaternion.Angle(transform.rotation, Quaternion.LookRotation(directionToFace)) < 0.1f)
+        if (target == null)
         {
-            if (targetPositions[currentTargetIndex].CompareTag(targetTagPausePoint))
+            currentTargetIndex++;
+            currentTime = 0f;
+            return;
+        }
+
+        Vector3 targetPosition = target.transform.position;
+
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            targetPosition,
+            moveSpeed * Time.fixedDeltaTime
+        );
+
+        bool rotationReached = true;
+
+        if (TryGetTargetRotation(out Quaternion targetRotation))
+        {
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                targetRotation,
+                rotSpeed * Time.fixedDeltaTime
+            );
+
+            rotationReached =
+                Quaternion.Angle(transform.rotation, targetRotation) < 0.1f;
+        }
+
+        bool positionReached =
+            Vector3.Distance(transform.position, targetPosition) <= 0.1f;
+
+        if (!positionReached || !rotationReached) return;
+
+        // Preserves the original behavior:
+        // PausePoint advances immediately; other locations wait.
+        if (target.CompareTag(targetTagPausePoint))
+        {
+            AdvanceTarget();
+        }
+        else
+        {
+            currentTime += Time.fixedDeltaTime;
+
+            if (currentTime >= pauseDuration)
             {
-                currentTargetIndex++;
-                currentTime = 0f;
+                AdvanceTarget();
             }
-            else
-            {
-                currentTime += 0.01f;
-                if (currentTime > pauseDuration)
-                {
-                    currentTargetIndex++;
-                    currentTime = 0f;
-                }
-            }
+        }
+    }
+
+    private void AdvanceTarget()
+    {
+        currentTargetIndex++;
+        currentTime = 0f;
+
+        if (currentTargetIndex >= targetPositions.Count)
+        {
+            isPlaying = false;
         }
     }
 }
