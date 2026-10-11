@@ -177962,6 +177962,7 @@ MonoBehaviour:
   onCanvasClosed:
     m_PersistentCalls:
       m_Calls: []
+  bgmAudioSource: {fileID: 1673526886}
 --- !u!1 &1800069647
 GameObject:
   m_ObjectHideFlags: 0
