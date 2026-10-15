@@ -2123,7 +2123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &115367298
 RectTransform:
   m_ObjectHideFlags: 0
@@ -65306,6 +65306,9 @@ MonoBehaviour:
   onPointerExit:
     m_PersistentCalls:
       m_Calls: []
+  domePanel: {fileID: 1897358322}
+  zoomablePaintingPanel: {fileID: 115367297}
+  earthPanel: {fileID: 1563565964}
 --- !u!114 &451835210
 MonoBehaviour:
   m_ObjectHideFlags: 0
