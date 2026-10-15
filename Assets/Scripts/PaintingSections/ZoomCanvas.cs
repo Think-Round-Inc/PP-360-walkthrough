@@ -7,8 +7,12 @@ public sealed class ZoomCanvas : MonoBehaviour
 {
     public Canvas zoomCanvas;
     [SerializeField] Image paintingZoomableCanvas;
+    [SerializeField] Text Title;
     [SerializeField] UnityEvent onCanvasOpened;
     [SerializeField] UnityEvent onCanvasClosed;
+
+    //Get audio
+    [SerializeField] private AudioSource bgmAudioSource;
 
     private void Start()
     {
@@ -22,11 +26,27 @@ public sealed class ZoomCanvas : MonoBehaviour
     /// <param name="screen">Current close screen</param>
     public void DisplayPaintingToZoomableCanvas(GameObject screen)
     {
-        // checks screen for painting data then if found, adds painting sprite to canvas
-        if (screen.TryGetComponent(out PaintingData data))
+        if (screen == null ||
+            !screen.TryGetComponent(out PaintingData data) ||
+            data.paintingData == null)
         {
-            if (data.paintingData.paintingImage != null)
-                paintingZoomableCanvas.sprite = data.paintingData.paintingImage;
+            return;
+        }
+
+        // Display this painting.
+        paintingZoomableCanvas.sprite = data.paintingData.paintingImage;
+
+        // Play this painting's paired audio.
+        if (bgmAudioSource != null)
+        {
+            bgmAudioSource.Stop();
+            bgmAudioSource.clip = data.paintingData.paintingClip;
+            bgmAudioSource.loop = false;
+
+            if (bgmAudioSource.clip != null)
+            {
+                bgmAudioSource.Play();
+            }
         }
     }
 

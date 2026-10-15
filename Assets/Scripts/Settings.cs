@@ -28,7 +28,7 @@ public class Settings : MonoBehaviour
         foreach (TextMeshProUGUI text in texts)
         {
             originalFontSizes[text] = text.fontSize;
-            text.enableAutoSizing = false;
+            //text.enableAutoSizing = false;
         }
 
         // The overlay must allow clicks through it.
