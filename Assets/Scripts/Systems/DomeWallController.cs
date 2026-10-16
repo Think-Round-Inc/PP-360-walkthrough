@@ -10,6 +10,8 @@ public class DomeWallController : MonoBehaviour
     [SerializeField] TMP_Text currentDomeInfoText;
     [SerializeField] CanvasRenderer bulletIcon;
 
+    private DomeWall selectedDomeWall;
+
     private void Start()
     {
         bulletIcon.gameObject.SetActive(false);
@@ -28,6 +30,7 @@ public class DomeWallController : MonoBehaviour
 
         if (hotSpotObject.TryGetComponent(out DomeWall domeWall))
         {
+            selectedDomeWall = domeWall;
             SetInfoText();
 
             Sprite domeSprite = domeWall.GetCurrentSprite();
@@ -63,4 +66,24 @@ public class DomeWallController : MonoBehaviour
                 break;
         }
     }
+
+    public void NextImage()
+{
+    if (selectedDomeWall == null)
+        return;
+
+    selectedDomeWall.SwitchWallSprite();
+
+    UpdateDomeWallViewingPanel(selectedDomeWall.gameObject);
+}
+
+public void PreviousImage()
+{
+    if (selectedDomeWall == null)
+        return;
+
+    selectedDomeWall.PreviousImage();
+
+    UpdateDomeWallViewingPanel(selectedDomeWall.gameObject);
+}
 }
