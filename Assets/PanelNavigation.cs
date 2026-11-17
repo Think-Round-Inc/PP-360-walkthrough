@@ -5,6 +5,7 @@ using UnityEngine;
 public class PanelNavigation : MonoBehaviour
 {
     [SerializeField] GameObject ControlPanel;
+    [SerializeField] GameObject MenuUIPanel;
 
     public void Start()
     {
@@ -18,5 +19,14 @@ public class PanelNavigation : MonoBehaviour
     public void CloseControlPanel()
     {
         ControlPanel.SetActive(false);
+    }
+    public void OpenMenuUI()
+    {
+        MenuUIPanel.SetActive(true);
+    }
+
+    public void CloseMenuUI()
+    {
+        MenuUIPanel.SetActive(false);
     }
 }
