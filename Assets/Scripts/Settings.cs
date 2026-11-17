@@ -9,37 +9,24 @@ public class Settings : MonoBehaviour
 
     [Header("Sliders")]
     [SerializeField] private Slider brightnessSlider;
-    [SerializeField] private Slider fontSizeSlider;
     [SerializeField] private Slider mouseSensitivitySlider;
 
     [Header("References")]
     [SerializeField] private Image brightnessOverlay;
     [SerializeField] private ViewerController viewerController;
 
-    private readonly Dictionary<TextMeshProUGUI, float> originalFontSizes =
-        new Dictionary<TextMeshProUGUI, float>();
 
     private void Start()
     {
-        // Include text on inactive panels.
-        TextMeshProUGUI[] texts =
-            FindObjectsOfType<TextMeshProUGUI>(true);
-
-        foreach (TextMeshProUGUI text in texts)
-        {
-            originalFontSizes[text] = text.fontSize;
-            //text.enableAutoSizing = false;
-        }
+       
 
         // The overlay must allow clicks through it.
         brightnessOverlay.raycastTarget = false;
 
         brightnessSlider.onValueChanged.AddListener(SetBrightness);
-        fontSizeSlider.onValueChanged.AddListener(SetFontSize);
         mouseSensitivitySlider.onValueChanged.AddListener(SetMouseSensitivity);
 
         SetBrightness(brightnessSlider.value);
-        SetFontSize(fontSizeSlider.value);
         SetMouseSensitivity(mouseSensitivitySlider.value);
     }
 
@@ -62,20 +49,6 @@ public class Settings : MonoBehaviour
         float darkness = (1f - brightness) * 0.8f;
 
         brightnessOverlay.color = new Color(0f, 0f, 0f, darkness);
-    }
-
-    public void SetFontSize(float value)
-    {
-        // 1 = original sizes; each step adds 1.
-        float offset = Mathf.Clamp(value, 1f, 100f) - 1f;
-
-        foreach (var entry in originalFontSizes)
-        {
-            if (entry.Key != null)
-            {
-                entry.Key.fontSize = entry.Value + offset;
-            }
-        }
     }
 
     public void SetMouseSensitivity(float value)
@@ -108,9 +81,6 @@ public class Settings : MonoBehaviour
     {
         if (brightnessSlider != null)
             brightnessSlider.onValueChanged.RemoveListener(SetBrightness);
-
-        if (fontSizeSlider != null)
-            fontSizeSlider.onValueChanged.RemoveListener(SetFontSize);
 
         if (mouseSensitivitySlider != null)
             mouseSensitivitySlider.onValueChanged.RemoveListener(SetMouseSensitivity);
