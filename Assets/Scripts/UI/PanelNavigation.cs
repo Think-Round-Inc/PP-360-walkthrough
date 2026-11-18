@@ -4,12 +4,26 @@ using UnityEngine;
 
 public class PanelNavigation : MonoBehaviour
 {
+   [Header("Panels")]
     [SerializeField] GameObject ControlPanel;
     [SerializeField] GameObject MenuUIPanel;
+    [SerializeField] private GameObject greetingPanel;
+    
+    [Header("Action Keys")]
+    [SerializeField] private KeyCode exitKey = KeyCode.Tab;
 
     public void Start()
     {
         CloseControlPanel();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            greetingPanel.SetActive(true);
+            // Note canvas is getting disabled somewhere but I don't know where.
+        }
     }
 
     public void OpenControlPanel()
@@ -30,3 +44,4 @@ public class PanelNavigation : MonoBehaviour
         MenuUIPanel.SetActive(false);
     }
 }
+
