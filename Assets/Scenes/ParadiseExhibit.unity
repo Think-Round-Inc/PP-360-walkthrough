@@ -575,7 +575,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1055549206}
+  m_Father: {fileID: 120098862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &22636317
 MonoBehaviour:
@@ -1120,62 +1120,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52187238}
   m_CullTransparentMesh: 1
---- !u!1 &52830225
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 52830227}
-  - component: {fileID: 52830226}
-  m_Layer: 0
-  m_Name: 360 camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &52830226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52830225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaa2c395ce6e05649ad747d518987e99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toggleCameraKey: 99
-  startInWalkthroughMode: 0
-  walkSpeed: 5
-  runSpeed: 8
-  mouseSensitivity: 2
-  cameraHeight: 1.8
-  cubemapSize: 1024
-  saveFolder: 360Screenshots
-  captureKey: 32
-  captureUI: {fileID: 0}
-  statusText: {fileID: 0}
---- !u!4 &52830227
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52830225}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1, z: 70}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2104490184}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &52994313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,39 +1195,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52994313}
   m_CullTransparentMesh: 1
---- !u!1 &54908800
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 54908801}
-  m_Layer: 0
-  m_Name: Earth
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &54908801
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54908800}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2033532941}
-  - {fileID: 1240724968}
-  m_Father: {fileID: 120098862}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &55710781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,143 +1306,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84865003}
   m_CullTransparentMesh: 1
---- !u!1 &89335595
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 89335597}
-  - component: {fileID: 89335596}
-  m_Layer: 0
-  m_Name: Dolly Track
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &89335596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89335595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a200b19ca1a9685429ed7e043c28e904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Resolution: 8
-  m_Appearance:
-    pathColor: {r: 0, g: 1, b: 0, a: 1}
-    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    width: 0.2
-  m_Looped: 0
-  m_Waypoints:
-  - position: {x: 0, y: 0, z: -5}
-    roll: 0
-  - position: {x: 0, y: -1.5407658, z: 5}
-    roll: 0
-  - position: {x: 0, y: -7.3541336, z: 15}
-    roll: 0
-  - position: {x: 5.7908072, y: -13.167501, z: 25}
-    roll: 0
-  - position: {x: 10.364243, y: -16.52061, z: 33.318813}
-    roll: 0
-  - position: {x: 7.396882, y: -19.87372, z: 45}
-    roll: 0
-  - position: {x: 2.1745849, y: -20.957441, z: 53.718132}
-    roll: 0
-  - position: {x: -0.7103605, y: -21.228348, z: 55.887638}
-    roll: 0
-  - position: {x: -1.6136634, y: -21.39222, z: 58.057144}
-    roll: 0
-  - position: {x: 1.1550543, y: -21.202053, z: 60.22665}
-    roll: 0
-  - position: {x: 3.3643498, y: -21.209354, z: 57.03617}
-    roll: 0
-  - position: {x: -0.030449867, y: -21.216656, z: 55.236244}
-    roll: 0
-  - position: {x: -2.9596162, y: -21.561398, z: 60.76672}
-    roll: 0
-  - position: {x: -3.842638, y: -21.682451, z: 66.297195}
-    roll: 0
-  - position: {x: -7.0037208, y: -21.83015, z: 69.6528}
-    roll: 0
-  - position: {x: -10.1648035, y: -21.701618, z: 67.32579}
-    roll: 0
-  - position: {x: -10.176168, y: -21.573086, z: 62.77479}
-    roll: 0
-  - position: {x: -5.06132, y: -21.444553, z: 61.373882}
-    roll: 0
-  - position: {x: 0.053528786, y: -21.616138, z: 68.16031}
-    roll: 0
-  - position: {x: 2.3876443, y: -21.527678, z: 74.94673}
-    roll: 0
-  - position: {x: 1.2779129, y: -21.566391, z: 79.232155}
-    roll: 0
-  - position: {x: -2.4680805, y: -21.615023, z: 82.14581}
-    roll: 0
-  - position: {x: -6.2751856, y: -21.623682, z: 83.31478}
-    roll: 0
-  - position: {x: -9.046532, y: -21.578962, z: 84.1938}
-    roll: 0
-  - position: {x: -9.317262, y: -21.534243, z: 87.30382}
-    roll: 0
-  - position: {x: -5.843349, y: -21.489523, z: 87.90921}
-    roll: 0
-  - position: {x: -2.3694363, y: -21.444803, z: 88.5146}
-    roll: 0
-  - position: {x: 1.1044765, y: -21.400084, z: 87.56253}
-    roll: 0
-  - position: {x: 4.578389, y: -21.355364, z: 88.66}
-    roll: 0
-  - position: {x: 8.052301, y: -21.310644, z: 88.4578}
-    roll: 0
-  - position: {x: 11.526214, y: -21.265924, z: 86.71065}
-    roll: 0
-  - position: {x: 11.7745075, y: -21.221205, z: 83.533455}
-    roll: 0
-  - position: {x: 7.98029, y: -21.176485, z: 82.46382}
-    roll: 0
-  - position: {x: 5.6038017, y: -21.131765, z: 89.914795}
-    roll: 0
-  - position: {x: 2.300718, y: -21.37852, z: 97.36577}
-    roll: 0
-  - position: {x: -0.95067286, y: -21.625273, z: 100.085686}
-    roll: 0
-  - position: {x: -2.8157783, y: -21.582281, z: 97.94217}
-    roll: 0
-  - position: {x: -1.4804056, y: -21.575754, z: 95.49864}
-    roll: 0
-  - position: {x: 2.966628, y: -21.569227, z: 95.486115}
-    roll: 0
-  - position: {x: 4.5413055, y: -21.5627, z: 97.703}
-    roll: 0
-  - position: {x: 2.4744713, y: -21.556173, z: 101.355675}
-    roll: 0
-  - position: {x: 1.0242606, y: -17.446152, z: 105.00835}
-    roll: 0
-  - position: {x: 0.738314, y: -13.737659, z: 107.67583}
-    roll: 0
---- !u!4 &89335597
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89335595}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.881485, y: 23.08, z: -34.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &91950214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,7 +2223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120098862}
   m_Layer: 0
-  m_Name: ----- SYSTEMS -----
+  m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2468,15 +2242,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1058930277}
+  - {fileID: 1577390592}
+  - {fileID: 1800069648}
   - {fileID: 914239318}
   - {fileID: 374535519}
   - {fileID: 517347797}
   - {fileID: 1794477817}
   - {fileID: 655337666}
   - {fileID: 846923787}
-  - {fileID: 54908801}
-  - {fileID: 1055549206}
+  - {fileID: 2033532941}
+  - {fileID: 1240724968}
+  - {fileID: 22636316}
+  - {fileID: 349251905}
   - {fileID: 1591827322}
   - {fileID: 158266581}
   m_Father: {fileID: 0}
@@ -2754,7 +2531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -20.000057}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &124262855
@@ -7190,6 +6967,66 @@ PrefabInstance:
       propertyPath: m_Name
       value: InDp10c-2
       objectReference: {fileID: 0}
+    - target: {fileID: 242831048443376251, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Ever Supporting Smile of Father -2005
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831048443376251, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: be4f78dac2c4fcd49b2c1cfd1f94d5e8, type: 3}
+    - target: {fileID: 242831048443376251, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831048443376251, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831048443376251, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831048855463979, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Adolescent One day family became King\u2019s family"
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831048855463979, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c7e7b377ea3128418fdbffb116e3f43, type: 3}
+    - target: {fileID: 242831048855463979, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831048855463979, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831048855463979, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831049022734034, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Freedom of playfulness
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831049022734034, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 89f62db659add1949bac33eb4af4e067, type: 3}
+    - target: {fileID: 242831049022734034, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831049022734034, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 242831049022734034, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 259399006311497136, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -7258,6 +7095,27 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 325515715403416855, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Mom dressed up for Lord Krishna&#39;s birthday (Krishna Janmashtmi)
+        at home, Jaipur, 2016
+      objectReference: {fileID: 0}
+    - target: {fileID: 325515715403416855, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: f61ce8af475e57348b6e735248e51fd8, type: 3}
+    - target: {fileID: 325515715403416855, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 325515715403416855, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 325515715403416855, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 332367535526827303, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -8919,6 +8777,66 @@ PrefabInstance:
       propertyPath: m_Name
       value: InDp03a-4
       objectReference: {fileID: 0}
+    - target: {fileID: 846440132307420828, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Tahil\u2019s parents holding Tahil (in the middle)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132307420828, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ba21cde3f35cce49ab81d03c568a3e2, type: 3}
+    - target: {fileID: 846440132307420828, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132307420828, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132307420828, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132786113077, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Grandparents\u2019 new home, mid 1990s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132786113077, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 867a1178aac39014eb9c00dd87edad1e, type: 3}
+    - target: {fileID: 846440132786113077, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132786113077, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132786113077, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132952300748, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Tahil\u2019s mother, Tanu Nardip Singh"
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132952300748, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: ffa32dcd89988ec4c9f2271c9e6c9f86, type: 3}
+    - target: {fileID: 846440132952300748, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132952300748, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 846440132952300748, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 900712009163136593, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InDp02a-1
@@ -8938,6 +8856,26 @@ PrefabInstance:
     - target: {fileID: 910514395505049147, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 917173388758904331, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Strength of joint family -2016
+      objectReference: {fileID: 0}
+    - target: {fileID: 917173388758904331, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 16251db09a5a53045a6a55ee0d3e22a8, type: 3}
+    - target: {fileID: 917173388758904331, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 917173388758904331, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 917173388758904331, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
       objectReference: {fileID: 0}
     - target: {fileID: 922012722974144724, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
@@ -9286,6 +9224,66 @@ PrefabInstance:
     - target: {fileID: 1079801159186060079, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InDp01a-4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092524502666466, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Tahil at Home as a Young Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092524502666466, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: d08373a9f6a64f1449dc9a86e31bf882, type: 3}
+    - target: {fileID: 1086092524502666466, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092524502666466, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092524502666466, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092525397679991, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Tahil\u2019s Mom in Her Mother\u2019s Arms"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092525397679991, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 45c56bf947333494493bb80a8027dea1, type: 3}
+    - target: {fileID: 1086092525397679991, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092525397679991, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092525397679991, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092526097734445, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Tahil\u2019s maternal grandmother with Tahil\u2019s Mother as an Infant"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092526097734445, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 854635ba1defc1444bac32b6eeb2a6f0, type: 3}
+    - target: {fileID: 1086092526097734445, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092526097734445, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086092526097734445, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
       objectReference: {fileID: 0}
     - target: {fileID: 1097580828893545254, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10751,6 +10749,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 1700372218910957459, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Naisha with grandma
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700372218910957459, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 1edb399c96ec6fb49871412fe968eee5, type: 3}
+    - target: {fileID: 1700372218910957459, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700372218910957459, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700372218910957459, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 1722898396766236291, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InDp05a-3
@@ -13699,6 +13717,66 @@ PrefabInstance:
       propertyPath: m_Name
       value: InVp03c-4
       objectReference: {fileID: 0}
+    - target: {fileID: 2394660717176887888, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Dad with Youngest Daughter during an Indian festival
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717176887888, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: fd56abd21b41a6e4e96c43e3cfe3c28a, type: 3}
+    - target: {fileID: 2394660717176887888, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717176887888, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717176887888, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Naisha with mom on Diwali in San Fransisco
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 50c83d77613937c4099849f14746e45a, type: 3}
+    - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717588971520, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 'Naisha: Oldest daughter'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717588971520, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 35e24382c919da64fb609da00168cf8a, type: 3}
+    - target: {fileID: 2394660717588971520, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717588971520, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394660717588971520, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 2454434135914476494, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: debugSphereRadius
       value: 0.1
@@ -14055,6 +14133,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 2686737009305669045, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Tahil\u2019s Maternal Grandmother"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686737009305669045, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 579cd050ead000f40b24d67a1b1df18c, type: 3}
+    - target: {fileID: 2686737009305669045, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686737009305669045, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686737009305669045, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 2808938986031039133, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InDp02a-3
@@ -18502,6 +18600,26 @@ PrefabInstance:
     - target: {fileID: 3384665283398268775, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InDp08a-4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392922661312768170, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Afternoon tea outside of Army residence in Sikkim, India
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392922661312768170, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 981a1f3d8adce2b42bb3ee7aa0d05683, type: 3}
+    - target: {fileID: 3392922661312768170, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392922661312768170, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392922661312768170, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
       objectReference: {fileID: 0}
     - target: {fileID: 3415915269355372149, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
@@ -23007,6 +23125,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: InVp08a-2
       objectReference: {fileID: 0}
+    - target: {fileID: 4767576730252606981, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Mom and dad decorating the house on Diwali, 2018
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767576730252606981, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 09e63dfdaa1bceb409d336faabaf8705, type: 3}
+    - target: {fileID: 4767576730252606981, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767576730252606981, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767576730252606981, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 4821699732216085002, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -23578,6 +23716,106 @@ PrefabInstance:
     - target: {fileID: 5385388135623053585, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InDp02c-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863762452682473, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Naisha as a baby on Christmas day
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863762452682473, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 01bb1c487c322f14d93376811ed1fcd5, type: 3}
+    - target: {fileID: 5389863762452682473, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863762452682473, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863762452682473, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863762992868671, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 'Aurisha: Youngest Daughter, 1st birthday'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863762992868671, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8c6d684863da6f642b9ceb979138fae1, type: 3}
+    - target: {fileID: 5389863762992868671, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863762992868671, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863762992868671, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863763152474803, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Mom with daughters at Home
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863763152474803, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 71489e6f1f272004e9def0f9e17bb3b9, type: 3}
+    - target: {fileID: 5389863763152474803, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863763152474803, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863763152474803, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863764047511846, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Aayansh with Radha Krishna
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863764047511846, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 4878e818d3b6c2d42ad3ed77d250adf1, type: 3}
+    - target: {fileID: 5389863764047511846, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863764047511846, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863764047511846, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863764321132545, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Dad with Grandpa
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863764321132545, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 891ae1bdf1c45314e8df58487f511d00, type: 3}
+    - target: {fileID: 5389863764321132545, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863764321132545, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389863764321132545, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
       objectReference: {fileID: 0}
     - target: {fileID: 5417354297583631245, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: debugSphereRadius
@@ -25295,6 +25533,66 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 5583458471705789813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Naisha on her 5th birthday, dressed as a princess
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458471705789813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 4f9ad701d0a4b434da4ac5316d2a4282, type: 3}
+    - target: {fileID: 5583458471705789813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458471705789813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458471705789813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458472075400076, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Aayansh, 1st cousin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458472075400076, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: ae3953a7a4b1dd041ad80052fbeffe6c, type: 3}
+    - target: {fileID: 5583458472075400076, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458472075400076, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458472075400076, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458472502168028, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 'Dad with daughters: Dance of 2020'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458472502168028, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 9072992e35916a74c89eff2d88fb447f, type: 3}
+    - target: {fileID: 5583458472502168028, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458472502168028, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583458472502168028, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 5706102777557689697, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: debugSphereRadius
       value: 0.1
@@ -25627,6 +25925,86 @@ PrefabInstance:
       propertyPath: m_Name
       value: InVp09a-4
       objectReference: {fileID: 0}
+    - target: {fileID: 5796141916087331502, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Posing with my sisters in the dining room, Jaipur, 1998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916087331502, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 9beab879cf9562c498d2b007d45ac3ee, type: 3}
+    - target: {fileID: 5796141916087331502, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916087331502, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916087331502, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916458024023, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Playful time, Backyard, Summer, 2014
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916458024023, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 38cf0912bf1975248a12555908a8e817, type: 3}
+    - target: {fileID: 5796141916458024023, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916458024023, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916458024023, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916516200702, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Getting dad\u2019s blessing on the wedding day, March 2015"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916516200702, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d4ffd26e93fc6149ae8b97c50b9f4de, type: 3}
+    - target: {fileID: 5796141916516200702, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916516200702, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796141916516200702, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862467025868411091, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Tahil\u2019s Mother Dressed to Go Out with Tahil"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862467025868411091, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fbbdaec48a41fc4b99f640e147806ea, type: 3}
+    - target: {fileID: 5862467025868411091, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862467025868411091, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862467025868411091, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 5880730501689237272, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -25879,6 +26257,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.026
       objectReference: {fileID: 0}
+    - target: {fileID: 6041696621783948717, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Life has many colors -2022
+      objectReference: {fileID: 0}
+    - target: {fileID: 6041696621783948717, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 417efc4f0f302d34c9bb953edab63687, type: 3}
+    - target: {fileID: 6041696621783948717, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6041696621783948717, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6041696621783948717, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 6059502304739495373, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.2
@@ -25962,6 +26360,66 @@ PrefabInstance:
     - target: {fileID: 6216742540774175268, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682444755214868, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Grandmother is the root of my family 2014
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682444755214868, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 46e8ab4ad013bc648966616cae6a8a58, type: 3}
+    - target: {fileID: 6223682444755214868, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682444755214868, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682444755214868, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Rangoli in Varandah
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: a506fbaa88be84846ba303c945eeb89a, type: 3}
+    - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682445450426436, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Getting ready for sweet and healthy Wedding\u20132017"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682445450426436, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 85b16bd741a6b4a45b85b41980bdbe96, type: 3}
+    - target: {fileID: 6223682445450426436, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682445450426436, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223682445450426436, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
       objectReference: {fileID: 0}
     - target: {fileID: 6240716600934828062, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
@@ -26062,6 +26520,26 @@ PrefabInstance:
     - target: {fileID: 6458202196837567381, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InDp02c-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465541712925516852, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Strength of joint family -2016
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465541712925516852, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fa15666a70576f44a31054d4e2e60ac, type: 3}
+    - target: {fileID: 6465541712925516852, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465541712925516852, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465541712925516852, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
       objectReference: {fileID: 0}
     - target: {fileID: 6506012051262264393, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Mesh
@@ -26575,6 +27053,66 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
+    - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Our hero, Dad in the living room home, 2014
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: f8751640e0ea4e14597b4f3da65fed4d, type: 3}
+    - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484539867121, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Sparkly eyes, Gamya (niece) Dressed up for Dandiya dance night, 2017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484539867121, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: d109473597f6f6643b8ef92cf4514139, type: 3}
+    - target: {fileID: 6800704484539867121, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484539867121, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484539867121, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484709222664, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Prakash on our wedding day (Baraat Procession), March 10th, 2015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484709222664, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 5e11083647e235c458dfa7f798df5633, type: 3}
+    - target: {fileID: 6800704484709222664, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484709222664, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800704484709222664, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 6801413876065680947, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.42
@@ -26706,6 +27244,107 @@ PrefabInstance:
     - target: {fileID: 7058377868941192827, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InVp01a-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402450781369940, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Richa\u2019s happy moment, one breezy evening, Bangalore, Nov 2018"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402450781369940, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 01f77bb44ad320241b8303e741b671f2, type: 3}
+    - target: {fileID: 7074402450781369940, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402450781369940, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402450781369940, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402450940971480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Posing with my sisters in the dining room, Jaipur, 1998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402450940971480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: f5680be19114c2f4a8be9a2db6742524, type: 3}
+    - target: {fileID: 7074402450940971480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402450940971480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402450940971480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451313872258, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Viraaj, the day he was born, June 16th, 2022
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451313872258, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 61b200491cb04d34a9a05beb0d38c812, type: 3}
+    - target: {fileID: 7074402451313872258, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451313872258, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451313872258, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451571686250, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Three generations in one frame/Richa\u2019s Lil sis, Dad with his brothers
+        and Grandpa, Jaipur, 1996"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451571686250, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c6efd88be513754a895eb3bc41c43d7, type: 3}
+    - target: {fileID: 7074402451571686250, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451571686250, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451571686250, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451834804813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Prakash at his cousin's wedding, 2014
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451834804813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 06d4ae498ce252541ab6a3f6af9be432, type: 3}
+    - target: {fileID: 7074402451834804813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451834804813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074402451834804813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
       objectReference: {fileID: 0}
     - target: {fileID: 7128802483610984002, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -28306,6 +28945,26 @@ PrefabInstance:
     - target: {fileID: 7688411127904529274, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: onClickedViewButton.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694438188405138798, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Naisha and Aurisha playing in their backyard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694438188405138798, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 0284b730ad4fe724dbb8fa10db07bdda, type: 3}
+    - target: {fileID: 7694438188405138798, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694438188405138798, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694438188405138798, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
       objectReference: {fileID: 0}
     - target: {fileID: 7708115636305719203, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
@@ -31539,6 +32198,106 @@ PrefabInstance:
       propertyPath: m_Name
       value: InVp10a-2
       objectReference: {fileID: 0}
+    - target: {fileID: 8348808787083655653, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Freedom of playfulness -2012 Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787083655653, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 79b9e6829958d8c4d8861658df16bdd5, type: 3}
+    - target: {fileID: 8348808787083655653, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787083655653, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787083655653, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787357259970, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Strength of joint family -2016
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787357259970, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 1dd194992abc57f4f8bb821443dfc6b7, type: 3}
+    - target: {fileID: 8348808787357259970, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787357259970, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787357259970, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787636039210, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Innocence and joy spread lights through me
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787636039210, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: b7a6df6add9cc3f4d9a9a2442aa79036, type: 3}
+    - target: {fileID: 8348808787636039210, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787636039210, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808787636039210, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808788177458684, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Freedom of playfulness
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808788177458684, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: b5bb5ffb27149344b88ba6bc8b70c618, type: 3}
+    - target: {fileID: 8348808788177458684, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808788177458684, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808788177458684, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808788337142384, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Strength of joint family -2016
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808788337142384, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6f88b46405bf37f49a9db9434d7873a6, type: 3}
+    - target: {fileID: 8348808788337142384, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808788337142384, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348808788337142384, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 8356907991247877939, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -32011,6 +32770,26 @@ PrefabInstance:
       propertyPath: missingPaintingScreenColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8925863293410298911, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Mom with daughters during Diwali
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925863293410298911, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 58d29cc378f11a840be202ceb2134803, type: 3}
+    - target: {fileID: 8925863293410298911, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925863293410298911, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925863293410298911, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
     - target: {fileID: 8933549080641803526, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -32214,6 +32993,67 @@ PrefabInstance:
     - target: {fileID: 9123761984943515224, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.026
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211308750635434, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: Tahil as Prince of His Family
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211308750635434, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: e5b4e6fb64b3990478350b539487b7e6, type: 3}
+    - target: {fileID: 9200211308750635434, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211308750635434, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211308750635434, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211308983965523, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Tahil\u2019s mother (Tanu Nardip Singh) as a bride on her wedding day,
+        2/26/84"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211308983965523, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 09024fd5b6be72744b51a1f83134e7a9, type: 3}
+    - target: {fileID: 9200211308983965523, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211308983965523, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211308983965523, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211309429070842, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Newlyweds: Tahil\u2019s maternal grandfather &amp; maternal grandmother"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211309429070842, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 450a6b26c55e7da429907de385730544, type: 3}
+    - target: {fileID: 9200211309429070842, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.b
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211309429070842, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200211309429070842, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingTextureColor.r
+      value: 0.7058824
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -62159,12 +62999,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349251904}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1055549206}
+  m_Father: {fileID: 120098862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &349251906
 MonoBehaviour:
@@ -64581,8 +65421,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 912.00006, y: -924.375}
-  m_SizeDelta: {x: 1824.0001, y: 123.25}
+  m_AnchoredPosition: {x: 912.00006, y: -2763.9683}
+  m_SizeDelta: {x: 1824.0001, y: 368.52908}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409635505
 MonoBehaviour:
@@ -64887,8 +65727,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 39.625008, y: -369.75}
-  m_SizeDelta: {x: 79.250015, y: 739.5}
+  m_AnchoredPosition: {x: 39.625008, y: -1105.5873}
+  m_SizeDelta: {x: 79.250015, y: 2211.1746}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &436467477
 MonoBehaviour:
@@ -69647,8 +70487,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 912.00006, y: -493}
-  m_SizeDelta: {x: 1824.0001, y: 739.5}
+  m_AnchoredPosition: {x: 912.00006, y: -1474.1163}
+  m_SizeDelta: {x: 1824.0001, y: 2211.1746}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704501641
 MonoBehaviour:
@@ -71348,7 +72188,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2128969029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -71577,8 +72417,10 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 543450651991961975}
+  - {fileID: 1090506466}
   - {fileID: 121390381}
+  - {fileID: 543450651991961975}
+  - {fileID: 1615010654}
   - {fileID: 1788907016}
   - {fileID: 342268323}
   - {fileID: 1550876728}
@@ -71586,9 +72428,7 @@ Transform:
   - {fileID: 780009379}
   - {fileID: 267969736}
   - {fileID: 1997179950}
-  - {fileID: 1090506466}
   - {fileID: 824837582}
-  - {fileID: 1615010654}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &779250126
@@ -98902,8 +99742,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1228.3752, y: -369.75}
-  m_SizeDelta: {x: 79.250015, y: 739.5}
+  m_AnchoredPosition: {x: 1228.3752, y: -1105.5873}
+  m_SizeDelta: {x: 79.250015, y: 2211.1746}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858485455
 MonoBehaviour:
@@ -99234,107 +100074,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886940717}
   m_CullTransparentMesh: 1
---- !u!1 &887584723
-GameObject:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 887584724}
-  - component: {fileID: 887584727}
-  - component: {fileID: 887584726}
-  - component: {fileID: 887584725}
-  m_Layer: 0
-  m_Name: cm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &887584724
-Transform:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887584723}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1256129978}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &887584725
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887584723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 418e42c7d0405cc48a7b83f63ea53bb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Path: {fileID: 89335596}
-  m_PathPosition: 0
-  m_PositionUnits: 2
-  m_PathOffset: {x: 0, y: 0, z: 0}
-  m_XDamping: 0
-  m_YDamping: 0
-  m_ZDamping: 1
-  m_CameraUp: 0
-  m_PitchDamping: 0
-  m_YawDamping: 0
-  m_RollDamping: 0
-  m_AutoDolly:
-    m_Enabled: 0
-    m_PositionOffset: 0
-    m_SearchRadius: 2
-    m_SearchResolution: 5
---- !u!114 &887584726
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887584723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 0
-  m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0.5
-  m_VerticalDamping: 0.5
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
-  m_CenterOnActivate: 1
---- !u!114 &887584727
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887584723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &890436842
 GameObject:
   m_ObjectHideFlags: 0
@@ -102672,171 +103411,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054753140}
   m_CullTransparentMesh: 1
---- !u!1 &1055549205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1055549206}
-  m_Layer: 0
-  m_Name: DomeWalls
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1055549206
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055549205}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 22636316}
-  - {fileID: 349251905}
-  m_Father: {fileID: 120098862}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1058930276
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1058930277}
-  - component: {fileID: 1058930278}
-  m_Layer: 0
-  m_Name: AutoMover
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1058930277
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058930276}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 120098862}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1058930278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058930276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 925e9bf27fa7f5540bc122d26b98a3a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoMoverActive: 1
-  viewer: {fileID: 1673526884}
-  head: {fileID: 2020381928}
-  targetOffset: {x: 0, y: -0.4271566, z: 0}
-  targetObjects:
-  - {fileID: 1788907093}
-  - {fileID: 1788907092}
-  - {fileID: 1788907091}
-  - {fileID: 1788907090}
-  - {fileID: 1788907089}
-  - {fileID: 1788907088}
-  - {fileID: 1788907087}
-  - {fileID: 1788907086}
-  - {fileID: 1788907085}
-  - {fileID: 1788907084}
-  - {fileID: 1788907083}
-  - {fileID: 1788907082}
-  - {fileID: 1788907081}
-  - {fileID: 1788907080}
-  - {fileID: 1788907079}
-  - {fileID: 1788907078}
-  - {fileID: 1788907077}
-  - {fileID: 1788907076}
-  - {fileID: 1788907075}
-  - {fileID: 1788907074}
-  - {fileID: 1788907073}
-  - {fileID: 1788907072}
-  - {fileID: 1788907071}
-  - {fileID: 1788907070}
-  - {fileID: 1788907069}
-  - {fileID: 1788907068}
-  - {fileID: 1788907067}
-  - {fileID: 1788907066}
-  - {fileID: 1788907065}
-  - {fileID: 1788907064}
-  - {fileID: 1788907063}
-  - {fileID: 1788907062}
-  - {fileID: 1788907061}
-  - {fileID: 1788907060}
-  - {fileID: 1788907059}
-  - {fileID: 1788907058}
-  - {fileID: 1788907057}
-  - {fileID: 1788907056}
-  - {fileID: 1788907055}
-  - {fileID: 1788907054}
-  - {fileID: 1788907053}
-  - {fileID: 1788907052}
-  - {fileID: 1788907051}
-  - {fileID: 1788907050}
-  - {fileID: 1788907049}
-  - {fileID: 1788907048}
-  - {fileID: 1788907047}
-  - {fileID: 1788907046}
-  - {fileID: 1788907045}
-  - {fileID: 1788907044}
-  - {fileID: 1788907043}
-  - {fileID: 1788907042}
-  - {fileID: 1788907041}
-  - {fileID: 1788907040}
-  - {fileID: 1788907039}
-  - {fileID: 1788907038}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  liftViewer: 0
-  liftHeight: 3
-  floorLevel: 1
-  moveSpeed: 16
-  headRotation: {x: -6.5, y: 0, z: 0}
 --- !u!1 &1059851192
 GameObject:
   m_ObjectHideFlags: 0
@@ -103330,8 +103904,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 634.0001, y: -369.75}
-  m_SizeDelta: {x: 1109.5002, y: 739.5}
+  m_AnchoredPosition: {x: 634.0001, y: -1105.5873}
+  m_SizeDelta: {x: 1109.5002, y: 2211.1746}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1069053864
 MonoBehaviour:
@@ -105863,194 +106437,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164943774}
   m_CullTransparentMesh: 1
---- !u!1 &1169210454
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1169210459}
-  - component: {fileID: 1169210458}
-  - component: {fileID: 1169210457}
-  - component: {fileID: 1169210456}
-  - component: {fileID: 1169210455}
-  m_Layer: 3
-  m_Name: CAMERA_tracked
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1169210455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169210454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
-  m_DefaultBlend:
-    m_Style: 1
-    m_Time: 2
-    m_CustomCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
-  m_CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1169210456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169210454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 1169210459}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 1
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 1
-  m_ShowCustomSorter: 1
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
---- !u!81 &1169210457
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169210454}
-  m_Enabled: 0
---- !u!20 &1169210458
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169210454}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 16.516582
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 60.000004
-  orthographic: 0
-  orthographic size: 10
-  m_Depth: 1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1169210459
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169210454}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.1658515, y: 0.0070336205, z: -0.0011829501, w: 0.986125}
-  m_LocalPosition: {x: -0.881485, y: 23.08, z: -39.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1169315264
 GameObject:
   m_ObjectHideFlags: 0
@@ -107330,7 +107716,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 54908801}
+  m_Father: {fileID: 120098862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1240724969
 MonoBehaviour:
@@ -107764,158 +108150,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252714102}
   m_CullTransparentMesh: 1
---- !u!1 &1256129976
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1256129978}
-  - component: {fileID: 1256129977}
-  - component: {fileID: 1256129979}
-  - component: {fileID: 1256129981}
-  - component: {fileID: 1256129980}
-  - component: {fileID: 1256129982}
-  m_Layer: 0
-  m_Name: Virtual Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1256129977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256129976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ExcludedPropertiesInInspector:
-  - m_Script
-  m_LockStageInInspector: 
-  m_StreamingVersion: 20170927
-  m_Priority: 10
-  m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
-  m_Lens:
-    FieldOfView: 60.000004
-    OrthographicSize: 10
-    NearClipPlane: 0.1
-    FarClipPlane: 5000
-    Dutch: 0
-    ModeOverride: 0
-    LensShift: {x: 0, y: 0}
-    GateFit: 2
-    FocusDistance: 10
-    m_SensorSize: {x: 1, y: 1}
-  m_Transitions:
-    m_BlendHint: 2
-    m_InheritPosition: 0
-    m_OnCameraLive:
-      m_PersistentCalls:
-        m_Calls: []
-  m_LegacyBlendHint: 0
-  m_ComponentOwner: {fileID: 887584724}
---- !u!4 &1256129978
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256129976}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.1658515, y: 0.0070336205, z: -0.0011829501, w: 0.986125}
-  m_LocalPosition: {x: -17.705881, y: 46.062103, z: 7.1911125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 887584724}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 47.219, y: 177.88, z: 0}
---- !u!114 &1256129979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256129976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729aad4491e915a41bda2b8325cf757a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FocusTracksTarget: 0
-  m_FocusTracking: 0
-  m_FocusTarget: {fileID: 0}
-  m_FocusOffset: 0
-  m_Profile: {fileID: 11400000, guid: 466346654ec66084e8936ebcb7bc5389, type: 2}
---- !u!95 &1256129980
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256129976}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!320 &1256129981
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256129976}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 5276d8545a070de4fb38f3364e2ba915, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 2656762041327205213, guid: 5276d8545a070de4fb38f3364e2ba915, type: 2}
-    value: {fileID: 1256129980}
-  m_ExposedReferences:
-    m_References: []
---- !u!114 &1256129982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256129976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0544e7b14d134a1449e61175446cfb95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ApplyAfter: 1
-  m_Tilt: 0
-  m_Pan: 0
-  m_Dutch: 0
-  m_ZoomScale: 1
-  m_FollowAttachment: 1
-  m_LookAtAttachment: 0.4
 --- !u!1 &1264403403
 GameObject:
   m_ObjectHideFlags: 0
@@ -112804,7 +113038,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1629508038}
-  m_Father: {fileID: 1673526885}
+  m_Father: {fileID: 2128969029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -141921,11 +142155,11 @@ Transform:
   m_GameObject: {fileID: 1577390590}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 82.65443, y: 242.32935, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1789240686}
+  m_Father: {fileID: 120098862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1591827321
 GameObject:
@@ -144382,7 +144616,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2020381932}
-  - {fileID: 1488239777}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!82 &1673526886
@@ -176905,226 +177138,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5944510903610548991, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
   m_PrefabInstance: {fileID: 1788907014}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907038 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1651536115744161493, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907039 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2610598829342764275, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907040 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6397846164085704050, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907041 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 430082835867788369, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907042 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8839591356635721049, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907043 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5775913174018175381, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907044 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 993594059994140493, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907045 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 857666211473295351, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907046 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1250776064133557577, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907047 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6090434432211148941, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907048 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2903678159452329354, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907049 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4159726477332756002, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6090434431670967131, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907051 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4159726476800429556, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1250776064673928863, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907053 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2903678159993564764, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907054 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6090434430616450882, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907055 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4159726477854106093, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907056 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1250776065728494214, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907057 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2903678158899511877, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907058 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1651536115576924204, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907059 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2610598829646346762, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907060 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6397846164455347083, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907061 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 430082835500249768, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907062 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8839591356402432928, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907063 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5775913173647517548, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907064 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 993594060230613428, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 857666211639513358, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907066 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6090434431494579415, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907067 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4159726476976894584, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907068 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1250776064850389267, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907069 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2903678160169947600, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907070 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6090434430325921381, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907071 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4159726478144487626, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907072 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1250776065482136481, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907073 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2903678158653170530, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907074 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5480860110242882611, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907075 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9141805514677335573, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907076 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 156840194906431380, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907077 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6850947467948490423, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907078 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2326122276416174015, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907079 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 778181614127557491, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907080 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6281807808600577451, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1788907081 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5837659642128407825, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-  m_PrefabInstance: {fileID: 1788907014}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1788907082 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1651536115986920060, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
@@ -177185,39 +177198,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1855157023404721573, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
   m_PrefabInstance: {fileID: 1788907014}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1789240685
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1789240686}
-  m_Layer: 0
-  m_Name: Managers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1789240686
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789240685}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.65443, y: 242.32935, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1800069648}
-  - {fileID: 1577390592}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1790971907
 GameObject:
   m_ObjectHideFlags: 0
@@ -177507,11 +177487,11 @@ Transform:
   m_GameObject: {fileID: 1800069647}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -82.65443, y: -226.32935, z: 0}
+  m_LocalPosition: {x: 0, y: 16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1789240686}
+  m_Father: {fileID: 120098862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1800069649
 MonoBehaviour:
@@ -179767,7 +179747,7 @@ GameObject:
   - component: {fileID: 1897358325}
   - component: {fileID: 1897358324}
   m_Layer: 0
-  m_Name: DomeWallViewerPanel
+  m_Name: DomeWallViewer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180591,8 +180571,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 912.00006, y: -61.625}
-  m_SizeDelta: {x: 1824.0001, y: 123.25}
+  m_AnchoredPosition: {x: 912.00006, y: -184.26454}
+  m_SizeDelta: {x: 1824.0001, y: 368.52908}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967106201
 MonoBehaviour:
@@ -210413,7 +210393,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 54908801}
+  m_Father: {fileID: 120098862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2033532942
 MonoBehaviour:
@@ -212058,7 +212038,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
+  m_fontSize: 50
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -212385,159 +212365,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103036068}
   m_CullTransparentMesh: 1
---- !u!1 &2104490183
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2104490184}
-  - component: {fileID: 2104490186}
-  - component: {fileID: 2104490185}
-  - component: {fileID: 2104490187}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2104490184
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104490183}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 52830227}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &2104490185
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104490183}
-  m_Enabled: 0
---- !u!20 &2104490186
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104490183}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.01
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!114 &2104490187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104490183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 2020381932}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 1
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 1
-  m_ShowCustomSorter: 1
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
 --- !u!1 &2106929494
 GameObject:
   m_ObjectHideFlags: 0
@@ -213261,12 +213088,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1488239777}
   - {fileID: 1563565965}
   - {fileID: 115367298}
   - {fileID: 2111344053}
   - {fileID: 1381893988}
   - {fileID: 1897358323}
   - {fileID: 2020517682}
+  - {fileID: 757256034}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2129442855
@@ -246988,14 +246817,8 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 89335597}
-  - {fileID: 1169210459}
-  - {fileID: 1256129978}
-  - {fileID: 52830227}
+  - {fileID: 1858154364}
   - {fileID: 1673526885}
   - {fileID: 772729449}
-  - {fileID: 120098862}
   - {fileID: 2128969029}
-  - {fileID: 1858154364}
-  - {fileID: 757256034}
-  - {fileID: 1789240686}
+  - {fileID: 120098862}
