@@ -15,6 +15,7 @@ public class Settings : MonoBehaviour
     [SerializeField] private Image brightnessOverlay;
     [SerializeField] private ViewerController viewerController;
 
+    private float defaultSetting = 20f;
 
     private void Start()
     {
@@ -27,8 +28,8 @@ public class Settings : MonoBehaviour
         mouseSensitivitySlider.onValueChanged.AddListener(SetMouseSensitivity);
 
         SetBrightness(brightnessSlider.value);
-        SetMouseSensitivity(mouseSensitivitySlider.value);
-    }
+        mouseSensitivitySlider.SetValueWithoutNotify(defaultSetting);
+        SetMouseSensitivity(mouseSensitivitySlider.value);    }
 
     private void Update()
     {
@@ -53,10 +54,10 @@ public class Settings : MonoBehaviour
 
     public void SetMouseSensitivity(float value)
     {
+        
         if (viewerController != null)
         {
-            viewerController.SetMouseSensitivity(
-                Mathf.Clamp(value, 1f, 100f));
+            viewerController.SetMouseSensitivity(Mathf.Clamp(value, 1f, 100f));
         }
     }
 
