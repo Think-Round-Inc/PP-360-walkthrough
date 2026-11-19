@@ -66,7 +66,9 @@ public sealed class DomeWall : MonoBehaviour
             case DomeWallState.Religion:
                 group = religionGroup;
                 break;
-
+            case DomeWallState.Off:
+                ClearWallImage();
+                return;            
             default:
                 return;
         }
@@ -112,5 +114,18 @@ public sealed class DomeWall : MonoBehaviour
         return values != null && index >= 0 && index < values.Length
             ? values[index] ?? string.Empty
             : string.Empty;
+    }
+
+    internal void ClearWallImage()
+    {
+        currentSprite = null;
+        currentTitle = string.Empty;
+        currentInfo = string.Empty;
+
+        if (infoText != null)
+            infoText.text = string.Empty;
+
+        if (wallRenderer != null)
+            wallRenderer.material.mainTexture = Texture2D.blackTexture;
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 public enum DomeWallState
 {
     Art,
-    Religion
+    Religion,
+    Off
 }
 
 public sealed class DomeWallChanger : MonoBehaviour
@@ -57,7 +58,7 @@ public sealed class DomeWallChanger : MonoBehaviour
 
     private void Update()
     {
-        if (!isActive)
+        if (!isActive || CurrentDomeWallState == DomeWallState.Off)
         {
             StopAllCoroutines();
             return;
@@ -94,4 +95,26 @@ public sealed class DomeWallChanger : MonoBehaviour
     /// makes sure static field is updated when currentDomeWallState changes in the inspector
     /// </summary>
     private void OnValidate() => CurrentDomeWallState = currentDomeWallState;
+
+    public void DomeWallOff()
+{
+    StopAllCoroutines();
+    currentDomeWallState = DomeWallState.Off;
+    CurrentDomeWallState = currentDomeWallState;
+
+    ClearWallImages(faithWalls);
+    ClearWallImages(faunaWalls);
+    ClearWallImages(infoWalls);
+}
+
+private static void ClearWallImages(DomeWall[] walls)
+{
+    if (walls == null) return;
+
+    foreach (DomeWall wall in walls)
+    {
+        if (wall != null)
+            wall.ClearWallImage();
+    }
+}
 }

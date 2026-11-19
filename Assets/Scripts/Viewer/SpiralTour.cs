@@ -1,12 +1,16 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
 public sealed class SpiralTour : MonoBehaviour
 {
+    private static readonly string[] TourPrefixes =
+    {
+        "Ch", "Je", "Bu", "Hi", "Ta", "In", "Mu", "Ea", "Do"
+    };
+
     [Header("Settings")]
-    [SerializeField] private bool viewerControllerActive = true;
+    
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float rotSpeed = 3f;
     [SerializeField] private float pauseDuration = 2f;
@@ -16,32 +20,15 @@ public sealed class SpiralTour : MonoBehaviour
     [SerializeField] private Vector3 cameraAngleOffset;
 
     [Header("Playback")]
-    [SerializeField] private bool isPlaying = true;
+    private bool viewerControllerActive = true;
+    private bool isPlaying = true;
 
     [Header("Target Lists")]
-    [SerializeField] private List<GameObject> targetPositions =
-        new List<GameObject>();
+    [SerializeField] private List<GameObject> targetPositions = new List<GameObject>();
+    [SerializeField] private List<GameObject> targetRotations = new List<GameObject>();
 
-    [SerializeField] private List<GameObject> targetRotations =
-        new List<GameObject>();
-
-    [Header("Spiral Tour Options")]
-    [SerializeField] private bool Christians;
-    [SerializeField] private bool Jews;
-    [SerializeField] private bool Buddhists;
-    [SerializeField] private bool Hindus;
-    [SerializeField] private bool Taoists;
-    [SerializeField] private bool Indigenous;
-    [SerializeField] private bool Muslims;
-
-    [Header("Spawn Points")]
+    [Header("Spawn Point")]
     [SerializeField] private Transform christiansSpawnPoint;
-    [SerializeField] private Transform jewsSpawnPoint;
-    [SerializeField] private Transform buddhistsSpawnPoint;
-    [SerializeField] private Transform hindusSpawnPoint;
-    [SerializeField] private Transform taoistsSpawnPoint;
-    [SerializeField] private Transform indigenousSpawnPoint;
-    [SerializeField] private Transform muslimsSpawnPoint;
 
     private string targetTagViewingPoint = "ViewingPoint";
     private string targetTagPausePoint = "PausePoint";
@@ -55,14 +42,6 @@ public sealed class SpiralTour : MonoBehaviour
         viewerControllerActive = value;
     }
 
-    public void SetChristiansActive(bool value) => Christians = value;
-    public void SetJewsActive(bool value) => Jews = value;
-    public void SetBuddhistsActive(bool value) => Buddhists = value;
-    public void SetHindusActive(bool value) => Hindus = value;
-    public void SetTaoistsActive(bool value) => Taoists = value;
-    public void SetIndigenousActive(bool value) => Indigenous = value;
-    public void SetMuslimsActive(bool value) => Muslims = value;
-
     public void InitializeScript()
     {
         // Clear previous targets when starting a different tour.
@@ -71,6 +50,7 @@ public sealed class SpiralTour : MonoBehaviour
 
         currentTargetIndex = 0;
         currentTime = 0f;
+        isPlaying = true;
 
         SetSpawnLocation();
 
@@ -144,66 +124,26 @@ public sealed class SpiralTour : MonoBehaviour
 
     private void SetSpawnLocation()
     {
-        transform.position = GetSpawnPosition();
-    }
+        if (christiansSpawnPoint == null)
+        {
+            Debug.LogWarning("Assign the Christians Spawn Point on SpiralTour.", this);
+            return;
+        }
 
-    private Vector3 GetSpawnPosition()
-    {
-        if (Christians && christiansSpawnPoint != null)
-            return christiansSpawnPoint.position;
-
-        if (Jews && jewsSpawnPoint != null)
-            return jewsSpawnPoint.position;
-
-        if (Buddhists && buddhistsSpawnPoint != null)
-            return buddhistsSpawnPoint.position;
-
-        if (Hindus && hindusSpawnPoint != null)
-            return hindusSpawnPoint.position;
-
-        if (Taoists && taoistsSpawnPoint != null)
-            return taoistsSpawnPoint.position;
-
-        if (Indigenous && indigenousSpawnPoint != null)
-            return indigenousSpawnPoint.position;
-
-        if (Muslims && muslimsSpawnPoint != null)
-            return muslimsSpawnPoint.position;
-
-        return Vector3.zero;
+        transform.position = christiansSpawnPoint.position;
     }
 
     private void CollectObjectsWithTag(
         string targetTag,
         List<GameObject> targetList)
     {
-        GameObject[] objectsWithTag =
-            GameObject.FindGameObjectsWithTag(targetTag);
-
-        if (Christians || Jews || Buddhists || Hindus ||
-            Taoists || Indigenous || Muslims)
+        foreach (GameObject target in GameObject.FindGameObjectsWithTag(targetTag))
         {
-            string prefix = GetSelectedOptionPrefix();
-
-            objectsWithTag = objectsWithTag
-                .Where(obj => obj.name.StartsWith(prefix))
-                .ToArray();
+            if (GetPrefixOrder(target.name) < TourPrefixes.Length)
+            {
+                targetList.Add(target);
+            }
         }
-
-        targetList.AddRange(objectsWithTag);
-    }
-
-    private string GetSelectedOptionPrefix()
-    {
-        if (Christians) return "Ch";
-        if (Jews) return "Je";
-        if (Buddhists) return "Bu";
-        if (Hindus) return "Hi";
-        if (Taoists) return "Ta";
-        if (Indigenous) return "In";
-        if (Muslims) return "Mu";
-
-        return "";
     }
 
     private void SortLists(
@@ -214,8 +154,27 @@ public sealed class SpiralTour : MonoBehaviour
         rotations.Sort((a, b) => CompareNames(a.name, b.name));
     }
 
+    private static int GetPrefixOrder(string objectName)
+    {
+        for (int index = 0; index < TourPrefixes.Length; index++)
+        {
+            if (objectName.StartsWith(TourPrefixes[index], System.StringComparison.Ordinal))
+            {
+                return index;
+            }
+        }
+
+        return TourPrefixes.Length;
+    }
+
     private int CompareNames(string name1, string name2)
     {
+        int prefixOrder = GetPrefixOrder(name1).CompareTo(GetPrefixOrder(name2));
+        if (prefixOrder != 0)
+        {
+            return prefixOrder;
+        }
+
         string pattern =
             @"([a-zA-Z]{2})([a-zA-Z]{2})(\d{2})([a-zA-Z]+)(-)(\d+)";
 
