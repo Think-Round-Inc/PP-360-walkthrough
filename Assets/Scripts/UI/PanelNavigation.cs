@@ -8,6 +8,7 @@ public class PanelNavigation : MonoBehaviour
     [SerializeField] GameObject ControlPanel;
     [SerializeField] GameObject MenuUIPanel;
     [SerializeField] private GameObject greetingPanel;
+    [SerializeField] private GameObject domeDescriptionPanel;
     
     [Header("Action Keys")]
     [SerializeField] private KeyCode exitKey = KeyCode.Tab;
@@ -42,6 +43,16 @@ public class PanelNavigation : MonoBehaviour
     public void CloseMenuUI()
     {
         MenuUIPanel.SetActive(false);
+    }
+
+    public void ToggleDomeDescription()
+    {
+        if (domeDescriptionPanel.activeInHierarchy)
+        domeDescriptionPanel.SetActive(false);
+        else
+        {
+            domeDescriptionPanel.SetActive(true);
+        }
     }
 }
 

@@ -201,6 +201,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5137078}
   m_CullTransparentMesh: 1
+--- !u!1 &8568177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8568178}
+  - component: {fileID: 8568180}
+  - component: {fileID: 8568179}
+  m_Layer: 5
+  m_Name: DescriptionPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &8568178
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8568177}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 715927796}
+  - {fileID: 1996945906}
+  m_Father: {fileID: 495808444}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8568179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8568177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &8568180
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8568177}
+  m_CullTransparentMesh: 1
 --- !u!1 &17227627
 GameObject:
   m_ObjectHideFlags: 0
@@ -64368,12 +64445,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2096093061}
+  m_Father: {fileID: 801261411}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25, y: -25}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &434951652
 MonoBehaviour:
@@ -64444,7 +64521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
+  m_Color: {r: 0.46274513, g: 0.2392157, b: 0.89019614, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -65295,13 +65372,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8568178}
   m_Father: {fileID: 801261411}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -83.191}
-  m_SizeDelta: {x: 0, y: -166.37}
+  m_AnchorMin: {x: 0.015306123, y: 0}
+  m_AnchorMax: {x: 1, y: 0.6307636}
+  m_AnchoredPosition: {x: -3, y: 0.21499634}
+  m_SizeDelta: {x: 6, y: 0.43999863}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495808445
 MonoBehaviour:
@@ -69144,6 +69222,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713966441}
   m_CullTransparentMesh: 1
+--- !u!1 &715927795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715927796}
+  - component: {fileID: 715927798}
+  - component: {fileID: 715927797}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &715927796
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715927795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8568178}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 0, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &715927797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715927795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 44.75
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
+  m_fontSizeMax: 30
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &715927798
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715927795}
+  m_CullTransparentMesh: 1
 --- !u!1 &716506275
 GameObject:
   m_ObjectHideFlags: 0
@@ -70014,10 +70226,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 801261411}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -28.4178}
-  m_SizeDelta: {x: 0, y: 52.1432}
+  m_AnchorMin: {x: 0.05830816, y: 1}
+  m_AnchorMax: {x: 0.9392559, y: 1}
+  m_AnchoredPosition: {x: 0.49996948, y: -26.179}
+  m_SizeDelta: {x: -0.9999733, y: 52.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756278965
 MonoBehaviour:
@@ -70066,7 +70278,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.4
+  m_fontSize: 46.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -96295,7 +96507,7 @@ GameObject:
   - component: {fileID: 801261413}
   - component: {fileID: 801261412}
   m_Layer: 5
-  m_Name: ArtHistoryPanel
+  m_Name: DomeTourPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96313,10 +96525,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1711474260}
+  - {fileID: 434951651}
   - {fileID: 756278964}
   - {fileID: 901987556}
+  - {fileID: 1283459874}
   - {fileID: 495808444}
-  - {fileID: 2096093061}
   m_Father: {fileID: 59620532}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -98265,11 +98479,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -104373,6 +104587,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8acae8f40cd7c4f47b99b6e14e27523b, type: 3}
   - {fileID: 21300000, guid: f12b4fc6d65dda240823135c1cbbcf8f, type: 3}
   - {fileID: 21300000, guid: da5d1e85ea57e674daf949d7657af683, type: 3}
+  imageTitle: {fileID: 715927797}
+  imageDescription: {fileID: 1996945907}
 --- !u!1 &1218452812
 GameObject:
   m_ObjectHideFlags: 0
@@ -105196,9 +105412,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1248746245}
-  - component: {fileID: 1248746248}
-  - component: {fileID: 1248746247}
-  - component: {fileID: 1248746246}
   m_Layer: 0
   m_Name: DoDP01a-1
   m_TagString: Display
@@ -105221,78 +105434,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1259895157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1248746246
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248746244}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -345702231808409678, guid: 365b88217616a304bb8762e3d418b8fc, type: 3}
---- !u!23 &1248746247
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248746244}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: bd1ad65f06639ac44a4f820bb012aae9, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1248746248
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248746244}
-  m_Mesh: {fileID: -345702231808409678, guid: 365b88217616a304bb8762e3d418b8fc, type: 3}
 --- !u!1 &1252714102
 GameObject:
   m_ObjectHideFlags: 0
@@ -106269,6 +106410,138 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283246813}
+  m_CullTransparentMesh: 1
+--- !u!1 &1283459873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1283459874}
+  - component: {fileID: 1283459877}
+  - component: {fileID: 1283459876}
+  - component: {fileID: 1283459875}
+  m_Layer: 5
+  m_Name: DescroptionHotspot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1283459874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283459873}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 801261411}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.6307636}
+  m_AnchorMax: {x: 0.5, y: 0.707}
+  m_AnchoredPosition: {x: 0, y: -0.38616943}
+  m_SizeDelta: {x: 35, y: -1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1283459875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283459873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1283459876}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1577390591}
+        m_TargetAssemblyTypeName: PanelNavigation, Assembly-CSharp
+        m_MethodName: ToggleDomeDescription
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1283459876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283459873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f78382474d930b14dadb532c5dfa7b58, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1283459877
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283459873}
   m_CullTransparentMesh: 1
 --- !u!1 &1300975394
 GameObject:
@@ -137712,6 +137985,7 @@ MonoBehaviour:
   ControlPanel: {fileID: 1629508037}
   MenuUIPanel: {fileID: 1381893987}
   greetingPanel: {fileID: 1513749811}
+  domeDescriptionPanel: {fileID: 8568177}
   exitKey: 9
 --- !u!4 &1577390592
 Transform:
@@ -140243,12 +140517,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2096093061}
+  m_Father: {fileID: 801261411}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -25, y: -25}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711474261
 MonoBehaviour:
@@ -140319,7 +140593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
+  m_Color: {r: 0.46274513, g: 0.2392157, b: 0.89019614, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -175177,6 +175451,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977062502}
   m_CullTransparentMesh: 1
+--- !u!1 &1996945905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1996945906}
+  - component: {fileID: 1996945908}
+  - component: {fileID: 1996945907}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1996945906
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996945905}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8568178}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 0, y: 212.89}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1996945907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996945905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1996945908
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996945905}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1997179949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206026,83 +206434,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093454296}
-  m_CullTransparentMesh: 1
---- !u!1 &2096093060
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2096093061}
-  - component: {fileID: 2096093063}
-  - component: {fileID: 2096093062}
-  m_Layer: 5
-  m_Name: ArtInfo (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2096093061
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096093060}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 434951651}
-  - {fileID: 1711474260}
-  m_Father: {fileID: 801261411}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -83.18701}
-  m_SizeDelta: {x: 0, y: -166.38}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2096093062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096093060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2096093063
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096093060}
   m_CullTransparentMesh: 1
 --- !u!1 &2103036068
 GameObject:
@@ -237207,8 +237538,8 @@ MonoBehaviour:
     - Untitled
     - Gunyalungalung
     groupInfo:
-    - "Group: Aboriginals  \r\n\nContinent: Australia \r\n\nArtist: Barnaby and Ray\n   
-      Norris\r\nYear: Approx. 2007\r\n\nMedium: Photograph \r\n\nLocation: N/A\r"
+    - "Group: Aboriginals  \r\n\nContinent: Australia \r\n\nArtist: Barnaby and Ray
+      Norris\n\r\nYear: Approx. 2007\r\n\nMedium: Photograph \r\n\nLocation: N/A\r"
     - "Group: Aboriginals \r\n\nContinent: Australia\r\n\nArtist: Belanjee\r\n\nYear:
       Unknown\r\n\nMedium: Acrylic on canvas\r\n\nLocation: N/A\r"
     - "Group: Aboriginal\r\n\nContinent: Australia\r\n\nArtist: Belanjee\r\n\nYear:
@@ -237237,8 +237568,8 @@ MonoBehaviour:
     - "Siddh\u0101rtha Guatama"
     groupInfo:
     - "Group: Jainism\r\n\nContinent: Indian subcontinent\r\n\nArtist: Unknown\r\n\nYear:
-      1850 AD\r\n\nMedium: Unknown\r\n\nSource: Jain Miniature\n    Painting\r\nLocation:
-      Japiur, Rajasthan, \n    India\r"
+      1850 AD\r\n\nMedium: Unknown\r\n\nSource: Jain Miniature Painting\n\r\nLocation:
+      Japiur, Rajasthan,  India\r"
     - "Group: Tibetan Buddhism \r\n\nContinent: Indian subcontinent\r\n\nArtist:
       Unknown\r\n\nYear: 18th Century\r\n\nMedium: Pigments on cloth\r\n\nSource:
       Kyi Monastery\r\n\nLocation: Tibet\r"
@@ -238197,14 +238528,60 @@ MonoBehaviour:
     - Nighthawks
     - The Two Fridas
     groupInfo:
-    - "Group: Anglo-American\n\nContinent: North America\n\nArtist: Benjamin West\n\nYear:
-      1770 CE\n\nMedium: Oil Painting\n\nLocation: National Gallery of\n    Canada"
-    - "Group: American\n\nContinent: North America\n\nArtist: Edward Hopper\n\nYear:
-      1942 CE\n\nMedium: Oil on canvas\n\nLocation: School of The Art\n    Institute
-      of Chicago"
-    - "Group: Mexican\n\nContinent: North America\n\nArtist: Frida Kahlo\n\nYear:
-      1939 CE\n\nMedium: Oil Paint\n\nLocation: Museo de Arte\n    Moderno, Mexico
-      City"
+    - 'Group: Anglo-American
+
+
+      Continent: North America
+
+
+      Artist: Benjamin
+      West
+
+
+      Year: 1770 CE
+
+
+      Medium: Oil Painting
+
+
+      Location: National
+      Gallery of Canada'
+    - 'Group: American
+
+
+      Continent: North America
+
+
+      Artist: Edward Hopper
+
+
+      Year:
+      1942 CE
+
+
+      Medium: Oil on canvas
+
+
+      Location: School of The Art Institute
+      of Chicago'
+    - 'Group: Mexican
+
+
+      Continent: North America
+
+
+      Artist: Frida Kahlo
+
+
+      Year:
+      1939 CE
+
+
+      Medium: Oil Paint
+
+
+      Location: Museo de Arte Moderno,
+      Mexico City'
     groupShortInfo:
     - "\rNorth America's culture is a mosaic, reflecting its diverse population,
       including Indigenous peoples, immigrants, and their descendants. It embraces
@@ -238228,15 +238605,70 @@ MonoBehaviour:
     - The Crucifixion
     - The Adoration of the Magi
     groupInfo:
-    - "Group: Christianity\n\nContinent: Europe\n\nArtist: Gian Lorenzo Berini\n\nYear:
-      1647-1652 AD\n\nMedium: White Marble\n\nSource: The Life of Teresa Jesus\n\nLocation:
-      Church of Santa Maria\n    della Vittoria, Rome"
-    - "Group: Christianity\n\nContinent: N/A\n\nArtist: Rembrandt\n\nYear: 1631 AD\n\nMedium:
-      Oil on canvas\n\nSource: Gospel of Matthew \n    and Luke\nLocation: Leiden
-      or Amsterdam\n    Netherlands"
-    - "Group: Christianity\n\nContinent: Ancient Near East\n\nArtist: Sandro Botticelli\n\nYear:
-      1478-1482 AD\n\nMedium: Tempera and Oil on \n    wood\nSource: Gospel of Matthew\n\nLocation:
-      Bethlehem, Judea "
+    - 'Group: Christianity
+
+
+      Continent: Europe
+
+
+      Artist: Gian Lorenzo
+      Berini
+
+
+      Year: 1647-1652 AD
+
+
+      Medium: White Marble
+
+
+      Source:
+      The Life of Teresa Jesus
+
+
+      Location: Church of Santa Maria della Vittoria,
+      Rome'
+    - 'Group: Christianity
+
+
+      Continent: N/A
+
+
+      Artist: Rembrandt
+
+
+      Year:
+      1631 AD
+
+
+      Medium: Oil on canvas
+
+
+      Source: Gospel of Matthew and
+      Luke
+
+
+      Location: Leiden or Amsterdam Netherlands'
+    - 'Group: Christianity
+
+
+      Continent: Ancient Near East
+
+
+      Artist: Sandro
+      Botticelli
+
+
+      Year: 1478-1482 AD
+
+
+      Medium: Tempera and Oil on wood
+
+
+      Source:
+      Gospel of Matthew
+
+
+      Location: Bethlehem, Judea '
     groupShortInfo:
     - Christianity, a major monotheistic religion with over 2 billion adherents,
       centers on Jesus Christ as the Son of God and Savior, with the Bible as its
@@ -238507,14 +238939,14 @@ MonoBehaviour:
     - Power Figure
     - "B\xF2g\xF2lanfini"
     groupInfo:
-    - "Group:  Sandawe people\r\n\nContinent: Africa\r\n\nArtist: Ancestors of the\n   
-      Sandawe people\r\nYear: 19,000-30,000 \n    years ago\r\nMedium: Painting on
-      rock\r\n\nLocation: Tanzania\r\n"
+    - "Group:  Sandawe people\r\n\nContinent: Africa\r\n\nArtist: Ancestors of the
+      Sandawe people\r\n\nYear: 19,000-30,000 years ago\r\n\nMedium: Painting on
+      rock\r\n\nLocation: Tanzania\r"
     - "Group: Kongo people\r\n\nContinent: Africa\r\n\nArtist: Kongo artist\r\n\nYear: 
-      19th Century  \r\n\nMedium: Wood and mixed \n    media\r\nLocation: Republic
-      of the\n    Kongo"
+      19th Century  \r\n\nMedium: Wood and mixed media\n\r\nLocation: Republic of
+      the Kongo"
     - "Group: Mali Culture\r\n\nContinent: Africa\r\n\nArtist: woven by Mali men,
-      \n    dyed by Mali women \nYear: 12th century   \r\n\nMedium: Mud painted cloth\r\n\nLocation:
+      dyed by Mali women\n \nYear: 12th century   \r\n\nMedium: Mud painted cloth\r\n\nLocation:
       San, Mali\r"
     groupShortInfo:
     - Africa, the world's second-largest continent, is a cradle of human civilization
@@ -238543,11 +238975,10 @@ MonoBehaviour:
     - The Star Dreaming
     groupInfo:
     - "Group: Indigenous \r\n\nContinent: North America\r\n\nArtist: Hunter-gatherers\r\n\nYear: 
-      2500 BC - 500 AD\r\n\nMedium: Cliff walls \r\n\nLocation: Lower Pecos \n   
-      Canyonlands\r"
+      2500 BC - 500 AD\r\n\nMedium: Cliff walls \r\n\nLocation: Lower Pecos Canyonlands\r"
     - "Group: Indigenous \r\n\nContinent: North America\r\n\nArtist: Johnny Kit Elswa\r\n\nYear:
       1883 AD\r\n\nMedium: Painting\r\n\nSource: N/A\r\n\nLocation: Pacific North
-      \n    Western Mountains, US\r"
+      Western Mountains, US\r"
     - "Group: Aboriginal \r\n\nContinent: Australia\r\n\nArtist: David Wroth\r\n\nYear:
       2015 AD\r\n\nMedium: Painting\r\n\nSource: The Dreaming myth\r\n\nLocation:
       Japingka Gallery\r"
@@ -239261,10 +239692,10 @@ MonoBehaviour:
     - "Group: Argentinian \r\n\nContinent: South America\r\n\nArtist: Antonio Berni\r\n\nYear:
       1932 CE\r\n\nMedium: Oil on canvas\r\n\nLocation: Private Collection\r"
     - "Group: Nazca people\r\n\nContinent: South America\r\n\nArtist: Nazca people\r\n\nYear:
-      500 BC - 500 BCE\r\n\nMedium: Geoglyphs made \n    in soil\r\nLocation: Nazca
-      Desert, \n    Peru\r"
+      500 BC - 500 BCE\r\n\nMedium: Geoglyphs made in soil\n\r\nLocation: Nazca Desert,
+      Peru\r"
     - "Group: Cuban\r\n\nContinent: South America\r\n\nArtist: Wifredo Lam\r\n\nYear: 
-      1965 CE\r\n\nMedium: Oil on Canvas\r\n\nLocation: Museo Nacional de \n    Bellas
+      1965 CE\r\n\nMedium: Oil on Canvas\r\n\nLocation: Museo Nacional de Bellas
       Artes de La Habana\r"
     groupShortInfo:
     - South America, a continent of stunning landscapes and cultures, showcases the
@@ -239294,9 +239725,9 @@ MonoBehaviour:
       Unknown\r"
     - "Group: Islam\r\n\nContinent: Arabic Peninsula\r\n\nArtist: Abraham\r\n\nYear:
       Rebuilt in 608 AD\r\n\nMedium: Marble, Gray stone \r\n\nSource: Unknown\r\n\nLocation:
-      Mecca, Saudi \n    Arabia"
+      Mecca, Saudi Arabia"
     - "Group: Islam\r\n\nContinent: Ancient Near East\r\n\nArtist: Unknown\r\n\nYear: 
-      15th Century\r\n\nMedium: Unknown \r\n\nSource: Miraj Nama\r\n\nLocation: Bibliotheque\n   
+      15th Century\r\n\nMedium: Unknown \r\n\nSource: Miraj Nama\r\n\nLocation: Bibliotheque
       Nationale, Paris\r"
     groupShortInfo:
     - Islam, followed by Muslims, is a monotheistic faith centered on the Quran,
@@ -239761,14 +240192,14 @@ MonoBehaviour:
     - The Altar Piece
     - "S\xE1mi Drum"
     groupInfo:
-    - "Group: Inuit\r\n\nContinent: Antartica/Polar \n    Region\r\nArtist: Kenojuak
+    - "Group: Inuit\r\n\nContinent: Antartica/Polar Region\n\r\nArtist: Kenojuak
       Ashevak\r\n\nYear: 1960 CE\r\n\nMedium: Stone cut on paper\r\n\nLocation: Ikirisaq,
-      Northwest \n    Territories, Nunavut Territory, \n    Canada\r"
-    - "Group: Swedish \r\n\nContinent: Antartica/Polar\n    Region\r\nArtist: Hilma
+      Northwest Territories, Nunavut Territory, Canada\r"
+    - "Group: Swedish \r\n\nContinent: Antartica/Polar Region\n\r\nArtist: Hilma
       Af Klint\r\n\nYear: 1915 CE\r\n\nMedium: Painting\r\n\nLocation: Moderna Museet\r"
-    - "Group: Nordic\r\n\nContinent: Antartica/Polar \n    Region\r\nArtist: S\xE1mi
+    - "Group: Nordic\r\n\nContinent: Antartica/Polar Region\n\r\nArtist: S\xE1mi
       people \r\n\nYear: 1871 CE\r\n\nMedium: Unknown \r\n\nLocation: RiddoDuottarMuseat,
-      \n    Karasjok, Norway \r"
+      Karasjok, Norway \r"
     groupShortInfo:
     - Antarctica, Earth's southernmost continent, is an inhospitable, frozen wilderness
       with no native human population. It is primarily characterized by its vast
@@ -239793,14 +240224,14 @@ MonoBehaviour:
     - Jade Emperor
     groupInfo:
     - "Group: Daoism\r\n\nContinent: Asia\r\n\nArtist: Unknown\r\n\nYear: Before
-      1922 AD\r\n\nMedium: Illustration\r\n\nSource: Myths and Legends \n    of China\r\nLocation:
+      1922 AD\r\n\nMedium: Illustration\r\n\nSource: Myths and Legends of China\n\r\nLocation:
       Unknown\r"
     - "Group: Daoism\r\n\nContinent: Asia\r\n\nArtist: Unidentified Painter\r\n\nYear:
       17th Century\r\n\nMedium: Scroll, Ink, Silk\r\n\nSource: Met Museum\r\n\nLocation:
       Japan\r"
     - "Group: Confucianism/Daoism\r\n\nContinent: Asia\r\n\nArtist: Anonymous\r\n\nYear:
-      16th Century\r\n\nMedium: Ink, Color, Gold \non Silk\r\nSource: Museum of Fine
-      \nArts\r\nLocation: Ming Dynasty, \nChina\r"
+      16th Century\r\n\nMedium: Ink, Color, Gold on Silk\r\n\nSource: Museum of Fine
+      Arts\r\n\nLocation: Ming Dynasty, China\r"
     groupShortInfo:
     - Taoism, followed by Taoists, seeks harmony with the Tao (the Way) through simplicity
       and spontaneity. Confucianism, adhered to by Confucians, emphasizes ethics,
@@ -240121,14 +240552,14 @@ MonoBehaviour:
     - The School of Athens
     - The Kiss
     groupInfo:
-    - "Group: Roman Catholic \n    Church\r\nContinent: Europe\r\n\nArtist: Hildegard
-      von \n    Bingen\r\nYear:  1165 CE\r\n\nMedium: Illustration\r\n\nLocation:
-      Wiesbaden State \n    Library\r"
+    - "Group: Roman Catholic  Church\r\n\nContinent: Europe\r\n\nArtist: Hildegard
+      von Bingen\r\n\nYear:  1165 CE\r\n\nMedium: Illustration\r\n\nLocation: Wiesbaden
+      State Library\r"
     - "Group: Italian\r\n\nContinent: Europe\r\n\nArtist: Raphael\r\n\nYear:  1509\u20131511
-      CE\r\n\nMedium: Fresco\r\n\nLocation: Apostolic Palace, \n    Vatican City\r"
+      CE\r\n\nMedium: Fresco\r\n\nLocation: Apostolic Palace, Vatican City\r"
     - "Group:  N/A\r\n\nContinent: Europe\r\n\nArtist: Gustav Klim\r\n\nYear:  1907
-      - 1908 CE\r\n\nMedium: Oil on canvas\r\n\nLocation: \xD6sterreichische \n   
-      Galerie Belvedere, Vienna, \n    Austria\r"
+      - 1908 CE\r\n\nMedium: Oil on canvas\r\n\nLocation: \xD6sterreichische Galerie
+      Belvedere, Vienna, Austria\r"
     groupShortInfo:
     - Europe is a continent known for its diverse cultures and peoples. It has a
       rich history of art, music, literature, and philosophy. From the Mediterranean
@@ -240317,13 +240748,12 @@ MonoBehaviour:
     - Mega Mendung
     groupInfo:
     - "Group: Qing dynasty\r\n\nContinent: Asia\r\n\nArtist: Wang Yuanqi\r\n\nYear:
-      1711 CE\r\n\nMedium: Handscroll, ink\r\n\nLocation: Shaanxi province,\n   
-      China\r"
+      1711 CE\r\n\nMedium: Handscroll, ink\r\n\nLocation: Shaanxi province, China\r"
     - "Group: Japanese \r\n\nContinent: Asia\r\n\nArtist: Katsushika Hokusai\r\n\nYear:
       1830\u20131832 CE\r\n\nMedium: Woodblock print\r\n\nLocation: Museums worlwide\r"
-    - "Group: Cirebonese\r\n\nContinent: Asia\r\n\nArtist: A King of the Pajajaran
-      \n    Kingdom\r\nYear: 923-1428 CE\r\n\nMedium: Paint on cloth\r\n\nLocation:
-      Cirebon, Indonesia \r"
+    - "Group: Cirebonese\r\n\nContinent: Asia\r\n\nArtist: A King of the Pajajaran 
+      Kingdom\r\n\nYear: 923-1428 CE\r\n\nMedium: Paint on cloth\r\n\nLocation: Cirebon,
+      Indonesia \r"
     groupShortInfo:
     - Asia, the world's largest continent, is a tapestry of cultures, religions,
       and languages. Its diversity ranges from the nomadic tribes of Central Asia
@@ -240349,10 +240779,10 @@ MonoBehaviour:
     groupInfo:
     - "Group: Hinduism/Sikhism\r\n\nContinent: Indian subcontinent\r\n\nArtist: Unknown\r\n\nYear: 
       Unknown\r\n\nMedium: Unknown\r\n\nSource: Vishnu Purana\r\n\nLocation: Mathura,
-      Northern\n    India\r"
+      Northern India\r"
     - "Group: Hinduism/Sikhism\r\n\nContinent: Asia\r\n\nArtist: N/A\r\n\nYear: 5th
-      or 6th century AD\r\n\nMedium: N/A\r\n\nSource: Tevaram and \n    Thiruvasagam\nLocation:
-      Southern India\r\n"
+      or 6th century AD\r\n\nMedium: N/A\r\n\nSource: Tevaram and Thiruvasagam\n\nLocation:
+      Southern India\r"
     - "Group: Hinduism/Sikhism\r\n\nContinent: Asia\r\n\nArtist: N/A\r\n\nYear: 1
       AD\r\n\nMedium: N/A\r\n\nSource: Gatha Saptasati\r\n\nLocation: India\r"
     groupShortInfo:
