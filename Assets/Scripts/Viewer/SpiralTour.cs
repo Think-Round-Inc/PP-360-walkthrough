@@ -9,6 +9,7 @@ public sealed class SpiralTour : MonoBehaviour
 
     private const float DomePanelDelay = 0.5f;
     private const float DomeArrivalDistance = 0.1f;
+    private const float DomePanelExitDistance = 1.0f;
 
     private Transform domeWaypoint;
     private float domePanelOpenTime;
@@ -323,15 +324,18 @@ public sealed class SpiralTour : MonoBehaviour
     }
 
     private void AdvanceTarget()
-    {
-        currentTargetIndex++;
-        currentTime = 0f;
+{
+    currentTargetIndex++;
+    currentTime = 0f;
 
-        if (currentTargetIndex >= targetPositions.Count)
-        {
-            isPlaying = false;
-        }
+    if (currentTargetIndex >= targetPositions.Count)
+    {
+        isPlaying = false;
+        return;
     }
+
+    ClearDomeVisit();
+}
     private static bool IsDomeLocation(GameObject target)
 {
     return target.name.StartsWith("Do", System.StringComparison.Ordinal);
@@ -344,37 +348,36 @@ private void BeginDomeVisit(Transform waypoint)
 
     ClearDomeVisit();
     domeWaypoint = waypoint;
-    domePanelOpenTime = Time.time + DomePanelDelay;
-}
+domePanelOpenTime = Time.unscaledTime + DomePanelDelay;}
 
 private void LateUpdate()
 {
-    if (domeWaypoint == null)
+    if (domeWaypoint == null ||
+        domePanelOpened ||
+        domeTourPanel == null ||
+        Time.unscaledTime < domePanelOpenTime)
     {
-        if (domePanelOpened)
-            ClearDomeVisit();
-
         return;
     }
 
-    if (Vector3.Distance(transform.position, domeWaypoint.position) >
-        DomeArrivalDistance)
-    {
-        ClearDomeVisit();
-        return;
-    }
-
-    if (!domePanelOpened &&
-        domeTourPanel != null &&
-        Time.time >= domePanelOpenTime)
-    {
-        domePanelOpened = true;
-        domeTourPanel.SetActive(true);
-    }
+    domePanelOpened = true;
+    domeTourPanel.SetActive(true);
 }
-
-private void ClearDomeVisit()
+private void ClearDomeVisit(
+    [System.Runtime.CompilerServices.CallerMemberName] string caller = "")
 {
+    if (domeWaypoint != null)
+    {
+        float distance = Vector3.Distance(
+            transform.position, domeWaypoint.position);
+
+        Debug.LogWarning(
+            $"Dome visit cleared by {caller}. " +
+            $"Waypoint: {domeWaypoint.name}, distance: {distance:F4}, " +
+            $"panel opened: {domePanelOpened}.",
+            this);
+    }
+
     domeWaypoint = null;
     domePanelOpened = false;
 
