@@ -12,12 +12,21 @@ public class DomeTourManager : MonoBehaviour
         public readonly string Title;
         public readonly string Description;
         public readonly Sprite Image;
+        public readonly string ImageTitle;
+        public readonly string ImageDescription;
 
-        public TourSlide(string title, string description, Sprite image)
+        public TourSlide(
+        string title,
+        string description,
+        Sprite image,
+        string imageTitle = "",
+        string imageDescription = "")
         {
             Title = title;
             Description = description;
             Image = image;
+            ImageTitle = imageTitle;
+            ImageDescription = imageDescription;
         }
     }
 
@@ -57,6 +66,9 @@ public class DomeTourManager : MonoBehaviour
     private bool tourRunning;
 
     public bool SlideshowComplete { get; private set; }
+
+    [SerializeField] private TMP_Text imageTitle;
+[SerializeField] private TMP_Text imageDescription;
 
     private void OnEnable()
     {
@@ -128,6 +140,11 @@ public class DomeTourManager : MonoBehaviour
             exhibitImage.sprite = slide.Image;
             exhibitImage.enabled = slide.Image != null;
         }
+        if (imageTitle != null)
+         imageTitle.text = slide.ImageTitle;
+
+        if (imageDescription != null)
+            imageDescription.text = slide.ImageDescription;
     }
 
   private void BuildSlides()
@@ -157,7 +174,7 @@ private void AddSection(
     Sprite introImage)
 {
     string[] aliases = GetTitleAliases(title);
-    var artwork = new List<Sprite>();
+    var artwork = new List<(Sprite Sprite, string Title, string Info)>();
     var addedSprites = new HashSet<Sprite>();
     string description = string.Empty;
 
@@ -188,15 +205,23 @@ private void AddSection(
             }
 
             if (sprite != introImage && addedSprites.Add(sprite))
-                artwork.Add(sprite);
+{
+    artwork.Add((
+        sprite,
+        GetEntryText(group.groupTitles, index),
+        GetEntryText(group.groupInfo, index)));
+}
         }
     }
 
     if (introImage != null)
         slides.Add(new TourSlide(title, description, introImage));
 
-    foreach (Sprite sprite in artwork)
-        slides.Add(new TourSlide(title, description, sprite));
+    foreach (var entry in artwork)
+{
+    slides.Add(new TourSlide(
+        title, description, entry.Sprite, entry.Title, entry.Info));
+}
 
     if (artwork.Count == 0)
     {
@@ -340,7 +365,7 @@ private void AddSection(
     {
         "Antartica",
         "Antartica/Polar",
-        "Antarctica/Polar Region",
+        "Antartica/Polar Region",
         "Antartica/Polar Regions",
         "Antarctica/Polar Regions"
     };
@@ -348,4 +373,11 @@ private void AddSection(
                 return Array.Empty<string>();
         }
     }
+
+    private static string GetEntryText(string[] entries, int index)
+{
+    return entries != null && index >= 0 && index < entries.Length
+        ? entries[index] ?? string.Empty
+        : string.Empty;
+}
 }
