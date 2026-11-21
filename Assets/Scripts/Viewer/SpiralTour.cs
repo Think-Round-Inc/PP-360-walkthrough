@@ -4,6 +4,16 @@ using UnityEngine;
 
 public sealed class SpiralTour : MonoBehaviour
 {
+    [Header("Dome Tour")]
+    [SerializeField] private GameObject domeTourPanel;
+
+    private const float DomePanelDelay = 0.5f;
+    private const float DomeArrivalDistance = 0.1f;
+
+    private Transform domeWaypoint;
+    private float domePanelOpenTime;
+    private bool domePanelOpened;
+    
     private static readonly string[] TourPrefixes =
     {
         "Ch", "Je", "Bu", "Hi", "Ta", "In", "Mu", "Ea", "Do"
@@ -44,6 +54,7 @@ public sealed class SpiralTour : MonoBehaviour
 
     public void InitializeScript()
     {
+        ClearDomeVisit();
         // Clear previous targets when starting a different tour.
         targetPositions.Clear();
         targetRotations.Clear();
@@ -81,26 +92,18 @@ public sealed class SpiralTour : MonoBehaviour
     {
         if (targetPositions.Count == 0) return;
 
-        int index = Mathf.Clamp(
-            currentTargetIndex - 1,
-            0,
-            targetPositions.Count - 1
-        );
-
-        GoToLocation(index);
+        int lastIndex = targetPositions.Count - 1;
+        int currentIndex = Mathf.Min(currentTargetIndex, lastIndex);
+        GoToLocation(currentIndex == 0 ? lastIndex : currentIndex - 1);
     }
 
     public void NextLocation()
     {
         if (targetPositions.Count == 0) return;
 
-        int index = Mathf.Clamp(
-            currentTargetIndex + 1,
-            0,
-            targetPositions.Count - 1
-        );
-
-        GoToLocation(index);
+        int lastIndex = targetPositions.Count - 1;
+        int currentIndex = Mathf.Min(currentTargetIndex, lastIndex);
+        GoToLocation(currentIndex == lastIndex ? 0 : currentIndex + 1);
     }
 
     private void GoToLocation(int index)
@@ -109,6 +112,7 @@ public sealed class SpiralTour : MonoBehaviour
         currentTime = 0f;
 
         GameObject target = targetPositions[index];
+        if (target == null || target.transform != domeWaypoint) {ClearDomeVisit();}
         if (target == null) return;
 
         // Back/forward immediately jumps to the requested location.
@@ -117,6 +121,10 @@ public sealed class SpiralTour : MonoBehaviour
         if (TryGetTargetRotation(out Quaternion rotation))
         {
             transform.rotation = rotation;
+        }
+        if (domeTourPanel != null && IsDomeLocation(target))
+        {
+            BeginDomeVisit(target.transform);
         }
     }
 
@@ -289,6 +297,13 @@ public sealed class SpiralTour : MonoBehaviour
             Vector3.Distance(transform.position, targetPosition) <= 0.1f;
 
         if (!positionReached || !rotationReached) return;
+        if (domeTourPanel != null && IsDomeLocation(target))
+        {
+            BeginDomeVisit(target.transform);
+
+            if (!domePanelOpened)
+                return;
+        }
 
         // Preserves the original behavior:
         // PausePoint advances immediately; other locations wait.
@@ -317,4 +332,53 @@ public sealed class SpiralTour : MonoBehaviour
             isPlaying = false;
         }
     }
+    private static bool IsDomeLocation(GameObject target)
+{
+    return target.name.StartsWith("Do", System.StringComparison.Ordinal);
+}
+
+private void BeginDomeVisit(Transform waypoint)
+{
+    if (domeWaypoint == waypoint)
+        return;
+
+    ClearDomeVisit();
+    domeWaypoint = waypoint;
+    domePanelOpenTime = Time.time + DomePanelDelay;
+}
+
+private void LateUpdate()
+{
+    if (domeWaypoint == null)
+    {
+        if (domePanelOpened)
+            ClearDomeVisit();
+
+        return;
+    }
+
+    if (Vector3.Distance(transform.position, domeWaypoint.position) >
+        DomeArrivalDistance)
+    {
+        ClearDomeVisit();
+        return;
+    }
+
+    if (!domePanelOpened &&
+        domeTourPanel != null &&
+        Time.time >= domePanelOpenTime)
+    {
+        domePanelOpened = true;
+        domeTourPanel.SetActive(true);
+    }
+}
+
+private void ClearDomeVisit()
+{
+    domeWaypoint = null;
+    domePanelOpened = false;
+
+    if (domeTourPanel != null)
+        domeTourPanel.SetActive(false);
+}
 }

@@ -128,4 +128,19 @@ public sealed class DomeWall : MonoBehaviour
         if (wallRenderer != null)
             wallRenderer.material.mainTexture = Texture2D.blackTexture;
     }
+
+    public DomeWallSpriteGroup GetSpriteGroup(DomeWallState state)
+{
+    switch (state)
+    {
+        case DomeWallState.Religion:
+            return religionGroup;
+
+        case DomeWallState.Art:
+            return artGroup;
+
+        default:
+            return null;
+    }
+}
 }

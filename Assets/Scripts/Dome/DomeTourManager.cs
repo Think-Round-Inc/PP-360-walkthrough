@@ -1,123 +1,165 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DomeTourManager : MonoBehaviour
 {
-
-    //There's a script somewhere that auto populates the dome panel according to the info required
-    // I need to locate it and use it as a reference here so that I can auto populate descriptions, and panels.
-    // I do believe the titles and contient images may need to be set up mannually sitll though.
-    private readonly Dictionary<string, string> religiousSlides = new()
+    [System.Serializable]
+    private sealed class TourEntry
     {
-        ["Christians"] = "Christianity, a major monotheistic religion with over 2 billion adherents, centers on Jesus Christ as the Son of God and Savior, with the Bible as its sacred text, and diverse denominations and practices.",
-        ["Jews"] = "Judaism is an ancient monotheistic religion followed by Jews, emphasizing God's covenant with the Jewish people, as found in the Hebrew Bible (Tanakh), Talmud, and diverse traditions.",
-        ["Buddhists/Jains"] = "Buddhism, followed by Buddhists, teaches the path to enlightenment through meditation and ethical living, based on the teachings of Siddhartha Gautama (Buddha). Jainism, practiced by Jains, emphasizes non-violence, truth, and asceticism, guided by the teachings of Mahavira.",
-        ["Hindus"] = "Hinduism, followed by Hindus, is a diverse religion rooted in ancient Indian traditions with beliefs in karma, reincarnation, and a wide array of deities. Sikhism, practiced by Sikhs, teaches monotheism, equality, and devotion to one God, as per Guru Nanak's teachings.",
-        ["Taoists"] = "Taoism, followed by Taoists, seeks harmony with the Tao (the Way) through simplicity and spontaneity. Confucianism, adhered to by Confucians, emphasizes ethics, filial piety, and social harmony, as taught by Confucius.",
-        ["Indigenous"] = "Indigenous religions are diverse, rooted in native cultures worldwide, often emphasizing a spiritual connection to nature, ancestors, and unique cosmologies, with rituals and beliefs varying among different Indigenous communities.",
-        ["Muslims"] = "Islam, followed by Muslims, is a monotheistic faith centered on the Quran, the final revelation from God to Prophet Muhammad. It emphasizes prayer, fasting, charity, and the pilgrimage to Mecca. Muslims number over a billion worldwide."
+        public DomeWall wall;
+        [Min(0)] public int entryIndex;
+        public Sprite continentImage;
+    }
+
+    private static readonly string[] ReligionTitles =
+    {
+        "Christians",
+        "Jews",
+        "Buddhists/Jains",
+        "Hindus",
+        "Taoists",
+        "Indigenous",
+        "Muslims"
     };
 
-    private readonly Dictionary<string, string> artSlides = new()
+    private static readonly string[] ArtTitles =
     {
-        ["Africa"] = "Africa, the world's second-largest continent, is a cradle of human civilization and biodiversity. It features diverse cultures, languages, and landscapes, ranging from the Sahara Desert to the lush rainforests. Africa's rich history, music, art, and wildlife make it a continent of immense cultural and ecological significance.",
-        ["Europe"] = "Europe is a continent known for its diverse cultures and peoples. It has a rich history of art, music, literature, and philosophy. From the Mediterranean to the Arctic, Europe's heritage influences global culture and politics.",
-        ["Asia"] = "Asia, the world's largest continent, is a tapestry of cultures, religions, and languages. Its diversity ranges from the nomadic tribes of Central Asia to the bustling metropolises of East Asia. Asian heritage has profoundly shaped global history, philosophy, cuisine, and arts.",
-        ["North America"] = "North America's culture is a mosaic, reflecting its diverse population, including Indigenous peoples, immigrants, and their descendants. It embraces a variety of traditions, languages, and cuisines, contributing to a rich and dynamic cultural landscape.",
-        ["South America"] = "South America, a continent of stunning landscapes and cultures, showcases the Amazon rainforest, the Andes Mountains, and diverse ecosystems. Its people encompass indigenous communities and descendants of European, African, and Asian immigrants, contributing to a vibrant cultural tapestry.",
-        ["Australia"] = "Australia, a continent and country, boasts a unique blend of Indigenous and immigrant cultures. Its multicultural society values outdoor living, sports, arts, and a laid-back lifestyle. The land Down Under offers diverse landscapes, from arid deserts to lush coastlines.",
-        ["Antarctica"] = "Antarctica, Earth's southernmost continent, is an inhospitable, frozen wilderness with no native human population. It is primarily characterized by its vast ice sheets, extreme cold, and unique scientific research stations, making it a hub for international scientific cooperation."
+        "Africa",
+        "Europe",
+        "Asia",
+        "North America",
+        "South America",
+        "Australia",
+        "Antarctica"
     };
 
-    [Header("Religious Section")]
-    [SerializeField] private GameObject[] religiousPanels;
+    [Header("Exhibits in tour order")]
+    [SerializeField] private TourEntry[] religiousEntries =
+        new TourEntry[ReligionTitles.Length];
 
-    [Header("Art History Section")]
-    [SerializeField] private GameObject[] continentImages;
-    [SerializeField] private GameObject[] artHistoryPanels;
+    [SerializeField] private TourEntry[] artEntries =
+        new TourEntry[ArtTitles.Length];
 
-    [Header("Display")]
-    [SerializeField] private TextMeshProUGUI DisplayTitle;
-    [SerializeField] private TextMeshProUGUI DisplayDescription;
+    [Header("Tour panel")]
+    [SerializeField] private GameObject tourPanel;
+    [SerializeField] private TMP_Text DisplayTitle;
+    [SerializeField] private TMP_Text DisplayDescription;
+    [SerializeField] private Image exhibitImage;
+    [SerializeField] private Image continentImage;
 
-    private IEnumerator slideshow;
-    private GameObject visibleSlideObject;
+    private int nextSlideIndex;
+    private bool tourRunning;
 
     public bool SlideshowComplete { get; private set; }
 
     public void DomeSlideshow()
     {
+        nextSlideIndex = 0;
+        tourRunning = true;
         SlideshowComplete = false;
-        slideshow = PlaySlides();
+
         NextSlide();
+
+        if (tourPanel != null)
+            tourPanel.SetActive(true);
     }
 
     public void NextSlide()
     {
-        if (slideshow == null)
+        if (!tourRunning)
             return;
 
-        ClearSlide();
-
-        if (!slideshow.MoveNext())
+        if (nextSlideIndex >= ReligionTitles.Length + ArtTitles.Length)
         {
-            slideshow = null;
-            SlideshowComplete = true;
-        }
-    }
-
-    private IEnumerator PlaySlides()
-    {
-        int religiousIndex = 0;
-
-        foreach (var slide in religiousSlides)
-        {
-            DisplayTitle.text = slide.Key;
-            DisplayDescription.text = slide.Value;
-            yield return null;
-
-            ShowSlideObject(religiousPanels[religiousIndex]);
-            yield return null;
-
-            religiousIndex++;
+            EndTour();
+            return;
         }
 
-        int artIndex = 0;
+        int slideIndex = nextSlideIndex++;
 
-        foreach (var slide in artSlides)
+        if (slideIndex < ReligionTitles.Length)
         {
-            DisplayTitle.text = slide.Key;
-            ShowSlideObject(continentImages[artIndex]);
-            yield return null;
-
-            DisplayDescription.text = slide.Value;
-            yield return null;
-
-            ShowSlideObject(artHistoryPanels[artIndex]);
-            yield return null;
-
-            artIndex++;
+            PopulatePanel(
+                ReligionTitles[slideIndex],
+                GetEntry(religiousEntries, slideIndex),
+                DomeWallState.Religion);
+            return;
         }
+
+        int artIndex = slideIndex - ReligionTitles.Length;
+
+        PopulatePanel(
+            ArtTitles[artIndex],
+            GetEntry(artEntries, artIndex),
+            DomeWallState.Art);
     }
 
-    private void ShowSlideObject(GameObject slideObject)
+    public void EndTour()
     {
-        visibleSlideObject = slideObject;
+        tourRunning = false;
+        SlideshowComplete = true;
 
-        if (visibleSlideObject != null)
-            visibleSlideObject.SetActive(true);
+        if (tourPanel != null)
+            tourPanel.SetActive(false);
     }
 
-    private void ClearSlide()
+    private void PopulatePanel(
+        string title,
+        TourEntry entry,
+        DomeWallState state)
     {
-        DisplayTitle.text = string.Empty;
-        DisplayDescription.text = string.Empty;
+        Sprite sprite = null;
+        string description = string.Empty;
 
-        if (visibleSlideObject != null)
-            visibleSlideObject.SetActive(false);
+        if (entry != null && entry.wall != null)
+        {
+            DomeWallSpriteGroup group = entry.wall.GetSpriteGroup(state);
+            int index = entry.entryIndex;
 
-        visibleSlideObject = null;
+            if (group?.groupSprites != null &&
+                index >= 0 &&
+                index < group.groupSprites.Length)
+            {
+                sprite = group.groupSprites[index];
+
+                if (group.groupInfo != null && index < group.groupInfo.Length)
+                    description = group.groupInfo[index] ?? string.Empty;
+            }
+            else
+            {
+                Debug.LogWarning(
+                    $"Invalid {state} exhibit index {index} for '{title}'.", this);
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"Assign a DomeWall for '{title}'.", this);
+        }
+
+        if (DisplayTitle != null)
+            DisplayTitle.text = title;
+
+        if (DisplayDescription != null)
+            DisplayDescription.text = description;
+
+        SetImage(exhibitImage, sprite);
+        SetImage(
+            continentImage,
+            state == DomeWallState.Art ? entry?.continentImage : null);
+    }
+
+    private static TourEntry GetEntry(TourEntry[] entries, int index)
+    {
+        return entries != null && index < entries.Length ? entries[index] : null;
+    }
+
+    private static void SetImage(Image image, Sprite sprite)
+    {
+        if (image == null)
+            return;
+
+        image.sprite = sprite;
+        image.enabled = sprite != null;
     }
 }
