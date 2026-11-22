@@ -13,6 +13,8 @@ public class PanelNavigation : MonoBehaviour
     [Header("Action Keys")]
     [SerializeField] private KeyCode exitKey = KeyCode.Tab;
 
+    [SerializeField] SpiralTour tour;
+
     public void Start()
     {
         CloseControlPanel();
@@ -22,6 +24,7 @@ public class PanelNavigation : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            tour.ResetDomeVisit();
             greetingPanel.SetActive(true);
             // Note canvas is getting disabled somewhere but I don't know where.
         }
