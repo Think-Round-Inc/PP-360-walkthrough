@@ -14,7 +14,7 @@ public class PanelNavigation : MonoBehaviour
     [SerializeField] private GameObject domeDescriptionPanel;
 
     [Header("Action Keys")]
-    [SerializeField] private KeyCode exitKey = KeyCode.Tab;
+    private KeyCode exitKey = KeyCode.Tab;
 
     [SerializeField] private SpiralTour tour;
 

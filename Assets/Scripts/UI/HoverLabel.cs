@@ -1,5 +1,5 @@
 /*
-*   Name: UIController.cs
+*   Name: HoverLabel.cs
 *   Description: This script is responsible for displaying the labels 
 *                   shown when hovering over navigation buttons.
 */

@@ -8,9 +8,7 @@ public class ToggleAssistant : MonoBehaviour
 
     public void ToggleEvent(bool value)
     {
-        if (value)
-            onToggleTurnedOn.Invoke();
-        else
-            onToggleTurnedOff?.Invoke();
+        if (value) { onToggleTurnedOn.Invoke(); }
+        else { onToggleTurnedOff?.Invoke(); }
     }
 }

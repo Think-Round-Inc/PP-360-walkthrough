@@ -137957,7 +137957,6 @@ MonoBehaviour:
   MenuUIPanel: {fileID: 1381893987}
   greetingPanel: {fileID: 1513749811}
   domeDescriptionPanel: {fileID: 8568177}
-  exitKey: 9
   tour: {fileID: 1673526890}
 --- !u!4 &1577390592
 Transform:
