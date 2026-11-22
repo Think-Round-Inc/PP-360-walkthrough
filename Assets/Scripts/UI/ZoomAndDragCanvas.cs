@@ -24,10 +24,19 @@ public sealed class ZoomAndDragCanvas : MonoBehaviour
 
     private void Update()
     {
+        UpdateZoom();
+        UpdateDrag();
+    }
+
+    private void UpdateZoom()
+    {
         float zoomDelta = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
         float newScale = Mathf.Clamp(canvasRectTransform.localScale.x + zoomDelta, minZoom, maxZoom);
         canvasRectTransform.localScale = Vector3.one * newScale;
+    }
 
+    private void UpdateDrag()
+    {
         if (Input.GetMouseButtonDown((int)dragButton))
         {
             lastMousePosition = Input.mousePosition;
