@@ -1,19 +1,20 @@
+/*
+*   Name: UIController.cs
+*   Description: This script is responsible for displaying the labels 
+*                   shown when hovering over navigation buttons.
+*/
+
 using UnityEngine;
 
-public sealed class UIController : MonoBehaviour
+public sealed class HoverLabel : MonoBehaviour
 {
-    [SerializeField, Tooltip("Labels shown when hovering over navigation buttons")]
+    [SerializeField, Tooltip("")]
     private GameObject[] navigationInfoLabels;
 
     private void Start()
     {
         SetAllNavigationLabelsInactive();
     }
-
-    // Kept temporarily for existing Inspector event references.
-    public void SetPaintingNameAndInfoToInfoText(GameObject screen) { }
-
-    public void ClearInfoPanelText() { }
 
     public void SetNavigationInfoLabelActive(int index)
     {
@@ -26,14 +27,5 @@ public sealed class UIController : MonoBehaviour
         }
     }
 
-    public void SetAllNavigationLabelsInactive()
-    {
-        for (int i = 0; i < navigationInfoLabels.Length; i++)
-        {
-            if (navigationInfoLabels[i] != null)
-            {
-                navigationInfoLabels[i].SetActive(false);
-            }
-        }
-    }
+    public void SetAllNavigationLabelsInactive() => SetNavigationInfoLabelActive(-1);
 }

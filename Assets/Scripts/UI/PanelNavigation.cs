@@ -1,3 +1,8 @@
+/*
+*   Name: PanelNavigation.cs
+*   Description: This script is responsible for openning/closing panels
+*/
+
 using UnityEngine;
 
 public class PanelNavigation : MonoBehaviour
@@ -28,13 +33,8 @@ public class PanelNavigation : MonoBehaviour
     }
 
     public void OpenControlPanel() => ControlPanel.SetActive(true);
-
     public void CloseControlPanel() => ControlPanel.SetActive(false);
-
     public void OpenMenuUI() => MenuUIPanel.SetActive(true);
-
     public void CloseMenuUI() => MenuUIPanel.SetActive(false);
-
-    public void ToggleDomeDescription() =>
-        domeDescriptionPanel.SetActive(!domeDescriptionPanel.activeInHierarchy);
+    public void ToggleDomeDescription() => domeDescriptionPanel.SetActive(!domeDescriptionPanel.activeInHierarchy);
 }

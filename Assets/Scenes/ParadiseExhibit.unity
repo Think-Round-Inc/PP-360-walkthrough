@@ -3095,7 +3095,6 @@ GameObject:
   - component: {fileID: 193542529}
   - component: {fileID: 193542528}
   - component: {fileID: 193542527}
-  - component: {fileID: 193542526}
   m_Layer: 0
   m_Name: 3rd Floor
   m_TagString: Untagged
@@ -3123,18 +3122,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -73.5}
   m_SizeDelta: {x: 200, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &193542526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193542524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c794a9f74654bc34284ae91a3292f651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &193542527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3150,7 +3137,7 @@ MonoBehaviour:
   onPointerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 193542526}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToTargetColor
         m_Mode: 1
@@ -3165,7 +3152,7 @@ MonoBehaviour:
   onPointerExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 193542526}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -3233,7 +3220,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 193542526}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -69034,7 +69021,6 @@ GameObject:
   - component: {fileID: 713966446}
   - component: {fileID: 713966445}
   - component: {fileID: 713966444}
-  - component: {fileID: 713966443}
   m_Layer: 0
   m_Name: 1st Floor
   m_TagString: Untagged
@@ -69062,18 +69048,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 23.5}
   m_SizeDelta: {x: 200, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &713966443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713966441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c794a9f74654bc34284ae91a3292f651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &713966444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69089,7 +69063,7 @@ MonoBehaviour:
   onPointerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 713966443}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToTargetColor
         m_Mode: 1
@@ -69104,7 +69078,7 @@ MonoBehaviour:
   onPointerExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 713966443}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -69172,7 +69146,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 713966443}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -173206,7 +173180,6 @@ GameObject:
   - component: {fileID: 1833679795}
   - component: {fileID: 1833679794}
   - component: {fileID: 1833679793}
-  - component: {fileID: 1833679792}
   m_Layer: 0
   m_Name: 2nd Floor
   m_TagString: Untagged
@@ -173234,18 +173207,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -23.5}
   m_SizeDelta: {x: 200, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1833679792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833679790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c794a9f74654bc34284ae91a3292f651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1833679793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173261,7 +173222,7 @@ MonoBehaviour:
   onPointerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1833679792}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToTargetColor
         m_Mode: 1
@@ -173276,7 +173237,7 @@ MonoBehaviour:
   onPointerExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1833679792}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -173344,7 +173305,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1833679792}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -205918,7 +205879,6 @@ GameObject:
   - component: {fileID: 2069684725}
   - component: {fileID: 2069684724}
   - component: {fileID: 2069684723}
-  - component: {fileID: 2069684722}
   m_Layer: 0
   m_Name: Outdoor
   m_TagString: Untagged
@@ -205946,18 +205906,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 73.5}
   m_SizeDelta: {x: 200, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2069684722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2069684720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c794a9f74654bc34284ae91a3292f651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2069684723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205973,7 +205921,7 @@ MonoBehaviour:
   onPointerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2069684722}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToTargetColor
         m_Mode: 1
@@ -205988,7 +205936,7 @@ MonoBehaviour:
   onPointerExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2069684722}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -206056,7 +206004,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2069684722}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
