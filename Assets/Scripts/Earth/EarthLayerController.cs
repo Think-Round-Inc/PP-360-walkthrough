@@ -43,7 +43,6 @@ public class EarthLayerController : MonoBehaviour
         UpdateSprites();
     }
 
-    // not working or need to rework
     public void LayerDeselect()
     {
         for (int i = 0; i < toggles.Length; i++)

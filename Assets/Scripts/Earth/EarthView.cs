@@ -3,90 +3,60 @@ using UnityEngine.Events;
 
 public sealed class EarthView : MonoBehaviour
 {
-    [SerializeField] Canvas earthViewCanvas;
-    [SerializeField] EarthViewPanel[] earthViewPanels = new EarthViewPanel[4];
-    [SerializeField] GameObject viewerHead;
-    [SerializeField] UnityEvent onEarthViewCanvasOpened;
-    [SerializeField] UnityEvent onEarthViewCanvasClosed;
-    [SerializeField] UnityEvent<EarthViewPanel> onPanelOpened;
-    [Range(0, 3)] int _currentPanelOpen = 0;
+    [SerializeField] private Canvas earthViewCanvas;
+    [SerializeField] private EarthViewPanel[] earthViewPanels = new EarthViewPanel[4];
+    [SerializeField] private GameObject viewerHead;
+    [SerializeField] private UnityEvent onEarthViewCanvasOpened;
+    [SerializeField] private UnityEvent onEarthViewCanvasClosed;
+    [SerializeField] private UnityEvent<EarthViewPanel> onPanelOpened;
+    private int currentPanelIndex;
 
-    void Start()
+    private void Start()
     {
         HideAllPanels();
         if (earthViewCanvas == null) return;
         earthViewCanvas.gameObject.SetActive(false);
     }
 
-    /// <summary>
-    /// hides all earth panels
-    /// </summary>
     public void HideAllPanels()
     {
-        for (int i = 0; i < earthViewPanels.Length; i++)
+        foreach (EarthViewPanel panel in earthViewPanels)
         {
-            if (earthViewPanels[i] != null)
-                earthViewPanels[i].gameObject.SetActive(false);
+            if (panel != null) panel.gameObject.SetActive(false);
         }
     }
 
-    /// <summary>
-    /// moves to a specific Earth panel
-    /// </summary>
-    /// <param name="panelToMoveTo">view panel to move to</param>
     public void MoveToPanel(EarthViewPanel panelToMoveTo)
     {
-        for (int i = 0; i < earthViewPanels.Length; i++)
+        foreach (EarthViewPanel panel in earthViewPanels)
         {
-            if (earthViewPanels[i] == null) continue;
-            if (earthViewPanels[i] != panelToMoveTo)
-                earthViewPanels[i].gameObject.SetActive(false);
-            else
-            {
-                earthViewPanels[i].gameObject.SetActive(true);
-                onPanelOpened?.Invoke(earthViewPanels[i]);
-            }
+            if (panel == null) continue;
+
+            bool isRequestedPanel = panel == panelToMoveTo;
+            panel.gameObject.SetActive(isRequestedPanel);
+            if (isRequestedPanel) onPanelOpened?.Invoke(panel);
         }
     }
 
-    /// <summary>
-    /// Move to previous Earth panel
-    /// </summary>
-    public void MoveToPreviousPanel()
+    public void MoveToPreviousPanel() => MoveBy(-1);
+
+    public void MoveToNextPanel() => MoveBy(1);
+
+    private void MoveBy(int step)
     {
-        _currentPanelOpen--;
-        if (_currentPanelOpen < 0)
-            _currentPanelOpen = earthViewPanels.Length - 1;
-        MoveToPanel(earthViewPanels[_currentPanelOpen]);
+        int panelCount = earthViewPanels.Length;
+        if (panelCount == 0) return;
+
+        currentPanelIndex = (currentPanelIndex + step + panelCount) % panelCount;
+        MoveToPanel(earthViewPanels[currentPanelIndex]);
     }
 
-    /// <summary>
-    /// move to next earth panel
-    /// </summary>
-    public void MoveToNextPanel()
-    {
-        _currentPanelOpen++;
-        if (_currentPanelOpen >= earthViewPanels.Length)
-            _currentPanelOpen = 0;
-        MoveToPanel(earthViewPanels[_currentPanelOpen]);
-    }
-
-    /// <summary>
-    /// set earth view canvas active
-    /// </summary>
-    /// <param name="isActive">new state of panel</param>
     public void SetEarthViewCanvasActive(bool isActive)
     {
         if (earthViewCanvas == null) return;
-        if (isActive)
-        {
-            earthViewCanvas.gameObject.SetActive(true);
-            onEarthViewCanvasOpened.Invoke();
-        }
-        else
-        {
-            earthViewCanvas.gameObject.SetActive(false);
-            onEarthViewCanvasClosed.Invoke();
-        }
+
+        earthViewCanvas.gameObject.SetActive(isActive);
+        UnityEvent canvasEvent = isActive ? onEarthViewCanvasOpened : onEarthViewCanvasClosed;
+        canvasEvent?.Invoke();
     }
 }

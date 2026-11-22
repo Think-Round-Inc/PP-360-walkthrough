@@ -1,3 +1,8 @@
+/*
+*   Name: RotateObject.cs
+*   Description: Rotates the Earth Hologram
+*/
+
 using UnityEngine;
 
 public class RotateObject : MonoBehaviour
