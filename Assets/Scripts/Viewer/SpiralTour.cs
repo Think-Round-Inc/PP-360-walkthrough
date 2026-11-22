@@ -384,4 +384,18 @@ private void ClearDomeVisit(
     if (domeTourPanel != null)
         domeTourPanel.SetActive(false);
 }
+
+private void ClearDomeVisit()
+{
+    domeWaypoint = null;
+    domePanelOpened = false;
+    domePanelOpenTime = 0f;
+
+    if (domeTourPanel != null)
+        domeTourPanel.SetActive(false);
+}
+public void ResetDomeVisit()
+{
+    ClearDomeVisit();
+}
 }
