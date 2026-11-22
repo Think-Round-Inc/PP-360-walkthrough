@@ -1,3 +1,8 @@
+/*
+*   Name: EarthView.cs
+*   Description:    This script is reposnible for toggling the Earth Panels & Canvas.
+*/
+
 using UnityEngine;
 using UnityEngine.Events;
 

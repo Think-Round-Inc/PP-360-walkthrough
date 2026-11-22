@@ -1,6 +1,6 @@
 /*
 *   Name: RotateObject.cs
-*   Description: Rotates the Earth Hologram
+*   Description: This script rotates the Earth Hologram
 */
 
 using UnityEngine;
