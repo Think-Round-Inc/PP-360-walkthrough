@@ -63269,7 +63269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &371672446
 Transform:
   m_ObjectHideFlags: 0
@@ -66743,7 +66743,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584828965
 MonoBehaviour:
@@ -104197,7 +104197,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1169315266
 MonoBehaviour:
@@ -104512,6 +104512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213781681}
   - component: {fileID: 1213781682}
+  - component: {fileID: 1213781683}
   m_Layer: 0
   m_Name: DomeTourManager
   m_TagString: Untagged
@@ -104546,10 +104547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41303df6c0cd4cc5bff0341626f5dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tourPanel: {fileID: 801261410}
-  DisplayTitle: {fileID: 756278965}
-  DisplayDescription: {fileID: 901987557}
-  exhibitImage: {fileID: 495808445}
   continentSprites:
   - {fileID: 21300000, guid: d5f0d01a527662046bde3da7eaf10776, type: 3}
   - {fileID: 21300000, guid: 487cdb396a2334949848e01c619d61c6, type: 3}
@@ -104558,6 +104555,22 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8acae8f40cd7c4f47b99b6e14e27523b, type: 3}
   - {fileID: 21300000, guid: f12b4fc6d65dda240823135c1cbbcf8f, type: 3}
   - {fileID: 21300000, guid: da5d1e85ea57e674daf949d7657af683, type: 3}
+--- !u!114 &1213781683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213781680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c5a8ce1fe854237832caff5523b073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tourPanel: {fileID: 0}
+  sectionTitle: {fileID: 756278965}
+  sectionDescription: {fileID: 901987557}
+  exhibitImage: {fileID: 495808445}
   imageTitle: {fileID: 715927797}
   imageDescription: {fileID: 1996945907}
 --- !u!1 &1218452812

@@ -1,13 +1,16 @@
+/*
+*   Name: DomeTourManager.cs
+*   Description: Gets DomeTour Information from DomeWall.cs
+*/
+
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DomeTourManager : MonoBehaviour
 {
-    private sealed class TourSlide
+    internal sealed class TourSlide
     {
         public readonly string Title;
         public readonly string Description;
@@ -16,11 +19,11 @@ public class DomeTourManager : MonoBehaviour
         public readonly string ImageDescription;
 
         public TourSlide(
-        string title,
-        string description,
-        Sprite image,
-        string imageTitle = "",
-        string imageDescription = "")
+            string title,
+            string description,
+            Sprite image,
+            string imageTitle = "",
+            string imageDescription = "")
         {
             Title = title;
             Description = description;
@@ -52,256 +55,122 @@ public class DomeTourManager : MonoBehaviour
         "Antarctica"
     };
 
-    [Header("Tour panel")]
-    [SerializeField] private GameObject tourPanel;
-    [SerializeField] private TMP_Text DisplayTitle;
-    [SerializeField] private TMP_Text DisplayDescription;
-    [SerializeField] private Image exhibitImage;
-
-    [Tooltip("Africa, Europe, Asia, North America, South America, Australia, Antarctica.")]
+    [Tooltip("Location Order: Africa, Europe, Asia, North America, South America, Australia, Antarctica.")]
     [SerializeField] private Sprite[] continentSprites = new Sprite[ArtTitles.Length];
 
-    private readonly List<TourSlide> slides = new();
-    private int currentSlideIndex;
-    private bool tourRunning;
+    private DomeTourPanel Panel => GetComponent<DomeTourPanel>();
 
-    public bool SlideshowComplete { get; private set; }
+    public bool SlideshowComplete => Panel != null && Panel.SlideshowComplete;
 
-    [SerializeField] private TMP_Text imageTitle;
-[SerializeField] private TMP_Text imageDescription;
+    // Preserve existing button bindings and the slideshow start on activation.
+    private void OnEnable() => Panel?.OpenOnEnable();
+    public void DomeSlideshow() => Panel?.Open();
+    public void NextSlide() => Panel?.NextSlide();
+    public void PreviousSlide() => Panel?.PreviousSlide();
+    public void EndTour() => Panel?.Close();
 
-    private void OnEnable()
+    internal void OpenForVisit(GameObject visitPanel) => Panel?.OpenForVisit(visitPanel);
+
+    internal List<TourSlide> BuildSlides()
     {
-        DomeSlideshow();
-    }
+        var slides = new List<TourSlide>();
 
-    public void DomeSlideshow()
-    {
-        BuildSlides();
+        DomeWall[] walls = FindObjectsOfType<DomeWall>(true);
 
-        currentSlideIndex = 0;
-        tourRunning = slides.Count > 0;
-        SlideshowComplete = false;
-
-        if (!tourRunning)
-            return;
-
-        ShowCurrentSlide();
-
-        if (tourPanel != null)
-            tourPanel.SetActive(true);
-    }
-
-    public void NextSlide()
-    {
-        if (!tourRunning)
-            return;
-
-        if (currentSlideIndex == slides.Count - 1)
+        var religionEntries = ReadArtwork(walls, DomeWallState.Religion, "Group");
+        foreach (string title in ReligionTitles)
         {
-            EndTour();
-            return;
+            AddSection(slides, religionEntries, DomeWallState.Religion, "Group", title, null);
         }
 
-        currentSlideIndex++;
-        ShowCurrentSlide();
-    }
+        var artEntries = ReadArtwork(walls, DomeWallState.Art, "Continent");
 
-    public void PreviousSlide()
-    {
-        if (!tourRunning || currentSlideIndex == 0)
-            return;
-
-        currentSlideIndex--;
-        ShowCurrentSlide();
-    }
-
-    public void EndTour()
-    {
-        tourRunning = false;
-        SlideshowComplete = true;
-
-        if (tourPanel != null)
-            tourPanel.SetActive(false);
-    }
-
-    private void ShowCurrentSlide()
-    {
-        TourSlide slide = slides[currentSlideIndex];
-
-        if (DisplayTitle != null)
-            DisplayTitle.text = slide.Title;
-
-        if (DisplayDescription != null)
-            DisplayDescription.text = slide.Description;
-
-        if (exhibitImage != null)
+        for (int index = 0; index < ArtTitles.Length; index++)
         {
-            exhibitImage.sprite = slide.Image;
-            exhibitImage.enabled = slide.Image != null;
+            Sprite map = continentSprites != null && index < continentSprites.Length
+                ? continentSprites[index]
+                : null;
+
+            AddSection(slides, artEntries, DomeWallState.Art, "Continent", ArtTitles[index], map);
         }
-        if (imageTitle != null)
-         imageTitle.text = slide.ImageTitle;
 
-        if (imageDescription != null)
-            imageDescription.text = slide.ImageDescription;
+        return slides;
     }
 
-  private void BuildSlides()
-{
-    slides.Clear();
-
-    DomeWall[] walls = FindObjectsOfType<DomeWall>(true);
-
-    foreach (string title in ReligionTitles)
-        AddSection(walls, DomeWallState.Religion, "Group", title, null);
-
-    for (int index = 0; index < ArtTitles.Length; index++)
+    private static List<(Sprite Sprite, string Section, string Title, string Info, string ShortInfo)>
+        ReadArtwork(DomeWall[] walls, DomeWallState state, string metadataLabel)
     {
-        Sprite map = continentSprites != null && index < continentSprites.Length
-            ? continentSprites[index]
-            : null;
-
-        AddSection(walls, DomeWallState.Art, "Continent", ArtTitles[index], map);
-    }
-}
-
-private void AddSection(
-    DomeWall[] walls,
-    DomeWallState state,
-    string metadataLabel,
-    string title,
-    Sprite introImage)
-{
-    string[] aliases = GetTitleAliases(title);
-    var artwork = new List<(Sprite Sprite, string Title, string Info)>();
-    var addedSprites = new HashSet<Sprite>();
-    string description = string.Empty;
-
-    foreach (DomeWall wall in walls)
-    {
-        DomeWallSpriteGroup group = wall.GetSpriteGroup(state);
-        if (group?.groupSprites == null)
-            continue;
-
-        for (int index = 0; index < group.groupSprites.Length; index++)
+        var entries = new List<(Sprite Sprite, string Section, string Title, string Info, string ShortInfo)>();
+        foreach (DomeWall wall in walls)
         {
-            Sprite sprite = group.groupSprites[index];
-            if (sprite == null)
-                continue;
+            DomeWallSpriteGroup group = wall.GetSpriteGroup(state);
+            if (group?.groupSprites == null) { continue; }
 
-            string section = ReadMetadata(group.groupInfo, index, metadataLabel);
-            if (string.IsNullOrWhiteSpace(section))
-                section = ReadMetadata(group.groupShortInfo, index, metadataLabel);
-
-            if (!MatchesSection(section, title, aliases))
-                continue;
-
-            if (string.IsNullOrWhiteSpace(description) &&
-                group.groupShortInfo != null &&
-                index < group.groupShortInfo.Length)
+            for (int index = 0; index < group.groupSprites.Length; index++)
             {
-                description = group.groupShortInfo[index]?.Trim() ?? string.Empty;
+                Sprite sprite = group.groupSprites[index];
+                if (sprite == null) { continue; }
+
+                string section = ReadMetadata(group.groupInfo, index, metadataLabel);
+                if (string.IsNullOrWhiteSpace(section))
+                {
+                    section = ReadMetadata(group.groupShortInfo, index, metadataLabel);
+                }
+
+                if (string.IsNullOrWhiteSpace(section)) { continue; }
+
+                entries.Add((sprite, section,
+                    GetEntryText(group.groupTitles, index),
+                    GetEntryText(group.groupInfo, index),
+                    GetEntryText(group.groupShortInfo, index)));
+            }
+        }
+
+        return entries;
+    }
+
+    private void AddSection(
+        List<TourSlide> slides,
+        List<(Sprite Sprite, string Section, string Title, string Info, string ShortInfo)> entries,
+        DomeWallState state,
+        string metadataLabel,
+        string title,
+        Sprite introImage)
+    {
+        string[] aliases = GetTitleAliases(title);
+        var artwork = new List<(Sprite Sprite, string Title, string Info)>();
+        var addedSprites = new HashSet<Sprite>();
+        string description = string.Empty;
+
+        foreach (var entry in entries)
+        {
+            if (!MatchesSection(entry.Section, title, aliases)) { continue; }
+
+            if (string.IsNullOrWhiteSpace(description))
+            {
+                description = entry.ShortInfo.Trim();
             }
 
-            if (sprite != introImage && addedSprites.Add(sprite))
-{
-    artwork.Add((
-        sprite,
-        GetEntryText(group.groupTitles, index),
-        GetEntryText(group.groupInfo, index)));
-}
+            if (entry.Sprite != introImage && addedSprites.Add(entry.Sprite))
+            {
+                artwork.Add((entry.Sprite, entry.Title, entry.Info));
+            }
         }
-    }
 
-    if (introImage != null)
-        slides.Add(new TourSlide(title, description, introImage));
+        if (introImage != null) { slides.Add(new TourSlide(title, description, introImage)); }
 
-    foreach (var entry in artwork)
-{
-    slides.Add(new TourSlide(
-        title, description, entry.Sprite, entry.Title, entry.Info));
-}
+        foreach (var entry in artwork)
+        {
+            slides.Add(new TourSlide(title, description, entry.Sprite, entry.Title, entry.Info));
+        }
 
-    if (artwork.Count == 0)
-    {
+        if (artwork.Count > 0) { return; }
+
         Debug.LogWarning(
             $"No {state} artwork matched '{title}' using {metadataLabel} metadata.",
             this);
 
-        if (introImage == null)
-            slides.Add(new TourSlide(title, description, null));
-    }
-}
-    private void AddSection(
-        DomeWall[] walls,
-        DomeWallState state,
-        string metadataLabel,
-        string title,
-        string description,
-        Sprite introImage)
-    {
-        int firstSlideIndex = slides.Count;
-
-        if (introImage != null)
-            slides.Add(new TourSlide(title, description, introImage));
-
-        string[] aliases = GetTitleAliases(title);
-        var addedSprites = new HashSet<Sprite>();
-
-        foreach (DomeWall wall in walls)
-        {
-            DomeWallSpriteGroup group = wall.GetSpriteGroup(state);
-            if (group?.groupSprites == null)
-                continue;
-
-            for (int index = 0; index < group.groupSprites.Length; index++)
-{
-    Sprite sprite = group.groupSprites[index];
-
-    string section = ReadMetadata(group.groupInfo, index, metadataLabel);
-    if (string.IsNullOrEmpty(section))
-        section = ReadMetadata(group.groupShortInfo, index, metadataLabel);
-
-    if (!MatchesSection(section, title, aliases))
-        continue;
-
-    string artworkTitle = group.groupTitles != null &&
-                          index < group.groupTitles.Length
-        ? group.groupTitles[index]
-        : "(untitled)";
-
-    if (sprite == null)
-    {
-        Debug.LogWarning(
-            $"{wall.name} [{index}] '{artworkTitle}' matches '{title}' " +
-            "but has an empty sprite slot.",
-            wall);
-        continue;
-    }
-
-    if (sprite == introImage || !addedSprites.Add(sprite))
-    {
-        Debug.LogWarning(
-            $"{wall.name} [{index}] '{artworkTitle}' reuses sprite '{sprite.name}' " +
-            $"in '{title}'.",
-            wall);
-        continue;
-    }
-
-    slides.Add(new TourSlide(title, description, sprite));
-}
-        }
-
-        if (addedSprites.Count == 0)
-        {
-            Debug.LogWarning(
-                $"No {state} artwork matched '{title}' using {metadataLabel} metadata.",
-                this);
-        }
-
-        if (slides.Count == firstSlideIndex)
-            slides.Add(new TourSlide(title, description, null));
+        if (introImage == null) { slides.Add(new TourSlide(title, description, null)); }
     }
 
     private static string ReadMetadata(string[] entries, int index, string label)
@@ -326,13 +195,11 @@ private void AddSection(
 
     private static bool MatchesSection(string value, string title, string[] aliases)
     {
-        if (string.Equals(value, title, StringComparison.OrdinalIgnoreCase))
-            return true;
+        if (string.Equals(value, title, StringComparison.OrdinalIgnoreCase)) { return true; }
 
         foreach (string alias in aliases)
         {
-            if (string.Equals(value, alias, StringComparison.OrdinalIgnoreCase))
-                return true;
+            if (string.Equals(value, alias, StringComparison.OrdinalIgnoreCase)) { return true; }
         }
 
         return false;
@@ -347,7 +214,7 @@ private void AddSection(
             case "Jews":
                 return new[] { "Judaism", "Jewish" };
             case "Buddhists/Jains":
-                return new[] { "Buddhism", "Jainism", "Buddhism/Jainism", "Buddhism and Jainism",  "Tibetan Buddhism" };
+                return new[] { "Buddhism", "Jainism", "Buddhism/Jainism", "Buddhism and Jainism", "Tibetan Buddhism" };
             case "Hindus":
                 return new[] { "Hinduism", "Hindu", "Sikhism", "Hinduism/Sikhism" };
             case "Taoists":
@@ -361,27 +228,16 @@ private void AddSection(
             case "South America":
                 return new[] { "SouthAmerica" };
             case "Antarctica":
-    return new[]
-    {
-        "Antartica",
-        "Antartica/Polar",
-        "Antartica/Polar Region",
-        "Antartica/Polar Regions",
-        "Antarctica/Polar Regions"
-    };
+                return new[] { "Antartica/Polar Region" };
             default:
                 return Array.Empty<string>();
         }
     }
 
     private static string GetEntryText(string[] entries, int index)
-{
-    return entries != null && index >= 0 && index < entries.Length
-        ? entries[index] ?? string.Empty
-        : string.Empty;
-}
-
-
-
-
+    {
+        return entries != null && index >= 0 && index < entries.Length
+            ? entries[index] ?? string.Empty
+            : string.Empty;
+    }
 }

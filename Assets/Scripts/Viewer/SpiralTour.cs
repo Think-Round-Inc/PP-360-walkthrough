@@ -8,20 +8,18 @@ public sealed class SpiralTour : MonoBehaviour
     [SerializeField] private GameObject domeTourPanel;
 
     private const float DomePanelDelay = 0.5f;
-    private const float DomeArrivalDistance = 0.1f;
-    private const float DomePanelExitDistance = 1.0f;
 
     private Transform domeWaypoint;
     private float domePanelOpenTime;
     private bool domePanelOpened;
-    
+
     private static readonly string[] TourPrefixes =
     {
         "Ch", "Je", "Bu", "Hi", "Ta", "In", "Mu", "Ea", "Do"
     };
 
     [Header("Settings")]
-    
+
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float rotSpeed = 3f;
     [SerializeField] private float pauseDuration = 2f;
@@ -30,7 +28,6 @@ public sealed class SpiralTour : MonoBehaviour
     [Tooltip("X = tilt up/down, Y = turn left/right, Z = roll.")]
     [SerializeField] private Vector3 cameraAngleOffset;
 
-    [Header("Playback")]
     private bool viewerControllerActive = true;
     private bool isPlaying = true;
 
@@ -41,9 +38,9 @@ public sealed class SpiralTour : MonoBehaviour
     [Header("Spawn Point")]
     [SerializeField] private Transform christiansSpawnPoint;
 
-    private string targetTagViewingPoint = "ViewingPoint";
-    private string targetTagPausePoint = "PausePoint";
-    private string targetTagScreen = "Display";
+    private const string targetTagViewingPoint = "ViewingPoint";
+    private const string targetTagPausePoint = "PausePoint";
+    private const string targetTagScreen = "Display";
 
     private int currentTargetIndex;
     private float currentTime;
@@ -89,22 +86,17 @@ public sealed class SpiralTour : MonoBehaviour
 
     // ---------- PLAYBACK BUTTONS ---------- //
 
-    public void PreviousLocation()
+    public void PreviousLocation() => MoveBy(-1);
+
+    public void NextLocation() => MoveBy(1);
+
+    private void MoveBy(int step)
     {
-        if (targetPositions.Count == 0) return;
+        int count = targetPositions.Count;
+        if (count == 0) return;
 
-        int lastIndex = targetPositions.Count - 1;
-        int currentIndex = Mathf.Min(currentTargetIndex, lastIndex);
-        GoToLocation(currentIndex == 0 ? lastIndex : currentIndex - 1);
-    }
-
-    public void NextLocation()
-    {
-        if (targetPositions.Count == 0) return;
-
-        int lastIndex = targetPositions.Count - 1;
-        int currentIndex = Mathf.Min(currentTargetIndex, lastIndex);
-        GoToLocation(currentIndex == lastIndex ? 0 : currentIndex + 1);
+        int currentIndex = Mathf.Min(currentTargetIndex, count - 1);
+        GoToLocation((currentIndex + step + count) % count);
     }
 
     private void GoToLocation(int index)
@@ -113,7 +105,9 @@ public sealed class SpiralTour : MonoBehaviour
         currentTime = 0f;
 
         GameObject target = targetPositions[index];
-        if (target == null || target.transform != domeWaypoint) {ClearDomeVisit();}
+        if (target == null || target.transform != domeWaypoint)
+            ClearDomeVisit();
+
         if (target == null) return;
 
         // Back/forward immediately jumps to the requested location.
@@ -155,7 +149,7 @@ public sealed class SpiralTour : MonoBehaviour
         }
     }
 
-    private void SortLists(
+    private static void SortLists(
         List<GameObject> positions,
         List<GameObject> rotations)
     {
@@ -176,7 +170,7 @@ public sealed class SpiralTour : MonoBehaviour
         return TourPrefixes.Length;
     }
 
-    private int CompareNames(string name1, string name2)
+    private static int CompareNames(string name1, string name2)
     {
         int prefixOrder = GetPrefixOrder(name1).CompareTo(GetPrefixOrder(name2));
         if (prefixOrder != 0)
@@ -324,78 +318,55 @@ public sealed class SpiralTour : MonoBehaviour
     }
 
     private void AdvanceTarget()
-{
-    currentTargetIndex++;
-    currentTime = 0f;
-
-    if (currentTargetIndex >= targetPositions.Count)
     {
-        isPlaying = false;
-        return;
+        currentTargetIndex++;
+        currentTime = 0f;
+
+        if (currentTargetIndex >= targetPositions.Count)
+        {
+            isPlaying = false;
+            return;
+        }
+
+        ClearDomeVisit();
     }
 
-    ClearDomeVisit();
-}
-    private static bool IsDomeLocation(GameObject target)
-{
-    return target.name.StartsWith("Do", System.StringComparison.Ordinal);
-}
+    private static bool IsDomeLocation(GameObject target) =>
+        target.name.StartsWith("Do", System.StringComparison.Ordinal);
 
-private void BeginDomeVisit(Transform waypoint)
-{
-    if (domeWaypoint == waypoint)
-        return;
-
-    ClearDomeVisit();
-    domeWaypoint = waypoint;
-domePanelOpenTime = Time.unscaledTime + DomePanelDelay;}
-
-private void LateUpdate()
-{
-    if (domeWaypoint == null ||
-        domePanelOpened ||
-        domeTourPanel == null ||
-        Time.unscaledTime < domePanelOpenTime)
+    private void BeginDomeVisit(Transform waypoint)
     {
-        return;
+        if (domeWaypoint == waypoint)
+            return;
+
+        ClearDomeVisit();
+        domeWaypoint = waypoint;
+        domePanelOpenTime = Time.unscaledTime + DomePanelDelay;
     }
 
-    domePanelOpened = true;
-    domeTourPanel.SetActive(true);
-}
-private void ClearDomeVisit(
-    [System.Runtime.CompilerServices.CallerMemberName] string caller = "")
-{
-    if (domeWaypoint != null)
+    private void LateUpdate()
     {
-        float distance = Vector3.Distance(
-            transform.position, domeWaypoint.position);
+        if (domeWaypoint == null ||
+            domePanelOpened ||
+            domeTourPanel == null ||
+            Time.unscaledTime < domePanelOpenTime)
+        {
+            return;
+        }
 
-        Debug.LogWarning(
-            $"Dome visit cleared by {caller}. " +
-            $"Waypoint: {domeWaypoint.name}, distance: {distance:F4}, " +
-            $"panel opened: {domePanelOpened}.",
-            this);
+        domePanelOpened = true;
+        domeTourPanel.SetActive(true);
     }
 
-    domeWaypoint = null;
-    domePanelOpened = false;
+    private void ClearDomeVisit()
+    {
+        domeWaypoint = null;
+        domePanelOpened = false;
+        domePanelOpenTime = 0f;
 
-    if (domeTourPanel != null)
-        domeTourPanel.SetActive(false);
-}
+        if (domeTourPanel != null)
+            domeTourPanel.SetActive(false);
+    }
 
-private void ClearDomeVisit()
-{
-    domeWaypoint = null;
-    domePanelOpened = false;
-    domePanelOpenTime = 0f;
-
-    if (domeTourPanel != null)
-        domeTourPanel.SetActive(false);
-}
-public void ResetDomeVisit()
-{
-    ClearDomeVisit();
-}
+    public void ResetDomeVisit() => ClearDomeVisit();
 }

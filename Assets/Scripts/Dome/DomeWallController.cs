@@ -1,14 +1,20 @@
+/*
+*   Name: DomeWallController.cs
+*   Description: This script manages the dome wall informaiton that displays
+*                when the hotspot button is clicked during self guided tours
+*/
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DomeWallController : MonoBehaviour
 {
-    [SerializeField] Sprite missingImageSprite;
-    [SerializeField] Image currentDomeImage;
-    [SerializeField] TMP_Text currentDomeTitleText;
-    [SerializeField] TMP_Text currentDomeInfoText;
-    [SerializeField] CanvasRenderer bulletIcon;
+    [SerializeField] private Sprite missingImageSprite;
+    [SerializeField] private Image currentDomeImage;
+    [SerializeField] private TMP_Text currentDomeTitleText;
+    [SerializeField] private TMP_Text currentDomeInfoText;
+    [SerializeField] private CanvasRenderer bulletIcon;
 
     private DomeWall selectedDomeWall;
 
@@ -23,40 +29,33 @@ public class DomeWallController : MonoBehaviour
         currentDomeImage.sprite = null;
         currentDomeTitleText.text = "";
 
-        if (DomeWallChanger.CurrentDomeWallState == DomeWallState.Religion)
-            bulletIcon.gameObject.SetActive(true);
-        else if (DomeWallChanger.CurrentDomeWallState == DomeWallState.Art)
-            bulletIcon.gameObject.SetActive(false);
+        DomeWallState state = DomeWallChanger.CurrentDomeWallState;
+        if (state == DomeWallState.Religion || state == DomeWallState.Art)
+            bulletIcon.gameObject.SetActive(state == DomeWallState.Religion);
 
-        if (hotSpotObject.TryGetComponent(out DomeWall domeWall))
-        {
-            selectedDomeWall = domeWall;
-            SetInfoText();
+        if (!hotSpotObject.TryGetComponent(out DomeWall domeWall))
+            return;
 
-            Sprite domeSprite = domeWall.GetCurrentSprite();
-
-            if (domeSprite != null)
-                currentDomeImage.sprite = domeSprite;
-            else if (missingImageSprite != null)
-                currentDomeImage.sprite = missingImageSprite;
-
-            string title = domeWall.GetCurrentTitle();
-
-            if (title != "")
-                currentDomeTitleText.text = title;
-            else
-                currentDomeTitleText.text = "Data coming soon!";
-
-            string info = domeWall.GetCurrentInfo();
-
-            if (info != "")
-                currentDomeInfoText.text = info;
-        }
+        selectedDomeWall = domeWall;
+        ShowWall(domeWall, state);
     }
 
-    void SetInfoText()
+    private void ShowWall(DomeWall wall, DomeWallState state)
     {
-        switch (DomeWallChanger.CurrentDomeWallState)
+        Sprite sprite = wall.GetCurrentSprite();
+        currentDomeImage.sprite = sprite != null ? sprite : missingImageSprite;
+
+        string title = wall.GetCurrentTitle();
+        currentDomeTitleText.text = title == "" ? "Data coming soon!" : title;
+
+        string info = wall.GetCurrentInfo();
+        if (info != "")
+        {
+            currentDomeInfoText.text = info;
+            return;
+        }
+
+        switch (state)
         {
             case DomeWallState.Art:
                 currentDomeInfoText.text = "Data\n\nbeing\n\nadded!\n\nPlease\n\ncome back\n\nlater!";
@@ -68,22 +67,18 @@ public class DomeWallController : MonoBehaviour
     }
 
     public void NextImage()
-{
-    if (selectedDomeWall == null)
-        return;
+    {
+        if (selectedDomeWall == null) { return; }
 
-    selectedDomeWall.SwitchWallSprite();
+        selectedDomeWall.SwitchWallSprite();
+        UpdateDomeWallViewingPanel(selectedDomeWall.gameObject);
+    }
 
-    UpdateDomeWallViewingPanel(selectedDomeWall.gameObject);
-}
+    public void PreviousImage()
+    {
+        if (selectedDomeWall == null) { return; }
 
-public void PreviousImage()
-{
-    if (selectedDomeWall == null)
-        return;
-
-    selectedDomeWall.PreviousImage();
-
-    UpdateDomeWallViewingPanel(selectedDomeWall.gameObject);
-}
+        selectedDomeWall.PreviousImage();
+        UpdateDomeWallViewingPanel(selectedDomeWall.gameObject);
+    }
 }
