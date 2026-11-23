@@ -1,3 +1,9 @@
+/*
+*   Name: ViewerController.cs
+*   Description: this script is repsonsible for the viewer contorls the user uses
+*                in the self guided tour 
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

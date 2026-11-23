@@ -20,15 +20,11 @@ public sealed class ZoomCanvas : MonoBehaviour
         zoomCanvas.gameObject.SetActive(false);
     }
 
-    /// <summary>
-    /// Sets current painting to the zoombale canvas for zooming
-    /// </summary>
-    /// <param name="screen">Current close screen</param>
+    // Sets current painting to the zoombale canvas for zooming
+    // <param name="screen">Current close screen</param>
     public void DisplayPaintingToZoomableCanvas(GameObject screen)
     {
-        if (screen == null ||
-            !screen.TryGetComponent(out PaintingData data) ||
-            data.paintingData == null)
+        if (screen == null || !screen.TryGetComponent(out PaintingData data) || data.paintingData == null)
         {
             return;
         }
@@ -50,38 +46,28 @@ public sealed class ZoomCanvas : MonoBehaviour
         }
     }
 
-    /// <summary>
     /// Turns on zoom canvas and fires event that it has been opened
-    /// </summary>
     public void OpenCanvas()
     {
         zoomCanvas.gameObject.SetActive(true);
         onCanvasOpened?.Invoke();
     }
 
-    /// <summary>
     /// Sets painting canvas to null effectively removing it
-    /// </summary>
     public void ClearPaintingCanvas()
     {
-        if (paintingZoomableCanvas == null) return;
+        if (paintingZoomableCanvas == null) { return; }
         paintingZoomableCanvas.sprite = null;
     }
 
-    /// <summary>
     /// Switch the visibility of zoom canvas
-    /// </summary>
     public void SwitchCanvasVisibility()
     {
-        if (zoomCanvas.gameObject.activeSelf)
-            CloseCanvas();
-        else
-            OpenCanvas();
+        if (zoomCanvas.gameObject.activeSelf) { CloseCanvas(); }
+        else { OpenCanvas(); }
     }
 
-    /// <summary>
-    /// Turns canvas off and fired event that it has been closed
-    /// </summary>
+    // Turns canvas off and fired event that it has been closed
     public void CloseCanvas()
     {
         zoomCanvas.gameObject.SetActive(false);
