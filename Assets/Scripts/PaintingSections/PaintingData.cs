@@ -1,3 +1,9 @@
+/*
+*   Name: PaintingData.cs
+*   Description: Stores painting image, title, description, and audio. Sets the exhibit screen,
+*               and loads an image from a URL when the screen is closee            
+*/
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;

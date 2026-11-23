@@ -1,3 +1,9 @@
+/*
+*   Name: ZoomCanvas.cs
+*   Description: Displays selected painting in the zoom canvas and plays
+*         its associated audio. Manages canvas visibility.
+*/
+
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;

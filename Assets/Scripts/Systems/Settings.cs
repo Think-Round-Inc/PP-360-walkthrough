@@ -1,3 +1,9 @@
+/*
+*   Name: Settings.cs
+*   Description: this script is reponsible for managing the setting panel
+*                slides and toggles.
+*/
+
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;

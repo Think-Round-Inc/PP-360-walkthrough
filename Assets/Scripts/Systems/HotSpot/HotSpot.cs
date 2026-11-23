@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/*
+*   Name: HotSpot.cs
+*   Description: Sets up each individual hotspot so the functionality 
+*                can be manipulated in HotSpotController.cs
+*/  
+
+using UnityEngine;
 using UnityEngine.Events;
 
 public sealed class HotSpot : MonoBehaviour
