@@ -1,3 +1,9 @@
+/*
+*   Name: Section.cs
+*   Description: Identifies a gallery section, sets the default color
+*                and initializes the painting screens for that section.
+*/              
+
 using UnityEngine;
 
 public static class SectionColorHolder

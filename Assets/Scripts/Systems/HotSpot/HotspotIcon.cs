@@ -1,3 +1,8 @@
+/*
+*   Name: HotSpotIcon.cs
+*   Description: this script determines what panel type to open onClick
+*/
+
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;

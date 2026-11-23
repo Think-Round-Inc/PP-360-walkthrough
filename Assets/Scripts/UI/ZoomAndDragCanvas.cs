@@ -1,11 +1,13 @@
+/*
+*   Name: ZoomAndDragCanvas.cs
+*   Description: this script is reponsible for the drag and zoom configuration and settings.
+*/
+
 using UnityEngine;
 
 public sealed class ZoomAndDragCanvas : MonoBehaviour
 {
-    public enum MouseButton
-    {
-        Left, Right, Middle
-    }
+    public enum MouseButton { Left, Right, Middle }
 
     public MouseButton dragButton;
     public float zoomSpeed = 1f;
@@ -14,7 +16,6 @@ public sealed class ZoomAndDragCanvas : MonoBehaviour
     public float dragSpeed = 1f;
 
     private RectTransform canvasRectTransform;
-
     private Vector3 lastMousePosition;
 
     private void Start()
@@ -24,10 +25,19 @@ public sealed class ZoomAndDragCanvas : MonoBehaviour
 
     private void Update()
     {
+        UpdateZoom();
+        UpdateDrag();
+    }
+
+    private void UpdateZoom()
+    {
         float zoomDelta = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
         float newScale = Mathf.Clamp(canvasRectTransform.localScale.x + zoomDelta, minZoom, maxZoom);
         canvasRectTransform.localScale = Vector3.one * newScale;
+    }
 
+    private void UpdateDrag()
+    {
         if (Input.GetMouseButtonDown((int)dragButton))
         {
             lastMousePosition = Input.mousePosition;

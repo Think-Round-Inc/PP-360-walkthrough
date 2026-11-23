@@ -3095,7 +3095,6 @@ GameObject:
   - component: {fileID: 193542529}
   - component: {fileID: 193542528}
   - component: {fileID: 193542527}
-  - component: {fileID: 193542526}
   m_Layer: 0
   m_Name: 3rd Floor
   m_TagString: Untagged
@@ -3123,18 +3122,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -73.5}
   m_SizeDelta: {x: 200, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &193542526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193542524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c794a9f74654bc34284ae91a3292f651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &193542527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3150,7 +3137,7 @@ MonoBehaviour:
   onPointerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 193542526}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToTargetColor
         m_Mode: 1
@@ -3165,7 +3152,7 @@ MonoBehaviour:
   onPointerExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 193542526}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -3233,7 +3220,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 193542526}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -63292,12 +63279,12 @@ Transform:
   m_GameObject: {fileID: 371672445}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.76, y: 0, z: 3.06}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -67.52, y: 0, z: 6.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 59620532}
-  m_Father: {fileID: 772729449}
+  m_Father: {fileID: 2128969029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &373478321
 GameObject:
@@ -66756,7 +66743,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584828965
 MonoBehaviour:
@@ -69034,7 +69021,6 @@ GameObject:
   - component: {fileID: 713966446}
   - component: {fileID: 713966445}
   - component: {fileID: 713966444}
-  - component: {fileID: 713966443}
   m_Layer: 0
   m_Name: 1st Floor
   m_TagString: Untagged
@@ -69062,18 +69048,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 23.5}
   m_SizeDelta: {x: 200, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &713966443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713966441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c794a9f74654bc34284ae91a3292f651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &713966444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69089,7 +69063,7 @@ MonoBehaviour:
   onPointerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 713966443}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToTargetColor
         m_Mode: 1
@@ -69104,7 +69078,7 @@ MonoBehaviour:
   onPointerExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 713966443}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -69172,7 +69146,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 713966443}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -70500,7 +70474,6 @@ Transform:
   m_Children:
   - {fileID: 1090506466}
   - {fileID: 121390381}
-  - {fileID: 371672446}
   - {fileID: 543450651991961975}
   - {fileID: 1615010654}
   - {fileID: 1788907016}
@@ -70510,8 +70483,6 @@ Transform:
   - {fileID: 780009379}
   - {fileID: 267969736}
   - {fileID: 1997179950}
-  - {fileID: 1710043091}
-  - {fileID: 1259895157}
   - {fileID: 824837582}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -104226,7 +104197,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1169315266
 MonoBehaviour:
@@ -104541,6 +104512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213781681}
   - component: {fileID: 1213781682}
+  - component: {fileID: 1213781683}
   m_Layer: 0
   m_Name: DomeTourManager
   m_TagString: Untagged
@@ -104575,10 +104547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41303df6c0cd4cc5bff0341626f5dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tourPanel: {fileID: 801261410}
-  DisplayTitle: {fileID: 756278965}
-  DisplayDescription: {fileID: 901987557}
-  exhibitImage: {fileID: 495808445}
   continentSprites:
   - {fileID: 21300000, guid: d5f0d01a527662046bde3da7eaf10776, type: 3}
   - {fileID: 21300000, guid: 487cdb396a2334949848e01c619d61c6, type: 3}
@@ -104587,6 +104555,22 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8acae8f40cd7c4f47b99b6e14e27523b, type: 3}
   - {fileID: 21300000, guid: f12b4fc6d65dda240823135c1cbbcf8f, type: 3}
   - {fileID: 21300000, guid: da5d1e85ea57e674daf949d7657af683, type: 3}
+--- !u!114 &1213781683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213781680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c5a8ce1fe854237832caff5523b073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tourPanel: {fileID: 0}
+  sectionTitle: {fileID: 756278965}
+  sectionDescription: {fileID: 901987557}
+  exhibitImage: {fileID: 495808445}
   imageTitle: {fileID: 715927797}
   imageDescription: {fileID: 1996945907}
 --- !u!1 &1218452812
@@ -105599,7 +105583,7 @@ Transform:
   m_Children:
   - {fileID: 934738059}
   - {fileID: 1248746245}
-  m_Father: {fileID: 772729449}
+  m_Father: {fileID: 543450651991961975}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1264403403
 GameObject:
@@ -137986,7 +137970,6 @@ MonoBehaviour:
   MenuUIPanel: {fileID: 1381893987}
   greetingPanel: {fileID: 1513749811}
   domeDescriptionPanel: {fileID: 8568177}
-  exitKey: 9
   tour: {fileID: 1673526890}
 --- !u!4 &1577390592
 Transform:
@@ -138342,6 +138325,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1894002187}
+  - {fileID: 1710043091}
   m_Father: {fileID: 772729449}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &1615010655
@@ -140400,14 +140384,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710043090}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 972575680}
   - {fileID: 1463377438}
-  m_Father: {fileID: 772729449}
+  m_Father: {fileID: 1615010654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1711422330
 GameObject:
@@ -173208,7 +173192,6 @@ GameObject:
   - component: {fileID: 1833679795}
   - component: {fileID: 1833679794}
   - component: {fileID: 1833679793}
-  - component: {fileID: 1833679792}
   m_Layer: 0
   m_Name: 2nd Floor
   m_TagString: Untagged
@@ -173236,18 +173219,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -23.5}
   m_SizeDelta: {x: 200, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1833679792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833679790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c794a9f74654bc34284ae91a3292f651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1833679793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173263,7 +173234,7 @@ MonoBehaviour:
   onPointerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1833679792}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToTargetColor
         m_Mode: 1
@@ -173278,7 +173249,7 @@ MonoBehaviour:
   onPointerExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1833679792}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -173346,7 +173317,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1833679792}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -205920,7 +205891,6 @@ GameObject:
   - component: {fileID: 2069684725}
   - component: {fileID: 2069684724}
   - component: {fileID: 2069684723}
-  - component: {fileID: 2069684722}
   m_Layer: 0
   m_Name: Outdoor
   m_TagString: Untagged
@@ -205948,18 +205918,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 73.5}
   m_SizeDelta: {x: 200, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2069684722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2069684720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c794a9f74654bc34284ae91a3292f651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2069684723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205975,7 +205933,7 @@ MonoBehaviour:
   onPointerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2069684722}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToTargetColor
         m_Mode: 1
@@ -205990,7 +205948,7 @@ MonoBehaviour:
   onPointerExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2069684722}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -206058,7 +206016,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2069684722}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextColorChanger, Assembly-CSharp
         m_MethodName: SetColorToOriginalColor
         m_Mode: 1
@@ -207300,6 +207258,7 @@ Transform:
   - {fileID: 1897358323}
   - {fileID: 2020517682}
   - {fileID: 757256034}
+  - {fileID: 371672446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2129442855
@@ -235604,6 +235563,7 @@ Transform:
   - {fileID: 1936222264819057568}
   - {fileID: 6883193099195699574}
   - {fileID: 712209482}
+  - {fileID: 1259895157}
   m_Father: {fileID: 772729449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &561635838211180330

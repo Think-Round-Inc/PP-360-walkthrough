@@ -1,3 +1,8 @@
+/*  Name: HotspotController.cs
+*  Description: Finds the nearest hotspot in range, positions the icon, tints it (if visited),
+*               dispatches the selected hotspot's click event and updates the plainting's title             
+*/
+
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -43,51 +48,43 @@ public sealed class HotspotController : MonoBehaviour
         HideHotspotIcon();
     }
 
-    /// <summary>
     /// Method to set the painting data information to the infoText
-    /// </summary>
     /// <param name="screen">screen that the painting is shown on</param>
    public void SetPaintingNameAndInfoToInfoText(GameObject screen)
-{
-    if (infoText == null || screen == null) return;
-
-    infoText.text = "";
-
-    if (screen.TryGetComponent(out PaintingData data) &&
-        data.paintingData != null)
     {
-        infoText.enableAutoSizing = true;
-        infoText.text = data.paintingData.paintingName;
-    }
-}
+        if (infoText == null || screen == null) return;
 
-    /// <summary>
+        infoText.text = "";
+
+        if (screen.TryGetComponent(out PaintingData data) &&
+            data.paintingData != null)
+        {
+            infoText.enableAutoSizing = true;
+            infoText.text = data.paintingData.paintingName;
+        }
+    }
+
     /// Clears infoText
-    /// </summary>
     public void ClearInfoPanelText() => infoText.text = string.Empty;
 
-    /// <summary>
     /// Returns closest hotspot GameObject
-    /// </summary>
     /// <returns>closest hotspot GameObject</returns>
     public GameObject GetClosestHotspotGameObject() => closestHotspot;
 
-    /// <summary>
     /// Triggers the current hotspots clicked events
-    /// </summary>
     public void HotSpotClickedEventTriggered()
-{
-    if (closestHotspot == null) return;
-
-    // Keep the existing painting setup events.
-    if (closestHotspot.TryGetComponent(out HotSpot hotSpot))
     {
-        hotSpot.onClickedHotspot?.Invoke(closestHotspot);
-    }
+        if (closestHotspot == null) return;
 
-    // Update the title above the zoomed painting.
-    SetPaintingNameAndInfoToInfoText(closestHotspot);
-}
+        // Keep the existing painting setup events.
+        if (closestHotspot.TryGetComponent(out HotSpot hotSpot))
+        {
+            hotSpot.onClickedHotspot?.Invoke(closestHotspot);
+        }
+
+        // Update the title above the zoomed painting.
+        SetPaintingNameAndInfoToInfoText(closestHotspot);
+    }
 
     private void Update()
     {
@@ -147,14 +144,10 @@ public sealed class HotspotController : MonoBehaviour
         }
     }
 
-    /// <summary>
     /// Sets hotspot icon GameObject inactive
-    /// </summary>
     public void HideHotspotIcon() => hotspotIcon.SetActive(false);
 
-    /// <summary>
     /// Sets the hotspot as seen by viewer
-    /// </summary>
     public void SetHotspotAsSeen()
     {
         if (closestHotspot == null) return;
@@ -163,9 +156,7 @@ public sealed class HotspotController : MonoBehaviour
             hotspot.hasSeenBefore = true;
     }
 
-    /// <summary>
     /// Moves the hotspot icon to hotspot location
-    /// </summary>
     /// <param name="targetHotspot">Hotspot target GameObject</param>
     public void MoveIconToHotspot(GameObject targetHotspot)
     {
@@ -189,9 +180,7 @@ public sealed class HotspotController : MonoBehaviour
         }
     }
 
-    /// <summary>
     /// Used for debugging, can be added to event list for a custom message to fire
-    /// </summary>
     /// <param name="message">Message to print to the console</param>
     public void PrintMessage(string message) => print($"{message}");
 }

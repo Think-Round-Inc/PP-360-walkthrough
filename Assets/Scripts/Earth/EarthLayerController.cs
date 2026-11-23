@@ -1,10 +1,15 @@
+/*
+*   Name: EarthLayerController.cs
+*   Description: This script is responsible for toggling the Earth Layers
+*/
+
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EarthLayerController : MonoBehaviour
 {
-    [SerializeField, Tooltip("Earth Layer Toggles")] Toggle[] toggles = new Toggle[4];
-    [SerializeField, Tooltip("All images for each state")] Image[] images;
+    [SerializeField] Toggle[] toggles = new Toggle[4];
+    [SerializeField] Image[] images;
     [SerializeField] CanvasRenderer layerPanelParent;
     [SerializeField] string layerPanelName;
 
@@ -43,7 +48,6 @@ public class EarthLayerController : MonoBehaviour
         UpdateSprites();
     }
 
-    // not working or need to rework
     public void LayerDeselect()
     {
         for (int i = 0; i < toggles.Length; i++)

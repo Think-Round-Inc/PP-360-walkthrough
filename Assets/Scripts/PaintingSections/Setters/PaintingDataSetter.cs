@@ -16,9 +16,7 @@ public sealed class PaintingDataSetter : MonoBehaviour
         SetPaintingData();
     }
 
-    /// <summary>
     /// sets painting data from entered info to individual paintings in scene
-    /// </summary>
     [ContextMenu(nameof(SetPaintingData))]
     public void SetPaintingData()
     {
@@ -58,8 +56,7 @@ public sealed class PaintingDataSetter : MonoBehaviour
 
     private void OnValidate()
     {
-        if (setAllDataWhenAValueChanges)
-            SetPaintingData();
+        if (setAllDataWhenAValueChanges) { SetPaintingData(); }
     }
 }
 

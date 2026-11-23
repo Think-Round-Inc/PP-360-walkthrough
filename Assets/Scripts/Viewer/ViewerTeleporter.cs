@@ -1,3 +1,9 @@
+/*
+*   Name: ViewerTeleporter.cs
+*   Description: this script goes on a location and gets the transform coordinates
+*                 so they may be used to transport the viewer to that location later
+*/
+
 using UnityEngine;
 
 public class ViewerTeleporter : MonoBehaviour
