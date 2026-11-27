@@ -31,7 +31,6 @@ public sealed class HotspotController : MonoBehaviour
 
     private HotSpot[] hotSpots;
     private Image iconImage;
-    private PaintingData closestPainting;
 
     private GameObject closestHotspot;
 
@@ -97,12 +96,8 @@ public sealed class HotspotController : MonoBehaviour
             if (closestHotspot != null)
                 closestHotspot.tag = "Screen";
             closestHotspot = next;
-            closestPainting = null;
             if (next != null)
-            {
                 next.tag = "ClosestHotspot";
-                next.TryGetComponent(out closestPainting);
-            }
         }
 
         if (next == null)
@@ -110,8 +105,6 @@ public sealed class HotspotController : MonoBehaviour
             HideHotspotIcon();
             return;
         }
-        if (closestPainting != null && closestPainting.isActiveAndEnabled)
-            closestPainting.EnsureImageLoaded();
         MoveIconToHotspot(next);
     }
 
