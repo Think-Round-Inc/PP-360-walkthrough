@@ -74,6 +74,13 @@ public class PanelNavigation : MonoBehaviour
     public void OpenControlPanel() => ControlPanel.SetActive(true);
     public void CloseControlPanel() => ControlPanel.SetActive(false);
 
+    public void ReturnFromPainting()
+    {
+        OpenMenuUI();
+        if (SelfGuidedTourActive && tour.TryGetComponent<ViewerController>(out var viewer))
+            viewer.SetViewerControlsActive(true);
+    }
+
     public void OpenMenuUI() => MenuUIPanel.SetActive(true);
     public void CloseMenuUI()
     {

@@ -1,7 +1,7 @@
 /*
 *   Name: PaintingData.cs
 *   Description: Stores painting image, title, description, and audio. Sets the exhibit screen,
-*               and loads an image from a URL when the screen is closee            
+*               and loads an image from a URL when the screen is close.
 */
 
 using System.Collections;
@@ -24,72 +24,67 @@ public sealed class PaintingData : MonoBehaviour
 {
     public PaintingDataHolder paintingData;
 
-    // new flag
+    [SerializeField, Min(0.1f), Tooltip("Seconds before retrying a failed image download while the painting is nearby.")]
+    private float retryDelay = 5f;
+
     private bool isLoaded;
+    private UnityWebRequest pendingRequest;
+    private float nextRetry;
 
     public void InitializePaintingData()
     {
-        if (TryGetComponent<Renderer>(out var screenRenderer))
-        {
-            if (paintingData.paintingImage != null)
-            {
-                screenRenderer.material.color = paintingData.paintingTextureColor;
-                screenRenderer.material.mainTexture = paintingData.paintingImage.texture;   // :contentReference[oaicite:1]{index=1}
-                isLoaded = true;
-            }
-            else
-            {
-            // show the section’s fallback color when no image is available
-                screenRenderer.material.mainTexture = null;
-                screenRenderer.material.color = SectionColorHolder.EmptyScreenColor;       // :contentReference[oaicite:2]{index=2}
-            }
-        }
+        var sprite = paintingData?.paintingImage;
+        ApplyTexture(sprite != null ? sprite.texture : null);
+    }
+
+    public void EnsureImageLoaded()
+    {
+        if (!isLoaded && Time.unscaledTime >= nextRetry)
+            LoadImageBasedOnProximity();
     }
 
     public void LoadImageBasedOnProximity()
     {
-        if (!string.IsNullOrEmpty(paintingData.imageURL))
-            StartCoroutine(LoadImage(paintingData.imageURL));                              // :contentReference[oaicite:3]{index=3}
+        if (pendingRequest == null && !string.IsNullOrEmpty(paintingData?.imageURL))
+            StartCoroutine(LoadImage(paintingData.imageURL));
     }
 
-    IEnumerator LoadImage(string link)
+    private IEnumerator LoadImage(string url)
     {
-        UnityWebRequest request = UnityWebRequestTexture.GetTexture(link);
-        yield return request.SendWebRequest();
-
-#if UNITY_2020_2_OR_NEWER
-        if (request.result != UnityWebRequest.Result.Success)
-#else
-        if (request.isNetworkError || request.isHttpError)
-#endif
+        using (var request = UnityWebRequestTexture.GetTexture(url))
         {
-            Debug.Log(request.error);
-        }
-        else
-        {
-            Texture2D myTexture = ((DownloadHandlerTexture)request.downloadHandler).texture;
-
-            if (TryGetComponent<Renderer>(out var screenRenderer))
+            pendingRequest = request;
+            try
             {
-                if (myTexture != null)
-                {
-                    screenRenderer.material.color = paintingData.paintingTextureColor;
-                    screenRenderer.material.mainTexture = myTexture;                       // :contentReference[oaicite:4]{index=4}
-                    isLoaded = true;  // <-- set the flag here, inside a method
-                }
+                yield return request.SendWebRequest();
+                if (request.result == UnityWebRequest.Result.Success)
+                    ApplyTexture(DownloadHandlerTexture.GetContent(request));
                 else
-                {
-                    screenRenderer.material.mainTexture = null;
-                    screenRenderer.material.color = SectionColorHolder.EmptyScreenColor;   // :contentReference[oaicite:5]{index=5}
-                }
+                    Debug.LogWarning(request.error, this);
+                nextRetry = Time.unscaledTime + retryDelay;
+            }
+            finally
+            {
+                pendingRequest = null;
             }
         }
     }
 
-    private void Update()
+    private void OnDisable()
     {
-        // load once when we are the closest, never clear after
-        if (gameObject.tag == "ClosestHotspot" && !isLoaded)
-            LoadImageBasedOnProximity();
+        if (pendingRequest == null) return;
+        pendingRequest.Abort();
+        StopAllCoroutines();
+        pendingRequest?.Dispose();
+        pendingRequest = null;
+    }
+
+    private void ApplyTexture(Texture texture)
+    {
+        if (!TryGetComponent<Renderer>(out var screenRenderer)) return;
+        var material = screenRenderer.material;
+        material.mainTexture = texture;
+        material.color = texture != null ? paintingData.paintingTextureColor : SectionColorHolder.EmptyScreenColor;
+        isLoaded = texture != null;
     }
 }

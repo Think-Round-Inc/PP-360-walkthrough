@@ -15,8 +15,10 @@ public sealed class DomeWallChanger : MonoBehaviour
     public static DomeWallState CurrentDomeWallState = DomeWallState.Art;
     [SerializeField] DomeWallState currentDomeWallState = DomeWallState.Art;
     [SerializeField] bool isActive = true;
-    [SerializeField] float timeToChangeWalls;
-    [SerializeField] float timeBetweenWallChanges;
+    [Header("Wall Timing")]
+    [SerializeField, Min(1f), Tooltip("Seconds between starts of wall change sequences.")] float timeToChangeWalls;
+    [SerializeField, Min(0f), Tooltip("Seconds between consecutive walls in a group.")] float timeBetweenWallChanges;
+    [Header("Wall Groups")]
     [SerializeField] DomeWall[] faithWalls;
     [SerializeField] bool faithWallsToggle = true;
     [SerializeField] DomeWall[] faunaWalls;
@@ -24,6 +26,7 @@ public sealed class DomeWallChanger : MonoBehaviour
     [SerializeField] DomeWall[] infoWalls;
     [SerializeField] bool infoWallsToggle = true;
     private float currentTime;
+    private bool wasCycling;
 
     private void Start()
     {
@@ -56,10 +59,12 @@ public sealed class DomeWallChanger : MonoBehaviour
     {
         if (!isActive || CurrentDomeWallState == DomeWallState.Off)
         {
-            StopAllCoroutines();
+            if (wasCycling) StopAllCoroutines();
+            wasCycling = false;
             return;
         }
-        currentTime = currentTime < 0 ? 0 : currentTime -= Time.deltaTime;
+        wasCycling = true;
+        currentTime = Mathf.Max(0f, currentTime - Time.deltaTime);
         if (currentTime == 0)
         {
             currentTime = Mathf.Max(1, timeToChangeWalls);
@@ -74,11 +79,11 @@ public sealed class DomeWallChanger : MonoBehaviour
     // <returns>null</returns>
     public IEnumerator ChangeWalls(DomeWall[] walls)
     {
-        if (walls.Length.Equals(0)) yield return null;
+        if (walls == null) yield break;
         for (int i = 0; i < walls.Length; i++)
         {
             yield return new WaitForSeconds(Mathf.Max(0, timeBetweenWallChanges));
-            walls[i].SwitchWallSprite();
+            if (walls[i] != null) walls[i].SwitchWallSprite();
         }
     }
 

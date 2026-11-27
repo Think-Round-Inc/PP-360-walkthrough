@@ -8,7 +8,7 @@ using UnityEngine;
 
 public sealed class HoverLabel : MonoBehaviour
 {
-    [SerializeField, Tooltip("")]
+    [SerializeField, Tooltip("Navigation hints in the same order as the buttons’ hover events.")]
     private GameObject[] navigationInfoLabels;
 
     private void Start()

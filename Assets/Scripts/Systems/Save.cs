@@ -5,10 +5,12 @@ public sealed class Save : MonoBehaviour
 {
     private const string Prefix = "Exhibit.Settings.";
 
+    [Header("Narration")]
     [SerializeField] private TTS tts;
     [SerializeField] private UnityEngine.UI.Toggle voiceOver;
-    [SerializeField] private UnityEngine.UI.Toggle colorblindness;
     [SerializeField] private UnityEngine.UI.Slider ttsVolume;
+    [Header("Exhibit Preferences")]
+    [SerializeField] private UnityEngine.UI.Toggle colorblindness;
     [SerializeField] private UnityEngine.UI.Slider musicVolume;
     [SerializeField] private UnityEngine.UI.Slider brightness;
     [SerializeField] private UnityEngine.UI.Slider mouseSensitivity;

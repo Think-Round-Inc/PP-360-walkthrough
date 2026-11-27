@@ -7,7 +7,8 @@ public sealed class SpiralTour : MonoBehaviour
     [Header("Dome Tour")]
     [SerializeField] private GameObject domeTourPanel;
 
-    private const float DomePanelDelay = 0.5f;
+    [SerializeField, Min(0f), Tooltip("Seconds spent at a dome waypoint before opening its panel.")]
+    private float domePanelDelay = 0.5f;
 
     private Transform domeWaypoint;
     private float domePanelOpenTime;
@@ -18,7 +19,7 @@ public sealed class SpiralTour : MonoBehaviour
         "Ch", "Je", "Bu", "Hi", "Ta", "In", "Mu", "Ea", "Do"
     };
 
-    [Header("Settings")]
+    [Header("Tour Movement")]
 
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float rotSpeed = 3f;
@@ -31,7 +32,7 @@ public sealed class SpiralTour : MonoBehaviour
     private bool viewerControllerActive = true;
     private bool isPlaying = true;
 
-    [Header("Target Lists")]
+    [Header("Targets Collected at Tour Start")]
     [SerializeField] private List<GameObject> targetPositions = new List<GameObject>();
     [SerializeField] private List<GameObject> targetRotations = new List<GameObject>();
 
@@ -341,7 +342,7 @@ public sealed class SpiralTour : MonoBehaviour
 
         ClearDomeVisit();
         domeWaypoint = waypoint;
-        domePanelOpenTime = Time.unscaledTime + DomePanelDelay;
+        domePanelOpenTime = Time.unscaledTime + domePanelDelay;
     }
 
     private void LateUpdate()

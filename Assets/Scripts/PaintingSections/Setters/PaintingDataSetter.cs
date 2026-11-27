@@ -1,4 +1,6 @@
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 [System.Serializable]
@@ -23,7 +25,7 @@ public sealed class PaintingDataSetter : MonoBehaviour
         for (int i = 0; i < paintingData.Length; i++)
         {
             if (i >= screens.Length) return;
-            if (paintingData[i].paintingImage != null && screens[i] != null)
+            if (paintingData[i] != null && paintingData[i].paintingImage != null && screens[i] != null)
             {
                 if (screens[i].TryGetComponent(out PaintingData data))
                 {

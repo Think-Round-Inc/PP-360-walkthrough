@@ -6,6 +6,7 @@ using UnityEngine;
 
 public sealed class TTS : MonoBehaviour
 {
+    [Header("Narration Controls")]
     [SerializeField] private UnityEngine.UI.Toggle speechToggle;
     [SerializeField] private UnityEngine.UI.Slider ttsSlider;
     [SerializeField] private Transform sliderTitles;
@@ -13,6 +14,10 @@ public sealed class TTS : MonoBehaviour
     [SerializeField, Range(0.5f, 3f), Tooltip("Speech speed multiplier. 1 uses the device voice’s normal speed.")]
     private float speed = 1f;
 
+    [SerializeField, Min(0.05f), Tooltip("Seconds between visibility checks for new captions.")]
+    private float scanInterval = 0.2f;
+
+    [Header("Narration Scope")]
     [SerializeField] private RectTransform[] fullScreenIntroPanels = System.Array.Empty<RectTransform>();
     [SerializeField] private Transform domeWallPreviews;
     [SerializeField] private PanelNavigation tourNavigation;
@@ -33,6 +38,8 @@ public sealed class TTS : MonoBehaviour
     private readonly List<Caption> captions = new List<Caption>();
     private readonly List<int> hiddenIds = new List<int>();
     private readonly Vector3[] corners = new Vector3[4];
+    private readonly List<TMP_Text> greetingText = new List<TMP_Text>();
+    private readonly List<UnityEngine.UI.Text> legacyGreetingText = new List<UnityEngine.UI.Text>();
     private Caption speaking;
     private Transform narrationPanel;
     private float nextScan;
@@ -138,14 +145,26 @@ public sealed class TTS : MonoBehaviour
             volume == 0 || Time.unscaledTime < nextScan)
             return;
 
-        nextScan = Time.unscaledTime + 0.2f;
+        nextScan = Time.unscaledTime + scanInterval;
         visibleText.Clear();
         captions.Clear();
         var mainCamera = Camera.main;
-        foreach (var label in FindObjectsByType<TMP_Text>(FindObjectsSortMode.None))
-            Collect(label, label.text, label.richText, mainCamera);
-        foreach (var label in FindObjectsByType<UnityEngine.UI.Text>(FindObjectsSortMode.None))
-            Collect(label, label.text, label.supportRichText, mainCamera);
+        if (greetingPanel != null)
+        {
+            greetingPanel.GetComponentsInChildren(false, greetingText);
+            greetingPanel.GetComponentsInChildren(false, legacyGreetingText);
+            foreach (var label in greetingText)
+                Collect(label, label.text, label.richText, mainCamera);
+            foreach (var label in legacyGreetingText)
+                Collect(label, label.text, label.supportRichText, mainCamera);
+        }
+        else
+        {
+            foreach (var label in FindObjectsByType<TMP_Text>(FindObjectsSortMode.None))
+                Collect(label, label.text, label.richText, mainCamera);
+            foreach (var label in FindObjectsByType<UnityEngine.UI.Text>(FindObjectsSortMode.None))
+                Collect(label, label.text, label.supportRichText, mainCamera);
+        }
 
         if (speaking.Text != null && !IsStillVisible(speaking.Id, speaking.Text))
         {
@@ -259,7 +278,7 @@ public sealed class TTS : MonoBehaviour
         if (!inFront || min.x >= max.x || min.y >= max.y || !viewport.Overlaps(Rect.MinMaxRect(min.x, min.y, max.x, max.y)))
             return;
 
-        if (richText)
+        if (richText && text.IndexOf('<') >= 0)
             text = RichText.Replace(text, match => match.Value.StartsWith("<br", System.StringComparison.OrdinalIgnoreCase) ? " " : "");
         text = text.Trim();
         if (text.Length == 0)

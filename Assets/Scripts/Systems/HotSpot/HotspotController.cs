@@ -3,42 +3,45 @@
 *               dispatches the selected hotspot's click event and updates the plainting's title             
 */
 
-using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// sealed as its not intended to be inherited
-[System.Serializable]
 public sealed class HotspotController : MonoBehaviour
 {
-    [SerializeField] GameObject viewer; // player or camera parent
+    [Header("Scene References")]
+    [SerializeField] private GameObject viewer; // player or camera parent
 
     [SerializeField] GameObject hotspotIcon;
 
     [SerializeField, Tooltip("Tint of hotspot icon after first visit")] Color hotspotVisitedColor = Color.gray;
 
-    [SerializeField, Tooltip("Anything above this height will then ignore its height and just use height of floor, this way things above viewer will show up, or else they will usually be too far away to show up")] float distanceAbovePlayer = 2f;
+    [Header("Detection")]
+    [SerializeField, Tooltip("World-space height at which the overhead detection radius applies.")] float distanceAbovePlayer = 2f;
 
     [SerializeField, Tooltip("Max distance from hotspot the player needs to be for it to show up")] float maxDistanceFromHotspot = 20f;
 
     [SerializeField, Tooltip("Max distance the hotspots above player can be before they are visible")] float maxDistanceFromHotspotAbovePlayer = 100f;
 
-    [SerializeField, Tooltip("Dot product when facing screen, 1 completely facing, 0 facing away")] float visibilityThreshold = 0.5f;
+    [SerializeField, Range(-1f, 1f), Tooltip("Dot product when facing screen, 1 completely facing, 0 facing away")] float visibilityThreshold = 0.5f;
 
     [SerializeField, Tooltip("Info Text GameObject that will hold the hotspot info")] TMP_Text infoText;
 
     [SerializeField] Camera mainCamera;
 
-    private List<HotSpot> hotSpots;
+    private HotSpot[] hotSpots;
+    private Image iconImage;
+    private PaintingData closestPainting;
 
     private GameObject closestHotspot;
 
     private void Start()
     {
         // finds all GameObjects with HotSpot script attached
-        hotSpots = FindObjectsOfType<HotSpot>().ToList();
+        hotSpots = FindObjectsOfType<HotSpot>();
+        foreach (var hotspot in hotSpots)
+            hotspot.gameObject.tag = "Screen";
+        iconImage = hotspotIcon.GetComponent<Image>();
 
         // if main camera is not set, sets it here to main camera
         if (mainCamera == null)
@@ -88,60 +91,54 @@ public sealed class HotspotController : MonoBehaviour
 
     private void Update()
     {
-        float closestDistance = float.MaxValue;
-        closestHotspot = null;
-
-        // store forward direction of main camera
-        Vector3 cameraForward = mainCamera.transform.forward;
-
-        // iterate through all found hotspots (found at start)
-        for (int i = 0; i < hotSpots.Count; i++)
+        GameObject next = FindClosestHotspot();
+        if (next != closestHotspot)
         {
-            if (hotSpots[i] == null) continue;
-            float currentMaxDistance;
-
-            // check if hotspot above player or not and uses that max distance for hotspot icon distance check
-            if (hotSpots[i].transform.position.y + hotSpots[i].hotspotIconOffset.y > distanceAbovePlayer)
-                currentMaxDistance = maxDistanceFromHotspotAbovePlayer;
-            else
-                currentMaxDistance = maxDistanceFromHotspot;
-
-            // store hotspot location and offset
-            Vector3 hotspotPoint = hotSpots[i].transform.position + hotSpots[i].hotspotIconOffset;
-
-            // store direction from viewer to hotspot
-            Vector3 cameraToHotspot = (hotspotPoint - mainCamera.transform.position).normalized;
-
-            // store dot prodect to see if camera forward direction is similar to screen direction
-            float dotProduct = Vector3.Dot(cameraForward, cameraToHotspot);
-
-            // store distance from hotspot setting hotspot height to same as viewers (removing height check)
-            float distance = Vector3.Distance(new Vector3(hotspotPoint.x, viewer.transform.position.y, hotspotPoint.z), viewer.transform.position);
-
-            // use all stored data to set closest hotspot GameObject for use
-            if (dotProduct > visibilityThreshold && distance < currentMaxDistance && distance < closestDistance)
+            if (closestHotspot != null)
+                closestHotspot.tag = "Screen";
+            closestHotspot = next;
+            closestPainting = null;
+            if (next != null)
             {
-                closestDistance = distance;
-                closestHotspot = hotSpots[i].gameObject;
+                next.tag = "ClosestHotspot";
+                next.TryGetComponent(out closestPainting);
             }
         }
 
-        for (int i = 0; i < hotSpots.Count; i++)
-        {
-            if (hotSpots[i] != null)
-                hotSpots[i].gameObject.tag = "Screen";
-        }
-
-        // if there is a closest hotspot, move icon to that location or else hide it
-        if (closestHotspot != null)
-        {
-            MoveIconToHotspot(closestHotspot);
-            closestHotspot.tag = "ClosestHotspot";
-        }
-        else
+        if (next == null)
         {
             HideHotspotIcon();
+            return;
         }
+        if (closestPainting != null && closestPainting.isActiveAndEnabled)
+            closestPainting.EnsureImageLoaded();
+        MoveIconToHotspot(next);
+    }
+
+    private GameObject FindClosestHotspot()
+    {
+        Vector3 viewerPosition = viewer.transform.position;
+        Transform cameraTransform = mainCamera.transform;
+        Vector3 cameraPosition = cameraTransform.position;
+        Vector3 forward = cameraTransform.forward;
+        float nearestSquared = float.PositiveInfinity;
+        GameObject nearest = null;
+        foreach (var hotspot in hotSpots)
+        {
+            if (hotspot == null) continue;
+            Vector3 point = hotspot.transform.position + hotspot.hotspotIconOffset;
+            float radius = point.y > distanceAbovePlayer ? maxDistanceFromHotspotAbovePlayer : maxDistanceFromHotspot;
+            float dx = point.x - viewerPosition.x;
+            float dz = point.z - viewerPosition.z;
+            float distanceSquared = dx * dx + dz * dz;
+            if (radius <= 0 || distanceSquared >= radius * radius || distanceSquared >= nearestSquared)
+                continue;
+            if (Vector3.Dot(forward, (point - cameraPosition).normalized) <= visibilityThreshold)
+                continue;
+            nearestSquared = distanceSquared;
+            nearest = hotspot.gameObject;
+        }
+        return nearest;
     }
 
     /// Sets hotspot icon GameObject inactive
@@ -164,14 +161,8 @@ public sealed class HotspotController : MonoBehaviour
 
         if (targetHotspot.TryGetComponent(out HotSpot hotSpot))
         {
-            // gets image of icon
-            Image hotspotIconImage = hotspotIcon.GetComponent<Image>();
-
-            // sets icon to color if it has been visited upon reaching target hotspot
-            if (hotSpot.hasSeenBefore && hotspotIconImage != null)
-                hotspotIconImage.color = hotspotVisitedColor;
-            else
-                hotspotIconImage.color = Color.white;
+            if (iconImage != null)
+                iconImage.color = hotSpot.hasSeenBefore ? hotspotVisitedColor : Color.white;
 
             // get world space location of hotspot + offset and converts it to screen space and set icon to that position
             Vector3 hotspotScreenPos = mainCamera.WorldToScreenPoint(targetHotspot.transform.position + hotSpot.hotspotIconOffset);
