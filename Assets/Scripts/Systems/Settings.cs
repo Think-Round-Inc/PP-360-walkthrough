@@ -4,8 +4,6 @@
 *                slides and toggles.
 */
 
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,12 +19,8 @@ public class Settings : MonoBehaviour
     [SerializeField] private Image brightnessOverlay;
     [SerializeField] private ViewerController viewerController;
 
-    private float defaultSetting = 20f;
-
     private void Start()
     {
-       
-
         // The overlay must allow clicks through it.
         brightnessOverlay.raycastTarget = false;
 
@@ -34,14 +28,16 @@ public class Settings : MonoBehaviour
         mouseSensitivitySlider.onValueChanged.AddListener(SetMouseSensitivity);
 
         SetBrightness(brightnessSlider.value);
-        mouseSensitivitySlider.SetValueWithoutNotify(defaultSetting);
-        SetMouseSensitivity(mouseSensitivitySlider.value);    }
+        if (!TryGetComponent<Save>(out _))
+            mouseSensitivitySlider.SetValueWithoutNotify(20f);
+        SetMouseSensitivity(mouseSensitivitySlider.value);
+    }
 
     private void Update()
     {
         bool settingsOpen = settingsPanel.activeInHierarchy;
 
-        viewerController.SetViewerControlsActive(!settingsOpen);
+        viewerController.SetSettingsOpen(settingsOpen);
 
         if (settingsOpen)
         {

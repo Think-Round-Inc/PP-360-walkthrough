@@ -11,6 +11,7 @@ using UnityEngine;
 public sealed class ViewerController : MonoBehaviour
 {
     public bool viewerControllerActive = true;
+    private bool settingsOpen;
     [SerializeField] Transform headTransform;
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float rotationSpeed;
@@ -18,7 +19,7 @@ public sealed class ViewerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!viewerControllerActive)return;
+        if (!viewerControllerActive || settingsOpen) return;
         RotateViewer();
         MoveCharacter();
     }
@@ -55,6 +56,8 @@ public sealed class ViewerController : MonoBehaviour
             return angle + 360f;
         return angle;
     }
+
+    public void SetSettingsOpen(bool value) => settingsOpen = value;
 
     public void SetViewerControlsActive(bool value) => viewerControllerActive = value;
 
