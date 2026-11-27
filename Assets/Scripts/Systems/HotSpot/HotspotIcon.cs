@@ -23,6 +23,12 @@ public class HotspotIcon : MonoBehaviour,
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (eventData.button != PointerEventData.InputButton.Left ||
+            (domePanel != null && domePanel.activeInHierarchy) ||
+            (earthPanel != null && earthPanel.activeInHierarchy) ||
+            (zoomablePaintingPanel != null && zoomablePaintingPanel.activeInHierarchy))
+            return;
+
         onPointerClicked?.Invoke();
 
         if (domePanel != null && domePanel.activeSelf)

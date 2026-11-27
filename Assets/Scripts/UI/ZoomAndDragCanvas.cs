@@ -33,7 +33,9 @@ public sealed class ZoomAndDragCanvas : MonoBehaviour
     {
         float zoomDelta = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
         float newScale = Mathf.Clamp(canvasRectTransform.localScale.x + zoomDelta, minZoom, maxZoom);
-        canvasRectTransform.localScale = Vector3.one * newScale;
+        Vector3 scale = Vector3.one * newScale;
+        if (canvasRectTransform.localScale != scale)
+            canvasRectTransform.localScale = scale;
     }
 
     private void UpdateDrag()

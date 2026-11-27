@@ -4,13 +4,12 @@
 *                in the self guided tour 
 */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public sealed class ViewerController : MonoBehaviour
 {
     public bool viewerControllerActive = true;
+    private bool settingsOpen;
     [SerializeField] Transform headTransform;
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float rotationSpeed;
@@ -18,7 +17,7 @@ public sealed class ViewerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!viewerControllerActive)return;
+        if (!viewerControllerActive || settingsOpen) return;
         RotateViewer();
         MoveCharacter();
     }
@@ -56,15 +55,26 @@ public sealed class ViewerController : MonoBehaviour
         return angle;
     }
 
-    public void SetViewerControlsActive(bool value) => viewerControllerActive = value;
+    public void SetSettingsOpen(bool value) => settingsOpen = value;
+
+    public void SetViewerControlsActive(bool value)
+    {
+        viewerControllerActive = value;
+        if (!value)
+            Cursor.visible = true;
+    }
 
     private void MoveCharacter()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 cameraForward = Camera.main.transform.forward;
-        Vector3 movementDirection = cameraForward * verticalInput + Camera.main.transform.right * horizontalInput;
+        if (horizontalInput == 0f && verticalInput == 0f) return;
+        var camera = Camera.main;
+        if (camera == null) return;
+        Transform cameraTransform = camera.transform;
+        Vector3 cameraForward = cameraTransform.forward;
+        Vector3 movementDirection = cameraForward * verticalInput + cameraTransform.right * horizontalInput;
         movementDirection.y = 0f;
 
         if (movementDirection.magnitude > 1f)

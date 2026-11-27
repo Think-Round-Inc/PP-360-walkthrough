@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 17227630}
   - component: {fileID: 17227629}
   m_Layer: 0
-  m_Name: Volume
+  m_Name: TTS Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -25}
+  m_AnchoredPosition: {x: 100, y: -85}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &17227629
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Volume:'
+  m_text: 'TTS Volume:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 34.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1321,8 +1321,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9999702, y: 0.9999702, z: 0.9999702}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 264292328}
+  m_Children: []
   m_Father: {fileID: 1424789262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
@@ -1350,7 +1349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 61fc240b024a4c04ab19761dba93d388, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9506c2ca31b42845b05c4e490a7efcf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2573,7 +2572,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 126.106, y: -94}
+  m_AnchoredPosition: {x: 126.106, y: -130}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180134562
@@ -3726,14 +3725,14 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: d11b850351d06d34a9d2754958677ebf, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 1c131f58684de7b47b2aebb4db3463e2, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 226449413}
   m_OnClick:
     m_PersistentCalls:
@@ -4726,81 +4725,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258360691}
-  m_CullTransparentMesh: 1
---- !u!1 &264292327
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 264292328}
-  - component: {fileID: 264292330}
-  - component: {fileID: 264292329}
-  m_Layer: 0
-  m_Name: Checkmark
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &264292328
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264292327}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 97093800}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &264292329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264292327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f9506c2ca31b42845b05c4e490a7efcf, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &264292330
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264292327}
   m_CullTransparentMesh: 1
 --- !u!1001 &267969735
 PrefabInstance:
@@ -6396,12 +6320,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 242831048443376251, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Ever Supporting Smile of Father -2005
+      value: "Ron and Remmawii Wedding"
       objectReference: {fileID: 0}
     - target: {fileID: 242831048443376251, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: be4f78dac2c4fcd49b2c1cfd1f94d5e8, type: 3}
+      objectReference: {fileID: 21300000, guid: 1d6161e1641b29e47a560fa5ccfe0121, type: 3}
     - target: {fileID: 242831048443376251, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -6416,12 +6340,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 242831048855463979, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Adolescent One day family became King\u2019s family"
+      value: "Lalzuia with His"
       objectReference: {fileID: 0}
     - target: {fileID: 242831048855463979, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 7c7e7b377ea3128418fdbffb116e3f43, type: 3}
+      objectReference: {fileID: 21300000, guid: 34059c223d43685429433054d7d25ca7, type: 3}
     - target: {fileID: 242831048855463979, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -6436,12 +6360,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 242831049022734034, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Freedom of playfulness
+      value: "Remmawii and Ron Kristjanson"
       objectReference: {fileID: 0}
     - target: {fileID: 242831049022734034, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 89f62db659add1949bac33eb4af4e067, type: 3}
+      objectReference: {fileID: 21300000, guid: 2dd75f91a3e341c449bd29da8923f579, type: 3}
     - target: {fileID: 242831049022734034, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -6524,13 +6448,12 @@ PrefabInstance:
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 325515715403416855, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Mom dressed up for Lord Krishna&#39;s birthday (Krishna Janmashtmi)
-        at home, Jaipur, 2016
+      value: "Rebecca\u2019s Great Grandmother, Ella, with"
       objectReference: {fileID: 0}
     - target: {fileID: 325515715403416855, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: f61ce8af475e57348b6e735248e51fd8, type: 3}
+      objectReference: {fileID: 21300000, guid: a2d0757ff144d8b46b86af8e51b91aac, type: 3}
     - target: {fileID: 325515715403416855, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -6961,613 +6884,608 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[0].paintingName
-      value: Mom and dad decorating the house on Diwali, 2018
+      value: "Rebecca, Kyle,"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[1].paintingName
-      value: Life has many colors -2022
+      value: "Aizawl, Mizoram A"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[2].paintingName
-      value: Afternoon tea outside of Army residence in Sikkim, India
+      value: "Roca (Backyard),"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[3].paintingName
-      value: Naisha and Aurisha playing in their backyard
+      value: "Backyard with my"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[4].paintingName
-      value: "Getting dad\u2019s blessing on the wedding day, March 2015"
+      value: "Rebecca\u2019s Grandpa Holding"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[5].paintingName
-      value: "Getting ready for sweet and healthy Wedding\u20132017"
+      value: "Ron Kristjanson,"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[6].paintingName
-      value: "Tahil\u2019s parents holding Tahil (in the middle)"
+      value: "Uncle, Pulling Rope,"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[7].paintingName
-      value: Dad with Youngest Daughter during an Indian festival
+      value: "My uncle (Fondly"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[8].paintingName
-      value: Our hero, Dad in the living room home, 2014
+      value: "Wedding Day_ Re"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[9].paintingName
-      value: Ever Supporting Smile of Father -2005
+      value: "Ron and Remmawii Wedding"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[0].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 09e63dfdaa1bceb409d336faabaf8705, type: 3}
+      objectReference: {fileID: 21300000, guid: 33177f779d2cea84681cb70540497fef, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[10].paintingName
-      value: "Newlyweds: Tahil\u2019s maternal grandfather &amp; maternal grandmother"
+      value: "Uncle"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[11].paintingName
-      value: 'Dad with daughters: Dance of 2020'
+      value: "Husband e 9)"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[13].paintingName
-      value: Strength of joint family -2016
+      value: "Remmawii Kris"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[14].paintingName
-      value: "Tahil\u2019s Mother Dressed to Go Out with Tahil"
+      value: "Mother (Mom as Mom), Making Fire,"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[15].paintingName
-      value: Mom with daughters during Diwali
+      value: "Mother with Daughters"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[16].paintingName
-      value: Mom dressed up for Lord Krishna&#39;s birthday (Krishna Janmashtmi)
-        at home, Jaipur, 2016
+      value: "Rebecca\u2019s Great Grandmother, Ella, with"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[17].paintingName
-      value: Strength of joint family -2016
+      value: "Remmawii Kristjan"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[18].paintingName
-      value: "Tahil\u2019s Maternal Grandmother"
+      value: "Mother Craftswoman"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[19].paintingName
-      value: Naisha with grandma
+      value: "Mpho\u2019s Matriarch \u2013 Gogo with"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[1].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 417efc4f0f302d34c9bb953edab63687, type: 3}
+      objectReference: {fileID: 21300000, guid: 627bb6c70dc3b9a4f97357caf7ca5d0a, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[20].paintingName
-      value: "Three generations in one frame/Richa\u2019s Lil sis, Dad with his brothers
-        and Grandpa, Jaipur, 1996"
+      value: "3 Boys-2 Tom Boys"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[21].paintingName
-      value: Strength of joint family -2016
+      value: "Remmawii, Zoliansanga, Lalbiaksangi"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[22].paintingName
-      value: "Tahil\u2019s Maternal Grandfather (Brigadier Nardip Singh) Receiving
-        the Athi Vishist Seva Medal from then President of India, Sarvepalli Ramakrishnan"
+      value: "Tios-Uncles (Boy Group"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[23].paintingName
-      value: Dad with Grandpa
+      value: "Mpho's Husband and"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[24].paintingName
-      value: Posing with my sisters in the dining room, Jaipur, 1998
+      value: "Grandmother Rebecca with"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[25].paintingName
-      value: Strength of joint family -2016
+      value: "Remmawii with Her"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[26].paintingName
-      value: "Tahil\u2019s Mom in Her Mother\u2019s Arms"
+      value: "Mothers and Daughters"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[27].paintingName
-      value: Mom with daughters at Home
+      value: "Mpho\u2019s Daughters  (Indigenous - Mpho"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[28].paintingName
-      value: Posing with my sisters in the dining room, Jaipur, 1998
+      value: "Fierce Mother-Daughter Conversation"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[29].paintingName
-      value: Grandmother is the root of my family 2014
+      value: "Remmawii Writing Poetry"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[2].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 981a1f3d8adce2b42bb3ee7aa0d05683, type: 3}
+      objectReference: {fileID: 21300000, guid: fd3016b06f99bde4fb2eb81f297318f5, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[30].paintingName
-      value: "Tahil\u2019s mother, Tanu Nardip Singh"
+      value: "Child (Adolescent), Going to the"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[31].paintingName
-      value: 'Naisha: Oldest daughter'
+      value: "Daughter, Lesedi Ralengole"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[32].paintingName
-      value: Prakash on our wedding day (Baraat Procession), March 10th, 2015
+      value: "Seth All Dressed Up"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[33].paintingName
-      value: "Adolescent One day family became King\u2019s family"
+      value: "Lalzuia with His"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[34].paintingName
-      value: Tahil as Prince of His Family
+      value: "Nephew on the Beach of"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[35].paintingName
-      value: Aayansh, 1st cousin
+      value: "AI-generated image of Mpho\u2019s"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[36].paintingName
-      value: Prakash at his cousin's wedding, 2014
+      value: "Kyle, Ready for Everything"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[37].paintingName
-      value: Freedom of playfulness -2012 Boy
+      value: "Erik Kristjanson on a Chair Before the Kitchen Cupboard"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[38].paintingName
-      value: Tahil at Home as a Young Boy
+      value: "Sobrinho (Brother), Taking Xibe,"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[39].paintingName
-      value: Aayansh with Radha Krishna
+      value: "AI-generated"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[3].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 0284b730ad4fe724dbb8fa10db07bdda, type: 3}
+      objectReference: {fileID: 21300000, guid: 0d9333859b8adda42ba31fc87d66e59a, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[40].paintingName
-      value: "Richa\u2019s happy moment, one breezy evening, Bangalore, Nov 2018"
+      value: "Rebecca in Her Happy Place"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[41].paintingName
-      value: Freedom of playfulness
+      value: "Ron and Remmawii with Zopari Kristjanson"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[42].paintingName
-      value: "Tahil\u2019s mother (Tanu Nardip Singh), as a Young Girl"
+      value: "Child (Girl), Trail,"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[43].paintingName
-      value: 'Aurisha: Youngest Daughter, 1st birthday'
+      value: "Mpho's Daughter, Lesedi Ralengole"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[44].paintingName
-      value: Viraaj, the day he was born, June 16th, 2022
+      value: "Rebecca as a Tree"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[45].paintingName
-      value: Innocence and joy spread lights through me
+      value: "Zoliansanga and Remmawi"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[46].paintingName
-      value: "Tahil\u2019s maternal grandmother with Tahil\u2019s Mother as an Infant"
+      value: "Child, Outing, Manaus"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[47].paintingName
-      value: Naisha as a baby on Christmas day
+      value: "Daughter, Lesego Ralengole"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[48].paintingName
-      value: Playful time, Backyard, Summer, 2014
+      value: "Family Reunion on the Front Porch c. 1990 Oklahom"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[49].paintingName
-      value: Rangoli in Varandah
+      value: "Remmawii and Her Sisters in"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[4].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 1d4ffd26e93fc6149ae8b97c50b9f4de, type: 3}
+      objectReference: {fileID: 21300000, guid: c45fff2633a3c4b4592663d26be1de85, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[50].paintingName
-      value: "Grandparents\u2019 new home, mid 1990s"
+      value: "Front Garden, Field Research, Bawari Rio Uaupes"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[51].paintingName
-      value: Naisha with mom on Diwali in San Fransisco
+      value: "Mpho\u2019s Three Daughters"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[52].paintingName
-      value: Sparkly eyes, Gamya (niece) Dressed up for Dandiya dance night, 2017
+      value: "Rebecca, Age 2, 1987"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[53].paintingName
-      value: Freedom of playfulness
+      value: "Remmawii and Ron Kristjanson"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[54].paintingName
-      value: "Tahil\u2019s mother (Tanu Nardip Singh) as a bride on her wedding day,
-        2/26/84"
+      value: "4-Year-Old Niece (Princess), Farm Work, Sao Bra"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[55].paintingName
-      value: Naisha on her 5th birthday, dressed as a princess
+      value: "Oldest girl, Lesedi Ralengole, as Princes"
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[56].paintingName
-      value: "Ruchi\u2019s Family at The Festival of Color, A Celebration of Holi"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[57].paintingName
-      value: 'Magician-Seedlings-The Paths of Happy Marriage: One life One wife'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[58].paintingName
-      value: Feeling princessly, my wedding day, March 10th, 2015
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[59].paintingName
-      value: 'The Paths of Happy Marriage: One Life-One Wife'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[5].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 85b16bd741a6b4a45b85b41980bdbe96, type: 3}
+      objectReference: {fileID: 21300000, guid: ef5761bfa0b04e748bc2567ea0945227, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[60].paintingName
-      value: 'The Paths of Happy Marriage: One Life-One Husband'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[61].paintingName
-      value: Tahil Sharma as an Interfaith Teacher
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[62].paintingName
-      value: "Tahil\u2019s parents during their Wedding Engagement ceremony"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[63].paintingName
-      value: 'The Paths of Happy Marriage: One Life/One Husband-One Wife'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[64].paintingName
-      value: Durga Puja 2012
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[65].paintingName
-      value: The light Durga Puja 2012
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[66].paintingName
-      value: Tahil on The Wheel-Thinking Round
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[67].paintingName
-      value: The feel of Freedom/Justice/Equality, UN Headquarters, New York, 2020
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[68].paintingName
-      value: Durga Puja 2012
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[69].paintingName
-      value: Gazing away/childlike wonder, Kashvi (niece), Gujarat, 2014
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[6].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 6ba21cde3f35cce49ab81d03c568a3e2, type: 3}
+      objectReference: {fileID: 21300000, guid: 1d6cccdd0733d5741ae70a75ec4b725c, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[70].paintingName
-      value: Enjoying a summer day with ice cream, Ghirardelli, San Francisco, 2018
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[71].paintingName
-      value: Durga Puja 2012
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[72].paintingName
-      value: "From left: Tahil\u2019s paternal grandfather, father, and mother"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[73].paintingName
-      value: "Star-India\u2019s first prime minister, Jawaharlal Nehru, and Tahil\u2019s
-        grandmother, standing to his right"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[74].paintingName
-      value: "Moon Celebrations, Mom and dad at sister\u2019s wedding, Jaipur, 2012"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[75].paintingName
-      value: Adding colors to life. The joy of making Rangoli on Diwali, Jaipur
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[76].paintingName
-      value: "Ruchi\u2019s family\u2019s cousin on head shaving day"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[77].paintingName
-      value: Universe-I, the Artist, See You. Do You See You?
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[7].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: fd56abd21b41a6e4e96c43e3cfe3c28a, type: 3}
+      objectReference: {fileID: 21300000, guid: 682234fd5c192bc4980863565290a602, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[8].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: f8751640e0ea4e14597b4f3da65fed4d, type: 3}
+      objectReference: {fileID: 21300000, guid: 636b88c847f28b548a892c8a6fa45bc1, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[9].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: be4f78dac2c4fcd49b2c1cfd1f94d5e8, type: 3}
+      objectReference: {fileID: 21300000, guid: 1d6161e1641b29e47a560fa5ccfe0121, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[10].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 450a6b26c55e7da429907de385730544, type: 3}
+      objectReference: {fileID: 21300000, guid: 06c0fb46f0824a243aeb2c3434f2ea06, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[11].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 9072992e35916a74c89eff2d88fb447f, type: 3}
+      objectReference: {fileID: 21300000, guid: 2ce5a568430037040843df3acdaafa47, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[13].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 16251db09a5a53045a6a55ee0d3e22a8, type: 3}
+      objectReference: {fileID: 21300000, guid: cf23da6874ba9d949af456946f023a22, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[14].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 6fbbdaec48a41fc4b99f640e147806ea, type: 3}
+      objectReference: {fileID: 21300000, guid: c4331f1b03166f4438ff96b8921d0a3c, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[15].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 58d29cc378f11a840be202ceb2134803, type: 3}
+      objectReference: {fileID: 21300000, guid: 893aa71a79baf2f41932aa0e00be073c, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[16].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: f61ce8af475e57348b6e735248e51fd8, type: 3}
+      objectReference: {fileID: 21300000, guid: a2d0757ff144d8b46b86af8e51b91aac, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[17].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 6fa15666a70576f44a31054d4e2e60ac, type: 3}
+      objectReference: {fileID: 21300000, guid: 2692958748ea1094ebaa6da6c948edfe, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[18].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 579cd050ead000f40b24d67a1b1df18c, type: 3}
+      objectReference: {fileID: 21300000, guid: 2773cd1480da8f14eb9cdd711af45994, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[19].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 1edb399c96ec6fb49871412fe968eee5, type: 3}
+      objectReference: {fileID: 21300000, guid: 6fa38e0fd1b66ac40903fdfaa475cc60, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[20].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 4c6efd88be513754a895eb3bc41c43d7, type: 3}
+      objectReference: {fileID: 21300000, guid: 0c9cd1955f8a4f0419fe2014073a6b89, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[21].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 1dd194992abc57f4f8bb821443dfc6b7, type: 3}
+      objectReference: {fileID: 21300000, guid: 011119e498b83c8498f3f8071cbcd51c, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[23].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 891ae1bdf1c45314e8df58487f511d00, type: 3}
+      objectReference: {fileID: 21300000, guid: f03037fa79dc92b44992b0af80c04a49, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[24].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: f5680be19114c2f4a8be9a2db6742524, type: 3}
+      objectReference: {fileID: 21300000, guid: c0de60d6fc9a32f4eaa787ca5ec64fab, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[25].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 6f88b46405bf37f49a9db9434d7873a6, type: 3}
+      objectReference: {fileID: 21300000, guid: eb1c3f0929aed8945bcc73ef014b798a, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[26].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 45c56bf947333494493bb80a8027dea1, type: 3}
+      objectReference: {fileID: 21300000, guid: 67bb85f856b45d648b0489ba35dc55b1, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[27].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 71489e6f1f272004e9def0f9e17bb3b9, type: 3}
+      objectReference: {fileID: 21300000, guid: c7c6c11fea589044ea9fe5149ae1b599, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[28].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 9beab879cf9562c498d2b007d45ac3ee, type: 3}
+      objectReference: {fileID: 21300000, guid: 0b00773790502fa409047afa12727694, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[29].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 46e8ab4ad013bc648966616cae6a8a58, type: 3}
+      objectReference: {fileID: 21300000, guid: d891f3f9d297edf479c8d9d49aaa27e7, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[30].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: ffa32dcd89988ec4c9f2271c9e6c9f86, type: 3}
+      objectReference: {fileID: 21300000, guid: 0f50a492a5a51014a8e1ec6ae99a5e86, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[31].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 35e24382c919da64fb609da00168cf8a, type: 3}
+      objectReference: {fileID: 21300000, guid: 60b4f077a6e8bdc469221a5348bb3499, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[32].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 5e11083647e235c458dfa7f798df5633, type: 3}
+      objectReference: {fileID: 21300000, guid: 3d60f09c42e9d7240bd76ac87dd13263, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[33].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 7c7e7b377ea3128418fdbffb116e3f43, type: 3}
+      objectReference: {fileID: 21300000, guid: 34059c223d43685429433054d7d25ca7, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[34].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: e5b4e6fb64b3990478350b539487b7e6, type: 3}
+      objectReference: {fileID: 21300000, guid: 529f38fcb08db834c93713a7f7a8ca49, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[35].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: ae3953a7a4b1dd041ad80052fbeffe6c, type: 3}
+      objectReference: {fileID: 21300000, guid: 15ceb9cd6716988499c495d47bf8645d, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[36].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 06d4ae498ce252541ab6a3f6af9be432, type: 3}
+      objectReference: {fileID: 21300000, guid: 02769331bb5c87a4cbc53544abaf29b1, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[37].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 79b9e6829958d8c4d8861658df16bdd5, type: 3}
+      objectReference: {fileID: 21300000, guid: 0a179c3b1ceb1e24f8ee59d94cdd22c8, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[38].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: d08373a9f6a64f1449dc9a86e31bf882, type: 3}
+      objectReference: {fileID: 21300000, guid: 32bc40b55ef41f745903ace0661486e3, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[39].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 4878e818d3b6c2d42ad3ed77d250adf1, type: 3}
+      objectReference: {fileID: 21300000, guid: 41d38c42b82acbb41a22f5da825570a8, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[40].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 01f77bb44ad320241b8303e741b671f2, type: 3}
+      objectReference: {fileID: 21300000, guid: 552df46d9d5ec6248a80e12886dc3e4c, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[41].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: b5bb5ffb27149344b88ba6bc8b70c618, type: 3}
+      objectReference: {fileID: 21300000, guid: 5a38d7112bf0dd94989f14f552b87530, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[43].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 8c6d684863da6f642b9ceb979138fae1, type: 3}
+      objectReference: {fileID: 21300000, guid: 8724054e0ba5c454eabc382740279f3e, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[44].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 61b200491cb04d34a9a05beb0d38c812, type: 3}
+      objectReference: {fileID: 21300000, guid: 09a9165d4577fac46ab9431002aac5ec, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[45].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: b7a6df6add9cc3f4d9a9a2442aa79036, type: 3}
+      objectReference: {fileID: 21300000, guid: c30dd00d4f9db844793798a157899e77, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[46].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 854635ba1defc1444bac32b6eeb2a6f0, type: 3}
+      objectReference: {fileID: 21300000, guid: f4de99ab5a5c6764cb45f57296615826, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[47].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 01bb1c487c322f14d93376811ed1fcd5, type: 3}
+      objectReference: {fileID: 21300000, guid: dea069f69e45e1447b04b641780deb0f, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[48].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 38cf0912bf1975248a12555908a8e817, type: 3}
+      objectReference: {fileID: 21300000, guid: a617ae5cd15286d4f9650f5d5ded278b, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[49].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: a506fbaa88be84846ba303c945eeb89a, type: 3}
+      objectReference: {fileID: 21300000, guid: 5901d012e7a8e864bb71549f277d4ae6, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[50].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 867a1178aac39014eb9c00dd87edad1e, type: 3}
+      objectReference: {fileID: 21300000, guid: 3d02edf6c09d47b43baf792cc39740fc, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[51].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 50c83d77613937c4099849f14746e45a, type: 3}
+      objectReference: {fileID: 21300000, guid: ca7fbce3362426841974be1e20d1a456, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[52].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: d109473597f6f6643b8ef92cf4514139, type: 3}
+      objectReference: {fileID: 21300000, guid: d66ca3e1afde8e840a2dec0cf4d5d870, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[53].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 89f62db659add1949bac33eb4af4e067, type: 3}
+      objectReference: {fileID: 21300000, guid: 2dd75f91a3e341c449bd29da8923f579, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[54].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 09024fd5b6be72744b51a1f83134e7a9, type: 3}
+      objectReference: {fileID: 21300000, guid: 054cc2bc88f50334aadea72e2beba7b0, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[55].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 4f9ad701d0a4b434da4ac5316d2a4282, type: 3}
+      objectReference: {fileID: 21300000, guid: 7f2a254f27b29264b800f5a9cf7623a1, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[56].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 7db840dbff70aa94fa734827b13bd757, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[58].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: b336f009103db794ab381c6bf1c16695, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[59].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 5faea09a3a750d546bc90cdbe4d674ce, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[60].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: bcd0ab9b974d2924bae1cb92877c1680, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[61].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 04bce84075422f14aa239628d06d47ca, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[62].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 8c11324cc38919149925b51d5dbe4f12, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[63].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 8aa0a9a46bdbefc4ba68e08cab5da600, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[64].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 60b3a0b17afa5b244b867f95028d7388, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[65].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: f980bc3302901d24a89b81a8c6048133, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[66].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 3459bcdb02092054b842a03df5ca0c58, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[67].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 7449eb77c210fea4ebde43bd5d7c1c89, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[68].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 7d792e8e58e5e364fae74ef9a05119c5, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[69].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: de1c4af71e4d9574c89f0fdad089b232, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[70].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 96940b27a6e72af44bf95f4b9b4997b6, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[71].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: c69abdf5cef252f439697b60585e1492, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[72].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: cd9ad2fc3794e1944953b8813113d362, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[73].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 0add5d380110f66408e043341fe2bd13, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[74].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: ea47be683c2075e40bcba71ea03f4d2e, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[75].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 8662dada3e1b5034fa01ef87215f048c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[76].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 484d16c04abbd454e9f68e458839d95e, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.Array.data[77].paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 0000c5d29dca59e438d03ed648612b5d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 474150729639484875, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: m_Name
       value: InVp02c-1
@@ -8206,12 +8124,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 846440132307420828, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Tahil\u2019s parents holding Tahil (in the middle)"
+      value: "Uncle, Pulling Rope,"
       objectReference: {fileID: 0}
     - target: {fileID: 846440132307420828, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 6ba21cde3f35cce49ab81d03c568a3e2, type: 3}
+      objectReference: {fileID: 21300000, guid: 1d6cccdd0733d5741ae70a75ec4b725c, type: 3}
     - target: {fileID: 846440132307420828, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -8226,12 +8144,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 846440132786113077, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Grandparents\u2019 new home, mid 1990s"
+      value: "Front Garden, Field Research, Bawari Rio Uaupes"
       objectReference: {fileID: 0}
     - target: {fileID: 846440132786113077, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 867a1178aac39014eb9c00dd87edad1e, type: 3}
+      objectReference: {fileID: 21300000, guid: 3d02edf6c09d47b43baf792cc39740fc, type: 3}
     - target: {fileID: 846440132786113077, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -8246,12 +8164,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 846440132952300748, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Tahil\u2019s mother, Tanu Nardip Singh"
+      value: "Child (Adolescent), Going to the"
       objectReference: {fileID: 0}
     - target: {fileID: 846440132952300748, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: ffa32dcd89988ec4c9f2271c9e6c9f86, type: 3}
+      objectReference: {fileID: 21300000, guid: 0f50a492a5a51014a8e1ec6ae99a5e86, type: 3}
     - target: {fileID: 846440132952300748, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -8286,12 +8204,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 917173388758904331, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Strength of joint family -2016
+      value: "Remmawii Kris"
       objectReference: {fileID: 0}
     - target: {fileID: 917173388758904331, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 16251db09a5a53045a6a55ee0d3e22a8, type: 3}
+      objectReference: {fileID: 21300000, guid: cf23da6874ba9d949af456946f023a22, type: 3}
     - target: {fileID: 917173388758904331, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -8654,12 +8572,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1086092524502666466, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Tahil at Home as a Young Boy
+      value: "Sobrinho (Brother), Taking Xibe,"
       objectReference: {fileID: 0}
     - target: {fileID: 1086092524502666466, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: d08373a9f6a64f1449dc9a86e31bf882, type: 3}
+      objectReference: {fileID: 21300000, guid: 32bc40b55ef41f745903ace0661486e3, type: 3}
     - target: {fileID: 1086092524502666466, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -8674,12 +8592,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1086092525397679991, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Tahil\u2019s Mom in Her Mother\u2019s Arms"
+      value: "Mothers and Daughters"
       objectReference: {fileID: 0}
     - target: {fileID: 1086092525397679991, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 45c56bf947333494493bb80a8027dea1, type: 3}
+      objectReference: {fileID: 21300000, guid: 67bb85f856b45d648b0489ba35dc55b1, type: 3}
     - target: {fileID: 1086092525397679991, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -8694,12 +8612,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1086092526097734445, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Tahil\u2019s maternal grandmother with Tahil\u2019s Mother as an Infant"
+      value: "Child, Outing, Manaus"
       objectReference: {fileID: 0}
     - target: {fileID: 1086092526097734445, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 854635ba1defc1444bac32b6eeb2a6f0, type: 3}
+      objectReference: {fileID: 21300000, guid: f4de99ab5a5c6764cb45f57296615826, type: 3}
     - target: {fileID: 1086092526097734445, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -10178,12 +10096,12 @@ PrefabInstance:
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 1700372218910957459, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Naisha with grandma
+      value: "Mpho\u2019s Matriarch \u2013 Gogo with"
       objectReference: {fileID: 0}
     - target: {fileID: 1700372218910957459, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 1edb399c96ec6fb49871412fe968eee5, type: 3}
+      objectReference: {fileID: 21300000, guid: 6fa38e0fd1b66ac40903fdfaa475cc60, type: 3}
     - target: {fileID: 1700372218910957459, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -13146,12 +13064,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394660717176887888, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Dad with Youngest Daughter during an Indian festival
+      value: "My uncle (Fondly"
       objectReference: {fileID: 0}
     - target: {fileID: 2394660717176887888, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: fd56abd21b41a6e4e96c43e3cfe3c28a, type: 3}
+      objectReference: {fileID: 21300000, guid: 682234fd5c192bc4980863565290a602, type: 3}
     - target: {fileID: 2394660717176887888, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -13166,12 +13084,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Naisha with mom on Diwali in San Fransisco
+      value: "Mpho\u2019s Three Daughters"
       objectReference: {fileID: 0}
     - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 50c83d77613937c4099849f14746e45a, type: 3}
+      objectReference: {fileID: 21300000, guid: ca7fbce3362426841974be1e20d1a456, type: 3}
     - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -13186,12 +13104,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2394660717588971520, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: 'Naisha: Oldest daughter'
+      value: "Daughter, Lesedi Ralengole"
       objectReference: {fileID: 0}
     - target: {fileID: 2394660717588971520, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 35e24382c919da64fb609da00168cf8a, type: 3}
+      objectReference: {fileID: 21300000, guid: 60b4f077a6e8bdc469221a5348bb3499, type: 3}
     - target: {fileID: 2394660717588971520, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -13562,12 +13480,12 @@ PrefabInstance:
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 2686737009305669045, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Tahil\u2019s Maternal Grandmother"
+      value: "Mother Craftswoman"
       objectReference: {fileID: 0}
     - target: {fileID: 2686737009305669045, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 579cd050ead000f40b24d67a1b1df18c, type: 3}
+      objectReference: {fileID: 21300000, guid: 2773cd1480da8f14eb9cdd711af45994, type: 3}
     - target: {fileID: 2686737009305669045, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -18030,12 +17948,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392922661312768170, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Afternoon tea outside of Army residence in Sikkim, India
+      value: "Roca (Backyard),"
       objectReference: {fileID: 0}
     - target: {fileID: 3392922661312768170, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 981a1f3d8adce2b42bb3ee7aa0d05683, type: 3}
+      objectReference: {fileID: 21300000, guid: fd3016b06f99bde4fb2eb81f297318f5, type: 3}
     - target: {fileID: 3392922661312768170, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -22554,12 +22472,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767576730252606981, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Mom and dad decorating the house on Diwali, 2018
+      value: "Rebecca, Kyle,"
       objectReference: {fileID: 0}
     - target: {fileID: 4767576730252606981, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 09e63dfdaa1bceb409d336faabaf8705, type: 3}
+      objectReference: {fileID: 21300000, guid: 33177f779d2cea84681cb70540497fef, type: 3}
     - target: {fileID: 4767576730252606981, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -23146,12 +23064,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5389863762452682473, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Naisha as a baby on Christmas day
+      value: "Daughter, Lesego Ralengole"
       objectReference: {fileID: 0}
     - target: {fileID: 5389863762452682473, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 01bb1c487c322f14d93376811ed1fcd5, type: 3}
+      objectReference: {fileID: 21300000, guid: dea069f69e45e1447b04b641780deb0f, type: 3}
     - target: {fileID: 5389863762452682473, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -23166,12 +23084,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5389863762992868671, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: 'Aurisha: Youngest Daughter, 1st birthday'
+      value: "Mpho's Daughter, Lesedi Ralengole"
       objectReference: {fileID: 0}
     - target: {fileID: 5389863762992868671, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 8c6d684863da6f642b9ceb979138fae1, type: 3}
+      objectReference: {fileID: 21300000, guid: 8724054e0ba5c454eabc382740279f3e, type: 3}
     - target: {fileID: 5389863762992868671, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -23186,12 +23104,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5389863763152474803, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Mom with daughters at Home
+      value: "Mpho\u2019s Daughters  (Indigenous - Mpho"
       objectReference: {fileID: 0}
     - target: {fileID: 5389863763152474803, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 71489e6f1f272004e9def0f9e17bb3b9, type: 3}
+      objectReference: {fileID: 21300000, guid: c7c6c11fea589044ea9fe5149ae1b599, type: 3}
     - target: {fileID: 5389863763152474803, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -23206,12 +23124,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5389863764047511846, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Aayansh with Radha Krishna
+      value: "AI-generated"
       objectReference: {fileID: 0}
     - target: {fileID: 5389863764047511846, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 4878e818d3b6c2d42ad3ed77d250adf1, type: 3}
+      objectReference: {fileID: 21300000, guid: 41d38c42b82acbb41a22f5da825570a8, type: 3}
     - target: {fileID: 5389863764047511846, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -23226,12 +23144,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5389863764321132545, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Dad with Grandpa
+      value: "Mpho's Husband and"
       objectReference: {fileID: 0}
     - target: {fileID: 5389863764321132545, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 891ae1bdf1c45314e8df58487f511d00, type: 3}
+      objectReference: {fileID: 21300000, guid: f03037fa79dc92b44992b0af80c04a49, type: 3}
     - target: {fileID: 5389863764321132545, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -24962,12 +24880,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5583458471705789813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Naisha on her 5th birthday, dressed as a princess
+      value: "Oldest girl, Lesedi Ralengole, as Princes"
       objectReference: {fileID: 0}
     - target: {fileID: 5583458471705789813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 4f9ad701d0a4b434da4ac5316d2a4282, type: 3}
+      objectReference: {fileID: 21300000, guid: 7f2a254f27b29264b800f5a9cf7623a1, type: 3}
     - target: {fileID: 5583458471705789813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -24982,12 +24900,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5583458472075400076, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Aayansh, 1st cousin
+      value: "AI-generated image of Mpho\u2019s"
       objectReference: {fileID: 0}
     - target: {fileID: 5583458472075400076, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: ae3953a7a4b1dd041ad80052fbeffe6c, type: 3}
+      objectReference: {fileID: 21300000, guid: 15ceb9cd6716988499c495d47bf8645d, type: 3}
     - target: {fileID: 5583458472075400076, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -25002,12 +24920,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5583458472502168028, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: 'Dad with daughters: Dance of 2020'
+      value: "Husband e 9)"
       objectReference: {fileID: 0}
     - target: {fileID: 5583458472502168028, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 9072992e35916a74c89eff2d88fb447f, type: 3}
+      objectReference: {fileID: 21300000, guid: 2ce5a568430037040843df3acdaafa47, type: 3}
     - target: {fileID: 5583458472502168028, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -25354,12 +25272,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796141916087331502, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Posing with my sisters in the dining room, Jaipur, 1998
+      value: "Fierce Mother-Daughter Conversation"
       objectReference: {fileID: 0}
     - target: {fileID: 5796141916087331502, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 9beab879cf9562c498d2b007d45ac3ee, type: 3}
+      objectReference: {fileID: 21300000, guid: 0b00773790502fa409047afa12727694, type: 3}
     - target: {fileID: 5796141916087331502, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -25374,12 +25292,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796141916458024023, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Playful time, Backyard, Summer, 2014
+      value: "Family Reunion on the Front Porch c. 1990 Oklahom"
       objectReference: {fileID: 0}
     - target: {fileID: 5796141916458024023, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 38cf0912bf1975248a12555908a8e817, type: 3}
+      objectReference: {fileID: 21300000, guid: a617ae5cd15286d4f9650f5d5ded278b, type: 3}
     - target: {fileID: 5796141916458024023, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -25394,12 +25312,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796141916516200702, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Getting dad\u2019s blessing on the wedding day, March 2015"
+      value: "Rebecca\u2019s Grandpa Holding"
       objectReference: {fileID: 0}
     - target: {fileID: 5796141916516200702, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 1d4ffd26e93fc6149ae8b97c50b9f4de, type: 3}
+      objectReference: {fileID: 21300000, guid: c45fff2633a3c4b4592663d26be1de85, type: 3}
     - target: {fileID: 5796141916516200702, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -25414,12 +25332,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5862467025868411091, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Tahil\u2019s Mother Dressed to Go Out with Tahil"
+      value: "Mother (Mom as Mom), Making Fire,"
       objectReference: {fileID: 0}
     - target: {fileID: 5862467025868411091, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 6fbbdaec48a41fc4b99f640e147806ea, type: 3}
+      objectReference: {fileID: 21300000, guid: c4331f1b03166f4438ff96b8921d0a3c, type: 3}
     - target: {fileID: 5862467025868411091, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -25686,12 +25604,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041696621783948717, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Life has many colors -2022
+      value: "Aizawl, Mizoram A"
       objectReference: {fileID: 0}
     - target: {fileID: 6041696621783948717, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 417efc4f0f302d34c9bb953edab63687, type: 3}
+      objectReference: {fileID: 21300000, guid: 627bb6c70dc3b9a4f97357caf7ca5d0a, type: 3}
     - target: {fileID: 6041696621783948717, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -25790,12 +25708,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223682444755214868, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Grandmother is the root of my family 2014
+      value: "Remmawii Writing Poetry"
       objectReference: {fileID: 0}
     - target: {fileID: 6223682444755214868, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 46e8ab4ad013bc648966616cae6a8a58, type: 3}
+      objectReference: {fileID: 21300000, guid: d891f3f9d297edf479c8d9d49aaa27e7, type: 3}
     - target: {fileID: 6223682444755214868, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -25810,12 +25728,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Rangoli in Varandah
+      value: "Remmawii and Her Sisters in"
       objectReference: {fileID: 0}
     - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: a506fbaa88be84846ba303c945eeb89a, type: 3}
+      objectReference: {fileID: 21300000, guid: 5901d012e7a8e864bb71549f277d4ae6, type: 3}
     - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -25830,12 +25748,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6223682445450426436, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Getting ready for sweet and healthy Wedding\u20132017"
+      value: "Ron Kristjanson,"
       objectReference: {fileID: 0}
     - target: {fileID: 6223682445450426436, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 85b16bd741a6b4a45b85b41980bdbe96, type: 3}
+      objectReference: {fileID: 21300000, guid: ef5761bfa0b04e748bc2567ea0945227, type: 3}
     - target: {fileID: 6223682445450426436, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -25950,12 +25868,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465541712925516852, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Strength of joint family -2016
+      value: "Remmawii Kristjan"
       objectReference: {fileID: 0}
     - target: {fileID: 6465541712925516852, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 6fa15666a70576f44a31054d4e2e60ac, type: 3}
+      objectReference: {fileID: 21300000, guid: 2692958748ea1094ebaa6da6c948edfe, type: 3}
     - target: {fileID: 6465541712925516852, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -26482,12 +26400,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5db0c7ad05fde0e4e9c8f961173f7266, type: 2}
     - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Our hero, Dad in the living room home, 2014
+      value: "Wedding Day_ Re"
       objectReference: {fileID: 0}
     - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: f8751640e0ea4e14597b4f3da65fed4d, type: 3}
+      objectReference: {fileID: 21300000, guid: 636b88c847f28b548a892c8a6fa45bc1, type: 3}
     - target: {fileID: 6800704484028699480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -26502,12 +26420,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6800704484539867121, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Sparkly eyes, Gamya (niece) Dressed up for Dandiya dance night, 2017
+      value: "Rebecca, Age 2, 1987"
       objectReference: {fileID: 0}
     - target: {fileID: 6800704484539867121, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: d109473597f6f6643b8ef92cf4514139, type: 3}
+      objectReference: {fileID: 21300000, guid: d66ca3e1afde8e840a2dec0cf4d5d870, type: 3}
     - target: {fileID: 6800704484539867121, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -26522,12 +26440,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6800704484709222664, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Prakash on our wedding day (Baraat Procession), March 10th, 2015
+      value: "Seth All Dressed Up"
       objectReference: {fileID: 0}
     - target: {fileID: 6800704484709222664, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 5e11083647e235c458dfa7f798df5633, type: 3}
+      objectReference: {fileID: 21300000, guid: 3d60f09c42e9d7240bd76ac87dd13263, type: 3}
     - target: {fileID: 6800704484709222664, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -26674,12 +26592,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7074402450781369940, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Richa\u2019s happy moment, one breezy evening, Bangalore, Nov 2018"
+      value: "Rebecca in Her Happy Place"
       objectReference: {fileID: 0}
     - target: {fileID: 7074402450781369940, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 01f77bb44ad320241b8303e741b671f2, type: 3}
+      objectReference: {fileID: 21300000, guid: 552df46d9d5ec6248a80e12886dc3e4c, type: 3}
     - target: {fileID: 7074402450781369940, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -26694,12 +26612,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7074402450940971480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Posing with my sisters in the dining room, Jaipur, 1998
+      value: "Grandmother Rebecca with"
       objectReference: {fileID: 0}
     - target: {fileID: 7074402450940971480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: f5680be19114c2f4a8be9a2db6742524, type: 3}
+      objectReference: {fileID: 21300000, guid: c0de60d6fc9a32f4eaa787ca5ec64fab, type: 3}
     - target: {fileID: 7074402450940971480, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -26714,12 +26632,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7074402451313872258, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Viraaj, the day he was born, June 16th, 2022
+      value: "Rebecca as a Tree"
       objectReference: {fileID: 0}
     - target: {fileID: 7074402451313872258, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 61b200491cb04d34a9a05beb0d38c812, type: 3}
+      objectReference: {fileID: 21300000, guid: 09a9165d4577fac46ab9431002aac5ec, type: 3}
     - target: {fileID: 7074402451313872258, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -26734,13 +26652,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7074402451571686250, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Three generations in one frame/Richa\u2019s Lil sis, Dad with his brothers
-        and Grandpa, Jaipur, 1996"
+      value: "3 Boys-2 Tom Boys"
       objectReference: {fileID: 0}
     - target: {fileID: 7074402451571686250, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 4c6efd88be513754a895eb3bc41c43d7, type: 3}
+      objectReference: {fileID: 21300000, guid: 0c9cd1955f8a4f0419fe2014073a6b89, type: 3}
     - target: {fileID: 7074402451571686250, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -26755,12 +26672,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7074402451834804813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Prakash at his cousin's wedding, 2014
+      value: "Kyle, Ready for Everything"
       objectReference: {fileID: 0}
     - target: {fileID: 7074402451834804813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 06d4ae498ce252541ab6a3f6af9be432, type: 3}
+      objectReference: {fileID: 21300000, guid: 02769331bb5c87a4cbc53544abaf29b1, type: 3}
     - target: {fileID: 7074402451834804813, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -28375,12 +28292,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7694438188405138798, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Naisha and Aurisha playing in their backyard
+      value: "Backyard with my"
       objectReference: {fileID: 0}
     - target: {fileID: 7694438188405138798, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 0284b730ad4fe724dbb8fa10db07bdda, type: 3}
+      objectReference: {fileID: 21300000, guid: 0d9333859b8adda42ba31fc87d66e59a, type: 3}
     - target: {fileID: 7694438188405138798, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -31627,12 +31544,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8348808787083655653, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Freedom of playfulness -2012 Boy
+      value: "Erik Kristjanson on a Chair Before the Kitchen Cupboard"
       objectReference: {fileID: 0}
     - target: {fileID: 8348808787083655653, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 79b9e6829958d8c4d8861658df16bdd5, type: 3}
+      objectReference: {fileID: 21300000, guid: 0a179c3b1ceb1e24f8ee59d94cdd22c8, type: 3}
     - target: {fileID: 8348808787083655653, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -31647,12 +31564,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8348808787357259970, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Strength of joint family -2016
+      value: "Remmawii, Zoliansanga, Lalbiaksangi"
       objectReference: {fileID: 0}
     - target: {fileID: 8348808787357259970, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 1dd194992abc57f4f8bb821443dfc6b7, type: 3}
+      objectReference: {fileID: 21300000, guid: 011119e498b83c8498f3f8071cbcd51c, type: 3}
     - target: {fileID: 8348808787357259970, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -31667,12 +31584,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8348808787636039210, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Innocence and joy spread lights through me
+      value: "Zoliansanga and Remmawi"
       objectReference: {fileID: 0}
     - target: {fileID: 8348808787636039210, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: b7a6df6add9cc3f4d9a9a2442aa79036, type: 3}
+      objectReference: {fileID: 21300000, guid: c30dd00d4f9db844793798a157899e77, type: 3}
     - target: {fileID: 8348808787636039210, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -31687,12 +31604,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8348808788177458684, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Freedom of playfulness
+      value: "Ron and Remmawii with Zopari Kristjanson"
       objectReference: {fileID: 0}
     - target: {fileID: 8348808788177458684, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: b5bb5ffb27149344b88ba6bc8b70c618, type: 3}
+      objectReference: {fileID: 21300000, guid: 5a38d7112bf0dd94989f14f552b87530, type: 3}
     - target: {fileID: 8348808788177458684, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -31707,12 +31624,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8348808788337142384, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Strength of joint family -2016
+      value: "Remmawii with Her"
       objectReference: {fileID: 0}
     - target: {fileID: 8348808788337142384, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 6f88b46405bf37f49a9db9434d7873a6, type: 3}
+      objectReference: {fileID: 21300000, guid: eb1c3f0929aed8945bcc73ef014b798a, type: 3}
     - target: {fileID: 8348808788337142384, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -32199,12 +32116,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8925863293410298911, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Mom with daughters during Diwali
+      value: "Mother with Daughters"
       objectReference: {fileID: 0}
     - target: {fileID: 8925863293410298911, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 58d29cc378f11a840be202ceb2134803, type: 3}
+      objectReference: {fileID: 21300000, guid: 893aa71a79baf2f41932aa0e00be073c, type: 3}
     - target: {fileID: 8925863293410298911, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -32423,12 +32340,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9200211308750635434, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: Tahil as Prince of His Family
+      value: "Nephew on the Beach of"
       objectReference: {fileID: 0}
     - target: {fileID: 9200211308750635434, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: e5b4e6fb64b3990478350b539487b7e6, type: 3}
+      objectReference: {fileID: 21300000, guid: 529f38fcb08db834c93713a7f7a8ca49, type: 3}
     - target: {fileID: 9200211308750635434, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -32443,13 +32360,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9200211308983965523, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Tahil\u2019s mother (Tanu Nardip Singh) as a bride on her wedding day,
-        2/26/84"
+      value: "4-Year-Old Niece (Princess), Farm Work, Sao Bra"
       objectReference: {fileID: 0}
     - target: {fileID: 9200211308983965523, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 09024fd5b6be72744b51a1f83134e7a9, type: 3}
+      objectReference: {fileID: 21300000, guid: 054cc2bc88f50334aadea72e2beba7b0, type: 3}
     - target: {fileID: 9200211308983965523, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -32464,12 +32380,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9200211309429070842, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingName
-      value: "Newlyweds: Tahil\u2019s maternal grandfather &amp; maternal grandmother"
+      value: "Uncle"
       objectReference: {fileID: 0}
     - target: {fileID: 9200211309429070842, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingImage
       value: 
-      objectReference: {fileID: 21300000, guid: 450a6b26c55e7da429907de385730544, type: 3}
+      objectReference: {fileID: 21300000, guid: 06c0fb46f0824a243aeb2c3434f2ea06, type: 3}
     - target: {fileID: 9200211309429070842, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.b
       value: 0.7058824
@@ -32481,6 +32397,226 @@ PrefabInstance:
     - target: {fileID: 9200211309429070842, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingTextureColor.r
       value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[12].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 9d24ba4d60dde724db9982f10a4c7ddb, type: 3}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[12].paintingName
+      value: "Mom and Rebecca"
+      objectReference: {fileID: 0}
+    - target: {fileID: 762386239989049009, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 9d24ba4d60dde724db9982f10a4c7ddb, type: 3}
+    - target: {fileID: 762386239989049009, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Mom and Rebecca"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[22].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: d8975fd0bd3f49a4c9a543364e6a9439, type: 3}
+    - target: {fileID: 1086092524765932997, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: d8975fd0bd3f49a4c9a543364e6a9439, type: 3}
+    - target: {fileID: 1086092524765932997, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Tios-Uncles (Boy Group"
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[42].paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: c2d32490d0efc614aae9ed98ded5e734, type: 3}
+    - target: {fileID: 1086092525557358843, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 21300000, guid: c2d32490d0efc614aae9ed98ded5e734, type: 3}
+    - target: {fileID: 1086092525557358843, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: "Child (Girl), Trail,"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032528071112895588, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032528071112895588, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.Array.data[57].paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471939410718419489, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471939410718419489, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864790561692430, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864790561692430, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7974075910854483454, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7974075910854483454, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864791659444309, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864791659444309, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169430816624522, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169430816624522, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652120906510259, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652120906510259, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652120482507430, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652120482507430, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169429768989905, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169429768989905, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169430360392089, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169430360392089, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652120595248330, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652120595248330, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864790316327415, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864790316327415, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652120572824720, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652120572824720, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864792075826758, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864792075826758, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169430010156584, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169430010156584, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652121357007450, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652121357007450, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864790317521434, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864790317521434, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169430011588037, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169430011588037, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652121821790268, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652121821790268, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652120871946889, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186652120871946889, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169429769911450, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912169429769911450, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864790546615109, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100864790546615109, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
+      propertyPath: paintingData.paintingName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -33006,6 +33142,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 710000000000000002}
   - {fileID: 1550242412}
   - {fileID: 180134561}
   - {fileID: 572844662}
@@ -33034,9 +33171,9 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 22
+  m_Spacing: 40
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -34048,7 +34185,7 @@ RectTransform:
   m_Father: {fileID: 1106221355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0.2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -63269,7 +63406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &371672446
 Transform:
   m_ObjectHideFlags: 0
@@ -64723,7 +64860,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1794477818}
         m_TargetAssemblyTypeName: ZoomCanvas, Assembly-CSharp
-        m_MethodName: SwitchCanvasVisibility
+        m_MethodName: OpenCanvas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -66225,7 +66362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 126.106, y: -178}
+  m_AnchoredPosition: {x: 126.106, y: -190}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &572844663
@@ -66275,7 +66412,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -66406,7 +66543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -66463,7 +66600,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: b5d04066fb6257046948df210ef13a37, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 1c131f58684de7b47b2aebb4db3463e2, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -66886,7 +67023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -195}
+  m_AnchoredPosition: {x: 100, y: -205}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &586031581
@@ -67418,14 +67555,14 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: 9761ebe3d819b0546b0e5ab3e78801b7, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 1c131f58684de7b47b2aebb4db3463e2, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 627347895}
   m_OnClick:
     m_PersistentCalls:
@@ -97855,7 +97992,7 @@ GameObject:
   - component: {fileID: 886137454}
   - component: {fileID: 886137453}
   m_Layer: 0
-  m_Name: SetttingPanel
+  m_Name: SettingPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98229,7 +98366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 178.016, y: -166.1525}
+  m_AnchoredPosition: {x: 178.016, y: -185.8025}
   m_SizeDelta: {x: 297.3, y: 78.535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &900626051
@@ -99248,7 +99385,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 21300000, guid: 50e9f452f0193c448ae431dd007f0c5f, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 1c131f58684de7b47b2aebb4db3463e2, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -100211,7 +100348,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1673526890}
         m_TargetAssemblyTypeName: SpiralTour, Assembly-CSharp
@@ -100239,7 +100376,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1577390591}
         m_TargetAssemblyTypeName: PanelNavigation, Assembly-CSharp
-        m_MethodName: OpenControlPanel
+        m_MethodName: StartSpiralTour
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -100927,7 +101064,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1577390591}
         m_TargetAssemblyTypeName: PanelNavigation, Assembly-CSharp
-        m_MethodName: CloseControlPanel
+        m_MethodName: StartSelfGuidedTour
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -102935,8 +103072,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 516247200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.2, y: 0}
+  m_AnchorMax: {x: 0.2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -104725,7 +104862,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -110}
+  m_AnchoredPosition: {x: 100, y: -145}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223772777
@@ -108595,10 +108732,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.54509807, g: 0.25490198, b: 0.8000001, a: 1}
+    m_PressedColor: {r: 0.54509807, g: 0.25490198, b: 0.8000001, a: 1}
+    m_SelectedColor: {r: 0.54509807, g: 0.25490198, b: 0.8000001, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -108632,7 +108769,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!222 &1424789265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -110750,6 +110887,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 710000000000000021}
   - {fileID: 17227628}
   - {fileID: 1223772776}
   - {fileID: 586031580}
@@ -110780,7 +110918,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -111061,7 +111199,7 @@ GameObject:
   - component: {fileID: 1550242412}
   - component: {fileID: 1550242413}
   m_Layer: 0
-  m_Name: VolumeSlider
+  m_Name: TTS Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111086,7 +111224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 126.106, y: -10}
+  m_AnchoredPosition: {x: 126.106, y: -70}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550242413
@@ -111136,7 +111274,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -137665,6 +137803,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1424789262}
+  - {fileID: 710000000000000102}
   - {fileID: 900626050}
   m_Father: {fileID: 886137455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -137693,7 +137832,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -137971,6 +138110,10 @@ MonoBehaviour:
   greetingPanel: {fileID: 1513749811}
   domeDescriptionPanel: {fileID: 8568177}
   tour: {fileID: 1673526890}
+  locationButton: {fileID: 226449415}
+  domeWallsButton: {fileID: 627347897}
+  settingsPanel: {fileID: 886137452}
+  panelClickSensor: {fileID: 1364552807}
 --- !u!4 &1577390592
 Transform:
   m_ObjectHideFlags: 0
@@ -140700,7 +140843,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1577390591}
         m_TargetAssemblyTypeName: PanelNavigation, Assembly-CSharp
-        m_MethodName: OpenMenuUI
+        m_MethodName: ReturnFromPainting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -146408,10 +146551,6 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 846440132786113077, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-      propertyPath: paintingData.imageURL
-      value: https://images.squarespace-cdn.com/content/v1/522e01f0e4b074119b24a9d8/1605033982575-FX5I3UV9F4TIKA259L5W/Paradise%2B2%2BPaintings%2B061.jpg?format=750w
-      objectReference: {fileID: 0}
-    - target: {fileID: 846440132786113077, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingClip
       value: 
       objectReference: {fileID: 8300000, guid: 3725c97b5e821c549a97be2b20473f7c, type: 3}
@@ -151647,10 +151786,6 @@ PrefabInstance:
     - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: currentSphereType
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-      propertyPath: paintingData.imageURL
-      value: https://images.squarespace-cdn.com/content/v1/522e01f0e4b074119b24a9d8/1605034000642-BDBDWGQ8RZQ08ZZR9RIY/cafe-5-jonathans%2Bmom%2Bin%2Bthe%2Bbackyard.jpg?format=750w
       objectReference: {fileID: 0}
     - target: {fileID: 2394660717285431033, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingClip
@@ -164558,10 +164693,6 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5796141916458024023, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-      propertyPath: paintingData.imageURL
-      value: https://images.squarespace-cdn.com/content/v1/522e01f0e4b074119b24a9d8/1605033985963-PH1TB4BO894HVGTG6ODG/buddy%2B%26%2Bme%2B016.jpg?format=1000w
-      objectReference: {fileID: 0}
-    - target: {fileID: 5796141916458024023, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingClip
       value: 
       objectReference: {fileID: 8300000, guid: 3725c97b5e821c549a97be2b20473f7c, type: 3}
@@ -165092,10 +165223,6 @@ PrefabInstance:
     - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: currentSphereType
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-      propertyPath: paintingData.imageURL
-      value: https://images.squarespace-cdn.com/content/v1/522e01f0e4b074119b24a9d8/1605034033324-ZFY8VXDYHI4W12AYHG19/DSC_0003.jpg?format=750w
       objectReference: {fileID: 0}
     - target: {fileID: 6223682445055653101, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
       propertyPath: paintingData.paintingClip
@@ -172649,6 +172776,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1800069648}
   - component: {fileID: 1800069649}
+  - component: {fileID: 710000000000000099}
+  - component: {fileID: 710000000000000110}
   m_Layer: 0
   m_Name: SettingsManager
   m_TagString: Untagged
@@ -172720,8 +172849,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 513710110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.01, y: 0}
-  m_AnchorMax: {x: 0.01, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -172984,7 +173113,7 @@ RectTransform:
   m_Father: {fileID: 55710782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.01, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -235599,6 +235728,826 @@ Transform:
   - {fileID: 744038483}
   m_Father: {fileID: 543450651991961975}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &710000000000000001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710000000000000002}
+  - component: {fileID: 710000000000000003}
+  m_Layer: 0
+  m_Name: Music Volume Slider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &710000000000000002
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000001}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 710000000000000005}
+  - {fileID: 710000000000000009}
+  - {fileID: 710000000000000015}
+  m_Father: {fileID: 271262385}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 126.106, y: -10}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &710000000000000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 636878695}
+  m_FillRect: {fileID: 710000000000000011}
+  m_HandleRect: {fileID: 710000000000000017}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 1
+  m_Value: 100
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &710000000000000004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710000000000000005}
+  - component: {fileID: 710000000000000006}
+  - component: {fileID: 710000000000000007}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &710000000000000005
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000004}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 710000000000000002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &710000000000000006
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000004}
+  m_CullTransparentMesh: 1
+--- !u!114 &710000000000000007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &710000000000000008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710000000000000009}
+  m_Layer: 0
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &710000000000000009
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000008}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 710000000000000011}
+  m_Father: {fileID: 710000000000000002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &710000000000000010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710000000000000011}
+  - component: {fileID: 710000000000000012}
+  - component: {fileID: 710000000000000013}
+  m_Layer: 0
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &710000000000000011
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000010}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 710000000000000009}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &710000000000000012
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000010}
+  m_CullTransparentMesh: 1
+--- !u!114 &710000000000000013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &710000000000000014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710000000000000015}
+  m_Layer: 0
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &710000000000000015
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000014}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 710000000000000017}
+  m_Father: {fileID: 710000000000000002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &710000000000000016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710000000000000017}
+  - component: {fileID: 710000000000000018}
+  - component: {fileID: 710000000000000019}
+  m_Layer: 0
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &710000000000000017
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000016}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 710000000000000015}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &710000000000000018
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000016}
+  m_CullTransparentMesh: 1
+--- !u!114 &710000000000000019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &710000000000000020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710000000000000021}
+  - component: {fileID: 710000000000000022}
+  - component: {fileID: 710000000000000023}
+  m_Layer: 0
+  m_Name: Music Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &710000000000000021
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000020}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1542250657}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -25}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &710000000000000022
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000020}
+  m_CullTransparentMesh: 1
+--- !u!114 &710000000000000023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Music Volume:'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30.6
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
+  m_fontSizeMax: 50
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &710000000000000099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800069647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b106ff8b344c5b91b055edbb342c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechToggle: {fileID: 1424789264}
+  ttsSlider: {fileID: 1550242413}
+  sliderTitles: {fileID: 1542250657}
+  speed: 1
+  fullScreenIntroPanels:
+  - {fileID: 1513749812}
+  - {fileID: 2032558673}
+  - {fileID: 932380695}
+  domeWallPreviews: {fileID: 543450651991961975}
+  tourNavigation: {fileID: 1577390591}
+  exitHint: {fileID: 239068021}
+  speedButton: {fileID: 710000000000000105}
+  speedButtonLabel: {fileID: 710000000000000109}
+--- !u!1 &710000000000000101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710000000000000102}
+  - component: {fileID: 710000000000000104}
+  - component: {fileID: 710000000000000103}
+  - component: {fileID: 710000000000000105}
+  m_Layer: 0
+  m_Name: TTS Speed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &710000000000000102
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000101}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 710000000000000107}
+  m_Father: {fileID: 1562019209}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 178.016, y: -112.535}
+  m_SizeDelta: {x: 297.3, y: 48}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &710000000000000103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &710000000000000104
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000101}
+  m_CullTransparentMesh: 1
+--- !u!114 &710000000000000105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.54509807, g: 0.25490198, b: 0.8000001, a: 1}
+    m_PressedColor: {r: 0.54509807, g: 0.25490198, b: 0.8000001, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 50e9f452f0193c448ae431dd007f0c5f, type: 3}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 710000000000000103}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &710000000000000106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 710000000000000107}
+  - component: {fileID: 710000000000000108}
+  - component: {fileID: 710000000000000109}
+  m_Layer: 0
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &710000000000000107
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000106}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999702, y: 0.9999702, z: 0.9999702}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 710000000000000102}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -12, y: -6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &710000000000000108
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000106}
+  m_CullTransparentMesh: 1
+--- !u!114 &710000000000000109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710000000000000106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: TTS Speed 1x
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 6b53ea095654df344b4db68d9ba28de8, type: 2}
+  m_sharedMaterial: {fileID: -584873361208209370, guid: 6b53ea095654df344b4db68d9ba28de8, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
+  m_fontSizeMax: 32
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &710000000000000110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800069647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf038073d77480c9f3c11ef6be67bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tts: {fileID: 710000000000000099}
+  voiceOver: {fileID: 1424789264}
+  colorblindness: {fileID: 900626052}
+  ttsVolume: {fileID: 1550242413}
+  musicVolume: {fileID: 710000000000000003}
+  brightness: {fileID: 180134562}
+  mouseSensitivity: {fileID: 572844663}
 --- !u!33 &874447662570011228
 MeshFilter:
   m_ObjectHideFlags: 0
