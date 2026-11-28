@@ -82,6 +82,8 @@ public sealed class TTS : MonoBehaviour
 
     private void OnEnable()
     {
+        tourNavigation.TourModeChanged += RefreshNarrationControls;
+        RefreshNarrationControls();
         speechToggle.onValueChanged.AddListener(SetSpeechEnabled);
         ttsSlider.onValueChanged.AddListener(SetVolume);
         speedButton.onClick.AddListener(CycleSpeed);
@@ -92,6 +94,7 @@ public sealed class TTS : MonoBehaviour
 
     private void OnDisable()
     {
+        tourNavigation.TourModeChanged -= RefreshNarrationControls;
         speechToggle.onValueChanged.RemoveListener(SetSpeechEnabled);
         ttsSlider.onValueChanged.RemoveListener(SetVolume);
         speedButton.onClick.RemoveListener(CycleSpeed);
@@ -103,6 +106,14 @@ public sealed class TTS : MonoBehaviour
             synthesizer = System.IntPtr.Zero;
         }
 #endif
+    }
+
+    private void RefreshNarrationControls()
+    {
+        bool available = !tourNavigation.SelfGuidedTourActive;
+        speechToggle.interactable = available;
+        speedButton.interactable = available;
+        ttsSlider.interactable = available;
     }
 
     public void SetSpeed(float value)

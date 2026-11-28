@@ -24,6 +24,8 @@ public class PanelNavigation : MonoBehaviour
 
     public bool SpiralTourActive { get; private set; }
     public bool SelfGuidedTourActive { get; private set; }
+    public event System.Action TourModeChanged;
+
     private Canvas menuCanvas;
     private int menuSortingOrder;
 
@@ -60,6 +62,7 @@ public class PanelNavigation : MonoBehaviour
             menuCanvas.sortingOrder = spiral ? menuSortingOrder + 1 : menuSortingOrder;
         SetNavigationButtonActive(locationButton, selfGuided);
         SetNavigationButtonActive(domeWallsButton, selfGuided);
+        TourModeChanged?.Invoke();
     }
 
     private static void SetNavigationButtonActive(UnityEngine.UI.Button button, bool enabled)

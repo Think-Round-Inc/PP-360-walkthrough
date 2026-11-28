@@ -5,6 +5,29 @@ public sealed class AudioManager : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] HotspotController hotspotController; // lack of time
 
+    private UnityEngine.UI.Slider musicVolumeSlider;
+
+    private void Start()
+    {
+        var settings = FindFirstObjectByType<Save>();
+        if (settings == null || audioSource == null) return;
+        musicVolumeSlider = settings.MusicVolumeSlider;
+        if (musicVolumeSlider == null) return;
+        SetPaintingVolume(musicVolumeSlider.value);
+        musicVolumeSlider.onValueChanged.AddListener(SetPaintingVolume);
+    }
+
+    private void SetPaintingVolume(float value)
+    {
+        audioSource.volume = Mathf.InverseLerp(musicVolumeSlider.minValue, musicVolumeSlider.maxValue, value);
+    }
+
+    private void OnDestroy()
+    {
+        if (musicVolumeSlider != null)
+            musicVolumeSlider.onValueChanged.RemoveListener(SetPaintingVolume);
+    }
+
     public void SwitchAudioAtPainting(GameObject stand)
     {
         if (audioSource == null || stand == null) return;

@@ -15,6 +15,8 @@ public sealed class Save : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Slider brightness;
     [SerializeField] private UnityEngine.UI.Slider mouseSensitivity;
 
+    public UnityEngine.UI.Slider MusicVolumeSlider => musicVolume;
+
     private void Awake()
     {
         BindToggle("VoiceOver", voiceOver);
