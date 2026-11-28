@@ -378,7 +378,7 @@ MonoBehaviour:
   paintingData:
     paintingImage: {fileID: 0}
     paintingName: 
-    extraPaintingInfo: 
+    audioCaptions: 
     paintingClip: {fileID: 0}
     paintingTextureColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &8220407022076260033

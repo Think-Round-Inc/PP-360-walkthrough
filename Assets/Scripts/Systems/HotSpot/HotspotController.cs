@@ -88,7 +88,8 @@ public sealed class HotspotController : MonoBehaviour
         SetPaintingNameAndInfoToInfoText(closestHotspot);
     }
 
-    private void Update()
+    // Project the icon using the camera pose for this frame.
+    private void LateUpdate()
     {
         GameObject next = FindClosestHotspot();
         if (next != closestHotspot)

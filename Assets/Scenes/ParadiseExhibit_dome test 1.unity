@@ -145383,7 +145383,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 63c585601172f2b4eabf6ce7719bfa6c, type: 3}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-      propertyPath: paintingData.Array.data[0].extraPaintingInfo
+      propertyPath: paintingData.Array.data[0].audioCaptions
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 474150729639484875, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
@@ -177889,11 +177889,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-      propertyPath: paintingData.Array.data[27].extraPaintingInfo
+      propertyPath: paintingData.Array.data[27].audioCaptions
       value: (created from collaged photos)
       objectReference: {fileID: 0}
     - target: {fileID: 473966377750500467, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-      propertyPath: paintingData.Array.data[68].extraPaintingInfo
+      propertyPath: paintingData.Array.data[68].audioCaptions
       value: The Artist, HEIDI, with Her "11-Dimensional, Pure Vision" Bouquet Protected
         and Cared for By The Love Light of Hideki and Buddy, [Orea and Vincent (her
         cats that are not pictured)] - not to mention The Rose, Abraham, Nemo, et.
@@ -193677,7 +193677,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: bc51389916636964d9d8c48b9e2e7378, type: 3}
     - target: {fileID: 5186652120572824720, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-      propertyPath: paintingData.extraPaintingInfo
+      propertyPath: paintingData.audioCaptions
       value: The Artist, HEIDI, with Her "11-Dimensional, Pure Vision" Bouquet Protected
         and Cared for By The Love Light of Hideki and Buddy, [Orea and Vincent (her
         cats that are not pictured)] - not to mention The Rose, Abraham, Nemo, et.
@@ -193886,7 +193886,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f42451f79dc748b438f1bcd98b258de2, type: 3}
     - target: {fileID: 5389863763152474803, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}
-      propertyPath: paintingData.extraPaintingInfo
+      propertyPath: paintingData.audioCaptions
       value: (created from collaged photos)
       objectReference: {fileID: 0}
     - target: {fileID: 5389863763152474803, guid: 6c2f161bcd1894c409c0cc5142ed56c8, type: 3}

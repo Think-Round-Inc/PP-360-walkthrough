@@ -20,6 +20,16 @@ public sealed class ZoomCanvas : MonoBehaviour
     //Get audio
     [SerializeField] private AudioSource bgmAudioSource;
 
+    [SerializeField] private TTS narration;
+    private bool paintingSelected;
+    private bool waitingForTitle;
+
+    private void Awake()
+    {
+        if (narration == null)
+            narration = FindFirstObjectByType<TTS>();
+    }
+
     private void Start()
     {
         // turn canvas off at load of scene
@@ -38,19 +48,46 @@ public sealed class ZoomCanvas : MonoBehaviour
         // Display this painting.
         paintingZoomableCanvas.sprite = data.paintingData.paintingImage;
 
-        // Play this painting's paired audio.
+        EndPaintingPlayback();
+        paintingSelected = true;
         if (bgmAudioSource != null)
         {
             bgmAudioSource.Stop();
             bgmAudioSource.clip = data.paintingData.paintingClip;
             bgmAudioSource.loop = false;
-
-            if (bgmAudioSource.clip != null)
-            {
-                bgmAudioSource.Play();
-            }
         }
+
+        narration?.BeginPainting(data.paintingData.paintingName);
+        waitingForTitle = true;
     }
+
+    private void LateUpdate()
+    {
+        if (!paintingSelected) return;
+        if (!zoomCanvas.isActiveAndEnabled)
+        {
+            EndPaintingPlayback();
+            return;
+        }
+
+        if (!waitingForTitle || (narration != null && narration.PaintingTitleIsSpeaking))
+            return;
+
+        waitingForTitle = false;
+        if (bgmAudioSource != null && bgmAudioSource.clip != null)
+            bgmAudioSource.Play();
+    }
+
+    private void EndPaintingPlayback()
+    {
+        if (!paintingSelected) return;
+        paintingSelected = false;
+        waitingForTitle = false;
+        if (narration != null) narration.EndPainting();
+        if (bgmAudioSource != null) bgmAudioSource.Stop();
+    }
+
+    private void OnDisable() => EndPaintingPlayback();
 
     /// Turns on zoom canvas and fires event that it has been opened
     public void OpenCanvas()
@@ -62,6 +99,7 @@ public sealed class ZoomCanvas : MonoBehaviour
     /// Sets painting canvas to null effectively removing it
     public void ClearPaintingCanvas()
     {
+        EndPaintingPlayback();
         if (paintingZoomableCanvas == null) { return; }
         paintingZoomableCanvas.sprite = null;
     }
@@ -76,6 +114,7 @@ public sealed class ZoomCanvas : MonoBehaviour
     // Turns canvas off and fired event that it has been closed
     public void CloseCanvas()
     {
+        EndPaintingPlayback();
         zoomCanvas.gameObject.SetActive(false);
         onCanvasClosed?.Invoke();
     }

@@ -12,10 +12,18 @@ public sealed class ViewerController : MonoBehaviour
     private bool settingsOpen;
     [SerializeField] Transform headTransform;
     [SerializeField] float movementSpeed = 5f;
-    [SerializeField] float rotationSpeed;
+    [SerializeField, Min(0f), Tooltip("Turn speed at the default mouse sensitivity of 20.")]
+    float rotationSpeed = 5f;
+    [SerializeField, Range(0f, 0.1f), Tooltip("Seconds used to smooth mouse look during a drag. Zero applies movement immediately.")]
+    float lookSmoothing = 0.035f;
+
+    private const float DefaultSensitivity = 20f;
+    private float sensitivityMultiplier = 1f;
+    private Vector2 pendingLook;
     [SerializeField, Range(0, 90)] int maxHeadRotateAngle = 80;
 
-    void FixedUpdate()
+    // Mouse deltas belong to the rendered frame and should be consumed once.
+    private void Update()
     {
         if (!viewerControllerActive || settingsOpen) return;
         RotateViewer();
@@ -24,44 +32,42 @@ public sealed class ViewerController : MonoBehaviour
 
     private void RotateViewer()
     {
-        if (Input.GetMouseButton(0))
+        bool dragging = Input.GetMouseButton(0);
+        Cursor.visible = !dragging;
+        if (!dragging || Input.GetMouseButtonDown(0))
         {
-            float mouseX = Input.GetAxis("Mouse X");
-            float mouseY = Input.GetAxis("Mouse Y");
-            Cursor.visible = false;
-
-            Vector3 currentRotation = transform.localRotation.eulerAngles;
-            float newAngleX = currentRotation.x - mouseY * rotationSpeed;
-            newAngleX = WrapAngle(newAngleX);
-            newAngleX = Mathf.Clamp(newAngleX, -maxHeadRotateAngle, maxHeadRotateAngle);
-
-            transform.localRotation = Quaternion.Euler(newAngleX, currentRotation.y, 0f);
-
-            transform.Rotate(Vector3.up, mouseX * rotationSpeed, Space.World);
+            pendingLook = Vector2.zero;
+            return;
         }
-        else
-        {
-            Cursor.visible = true;
-        }
+
+        Vector2 delta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+        pendingLook += delta * (rotationSpeed * sensitivityMultiplier);
+        float fraction = lookSmoothing > 0f
+            ? 1f - Mathf.Exp(-Time.unscaledDeltaTime / lookSmoothing)
+            : 1f;
+        Vector2 turn = pendingLook * fraction;
+        pendingLook -= turn;
+
+        Vector3 angles = transform.localEulerAngles;
+        float pitch = Mathf.DeltaAngle(0f, angles.x) - turn.y;
+        transform.localRotation = Quaternion.Euler(
+            Mathf.Clamp(pitch, -maxHeadRotateAngle, maxHeadRotateAngle), angles.y + turn.x, 0f);
     }
 
-    private float WrapAngle(float angle)
+    public void SetSettingsOpen(bool value)
     {
-        angle %= 360f;
-        if (angle > 180f)
-            return angle - 360f;
-        if (angle < -180f)
-            return angle + 360f;
-        return angle;
+        settingsOpen = value;
+        if (value) pendingLook = Vector2.zero;
     }
-
-    public void SetSettingsOpen(bool value) => settingsOpen = value;
 
     public void SetViewerControlsActive(bool value)
     {
         viewerControllerActive = value;
         if (!value)
+        {
+            pendingLook = Vector2.zero;
             Cursor.visible = true;
+        }
     }
 
     private void MoveCharacter()
@@ -88,6 +94,6 @@ public sealed class ViewerController : MonoBehaviour
 
     public void SetMouseSensitivity(float value)
     {
-        rotationSpeed = value;
+        sensitivityMultiplier = value / DefaultSensitivity;
     }
 }

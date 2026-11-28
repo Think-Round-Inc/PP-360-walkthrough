@@ -6,6 +6,7 @@ mergeInto(LibraryManager.library, {
     restart: null,
     utterance: null,
     listening: false,
+    paintingTitle: false,
 
     wake: function () {
       DeviceTTS.trySpeak();
@@ -45,7 +46,7 @@ mergeInto(LibraryManager.library, {
       function finish(event) {
         if (DeviceTTS.utterance !== utterance) return;
         DeviceTTS.utterance = null;
-        if (event.error === 'not-allowed') return;
+        if (event.error === 'not-allowed' && !DeviceTTS.paintingTitle) return;
         if (event.error && event.error !== 'text-too-long') {
           DeviceTTS.chunks = [];
           return;
@@ -57,6 +58,13 @@ mergeInto(LibraryManager.library, {
       utterance.onerror = finish;
       synth.speak(utterance);
     }
+  },
+
+  SpeakPaintingTitle__deps: ['$DeviceTTS', 'SpeakOnDevice'],
+  SpeakPaintingTitle: function (text, rateMultiplier) {
+    if (!window.speechSynthesis || !window.speechSynthesis.getVoices().length) return;
+    DeviceTTS.paintingTitle = true;
+    _SpeakOnDevice(text, rateMultiplier);
   },
 
   SpeakOnDevice__deps: ['$DeviceTTS'],
@@ -79,6 +87,7 @@ mergeInto(LibraryManager.library, {
 
   StopDeviceSpeech__deps: ['$DeviceTTS'],
   StopDeviceSpeech: function () {
+    DeviceTTS.paintingTitle = false;
     var hadUtterance = DeviceTTS.utterance !== null;
     DeviceTTS.chunks = [];
     DeviceTTS.utterance = null;

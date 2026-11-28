@@ -44,6 +44,33 @@ public sealed class TTS : MonoBehaviour
     private Transform narrationPanel;
     private float nextScan;
     private float volume;
+    private bool paintingOpen;
+
+    public void BeginPainting(string title)
+    {
+        StopDeviceSpeech();
+        speaking = default;
+        paintingOpen = true;
+        if (!isActiveAndEnabled || !speechToggle.isOn || volume <= 0 ||
+            tourNavigation.SelfGuidedTourActive || string.IsNullOrWhiteSpace(title))
+            return;
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+        SpeakPaintingTitle(title.Trim(), speed);
+#else
+        SpeakOnDevice(title.Trim(), speed);
+#endif
+    }
+
+    public bool PaintingTitleIsSpeaking => paintingOpen && isActiveAndEnabled && DeviceIsSpeaking();
+
+    public void EndPainting()
+    {
+        if (!paintingOpen) return;
+        paintingOpen = false;
+        StopDeviceSpeech();
+        nextScan = 0;
+    }
 
     private struct Caption
     {
@@ -131,6 +158,8 @@ public sealed class TTS : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (paintingOpen) return;
+
         bool selfGuidedTourActive = tourNavigation.SelfGuidedTourActive;
         Transform greetingPanel = GetOpenGreetingPanel();
         if (selfGuidedTourActive != wasSelfGuidedTourActive || greetingPanel != narrationPanel)
@@ -290,6 +319,7 @@ public sealed class TTS : MonoBehaviour
     }
 
 #if UNITY_WEBGL && !UNITY_EDITOR
+    [DllImport("__Internal")] private static extern void SpeakPaintingTitle(string title, float rateMultiplier);
     [DllImport("__Internal")] private static extern void SpeakOnDevice(string text, float rateMultiplier);
     [DllImport("__Internal")] private static extern void StopDeviceSpeech();
     [DllImport("__Internal")] private static extern int TTSDeviceBusy();
